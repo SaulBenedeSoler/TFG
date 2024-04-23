@@ -48,6 +48,7 @@ Route::get('admin_index', [HomeController::class, 'index'])->name('admin.index')
 /*RUTA A LA VISTA DE CREACIÓN DE PELÍCULAS DEL ADMINISTRADOR*/
 Route::get('movies/create', [MovieController::class, 'create'])->name('movies.create');
 
+/*RUTAS USUARIOS ADMIN*/
 Route::post('/usuarios/store', [HomeController::class, 'store'])->name('admin.store');
 Route::get('/admin', [HomeController::class, 'index'])->name('admin.index');
 Route::get('/usuarios', [HomeController::class, 'showUsuarios'])->name('usuarios.mostrar');
@@ -59,7 +60,7 @@ Route::delete('admin/borrar/{id}', [HomeController::class, 'adborrar'])->name('a
 Route::post('admin/store', [HomeController::class, 'store'])->name('admin.store');
 Route::get('admin/add', [HomeController::class, 'create'])->name('admin.add');
 
-
+/*RUTAS MOVIE ADMIN*/
 Route::delete('/eliminarPelícula/{id}', [MovieController::class, 'eliminarPelicula'])->name('eliminar.pelicula');
 Route::get('/movies/{id}/edit', [MovieController::class, 'edit'])->name('form.edit');
 Route::put('movies/update/{id}', [MovieController::class, 'update'])->name('movies.update');
@@ -68,7 +69,7 @@ Route::delete('usuarios/{movie}', [MovieController::class, 'destroy'])->name('ad
 Route::get('admin/movies', [MovieController::class, 'showAdmin'])->name('admin.movies.show');
 Route::post('movies', [MovieController::class, 'store'])->name('movies.store');
 
-
+/*RUTAS COMIDA ADMIN*/
 Route::get('comida/adminshow', [ComidaController::class, 'adminComshow'])->name('comida.adminComshow');
 Route::get('comida/add', [ComidaController::class, 'create'])->name('comida.add');
 Route::post('comida/store', [ComidaController::class, 'store'])->name('comida.store');

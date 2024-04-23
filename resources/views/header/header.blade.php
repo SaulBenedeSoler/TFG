@@ -21,11 +21,6 @@
                     <li class="nav-item">
                         <a  href="{{ route('comida.index') }}" class="nav-link text-white">Packs de comida</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Contactanos</a>
-                    </li>
-
-                    
 
                 </ul>
             </div>

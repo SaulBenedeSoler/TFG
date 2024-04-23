@@ -47,7 +47,18 @@
     </div>
     
 
-
+    <div class="container main-content mt-4">
+      <div class="mx-auto text-center w-100">
+        <h2 class="h2Index">Películas</h2>  
+        <div class="card">
+          <div class="card-body">
+            <img src="/imagenes/peliculas.png" class="card-img-top FotoComida">
+            <h5 class="card-title">Acceda al apartado de semanas y selecciona la semana la cual te intertesa ver las películas que se van a proyectar.</h5>
+            <button class="boton"><a href="{{ route('comida.index') }}" class="enlace">Ver Pelícuñas</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <div class="container main-content mt-4">
