@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    font-family: "Manrope", sans-serif;
+}
+
+
+/*ESTILO PARA EL BODY*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilos HEADER*/
+.logo {
+    flex: 1;
+
+}
+.Logo{
+    width: 80px;
+    height: 80px;
+}
+.enlace {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+.inicios{
+    text-decoration: none;
+    color: white;
+    padding-right: 45px;
+}
+
+
+/* Estilo del dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.boton{
+    background-color: sandybrown;
+}
+
+/* Estilo del botón del usuario */
+.usuario {
+    background-color: transparent;
+    padding-right: 150px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.cerrarSesion{
+    background-color: black;
+}
+.cerrar {
+    background-color: transparent;
+    color: white;
+}
+
+/*CSS para la vista Mostrar de Movies*/
+.numeros{
+    border-radius: 50%;
+    color: white;
+    background-color: sandybrown;
+    font-size: 20px;
+    padding: 3px 10px;
+}
+.semana{
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+}
+.menus{
+    width: 200px;
+    height: 200px;
+}
+
+/*INDEX*/
+/*Titulo del carrousel*/
+.h2Index {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.FotoComida {
+    width: 450px;
+    height: 450px;
+}
+
+
+.carrouselimg{
+    height: 2800px;
+    width: 1500px;
+}
+
+/*CARDS DEL INDEX*/
+.cardindex{
+    width: 200px;
+    height: 400px;
+}
+.cardindex .FotoComida{
+    width: 200px;
+    height: 300px;
+}
+.h2index{
+    justify-content: center;
+}
+
+.cardindex .fotomen{
+    width: 100px;
+    height: 100px;
+}
+
+/* Semanas show */
+.enla{
+    background-color: sandybrown;
+    color: white;
+    text-decoration: none;
+}
+
+/*CSS DE LA TABLA PELICULAS Y VISTA mostrar.blade.php de MOVIES*/
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+
+.titulo-imagen {
+    margin-right: 20px;
+}
+
+.titulo-imagen img {
+    width: 500px;
+    max-width: 350px;
+}
+
+.parrafos {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.parrafos p {
+    margin-top: 50px;
+}
+
+.enlace {
+    text-decoration: none;
+    color: white;
+}
+
+.botonSala {
+    background-color: orange;
+}
+
+.texto {
+    color: white;
+    text-decoration: none;
+}
+.cent {
+    display: flex;
+    justify-content: center;
+}
+
+.centrado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tablaPelis {
+    border-collapse: collapse;
+    margin-top: 70px; 
+}
+
+.tr {
+    display: flex;
+}
+
+.mover {
+    padding: 50px; 
+}
+
+.imagenes {
+    width: 250px;
+    height: auto;
+}
+
+
+/*CSS PARA LA VISTA DE COMIDA*/
+
+.card-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-w {
+    width: 350px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.tarjeta{
+    width: 250px;
+}
+.menus{
+    width: 200px;
+}
+
+
+/*Estilos PROMOS*/
+.content-container {
+    padding-top: 20px;
+}
+.promo-card {
+    padding: 20px; 
+}
+
+
+
+/*ESTILOS LOGIN*/
+
+/*FORMULRIO */
+.formularioLogin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    border: 3px black solid;
+    color: white;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+}
+.TituloLogin{
+    text-align: center;
+    font-size: large;
+}
+.olvidado{
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+}
+.Login{
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/*Estilos Register*/
+.Register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    border: 3px black solid;
+}
+
+/* Estilos footer */
+footer{
+    height: 88px;
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+footer div.info{
+    margin-left: 10%;
+}
+footer div.copyright{
+    margin-right: 3%;
+}
+footer div.copyright a{
+    color: #9b9d9e;
+}
+.imgfooter{
+    width: 200px;
+    height: 100px;
+}
+.carousel-item img {
+    max-height: 200px;
+  }
+  /*CSS PROFILE EDIT*/
+  .intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.nomb{
+    color: white;
+    background-color: black;
+    padding-left: 30px;
+    margin-left: 50px;
+}
+
+/*ESTILOS PARA SHOW DE SALA*/
+.asientos{
+    width: 100px;
+    height: 100px;
+}
+.Salas{
+    margin-top: 50px;
+    padding: 40px;
+    margin: 0 auto; 
+}
+
+.Instrucciones {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding-bottom: 50px;
+}
+
+.Instrucciones p,
+.Instrucciones img {
+    margin: 0;
+    padding: 10px;
+}
+
+.Instrucciones img {
+    width: 100px; 
+    height: 100px;
+    margin: 0 10px;
+}
+
+
+/*CSS PARA EL APARTADO SHOWADMIN.PHP*/
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.mod{
+    color: white;
+    text-decoration: none;
+}
+
+
+/*CSS PARA EL APARTADO FORM DE ADMIN*/
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.movie-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.boton {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
