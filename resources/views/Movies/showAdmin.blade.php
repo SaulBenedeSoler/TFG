@@ -10,7 +10,6 @@
             <th>Género</th>
             <th>Fecha de Lanzamiento</th>
             <th>Duración</th>
-            <th>Añadir Película</th>
             <th>Modificar Peliculas</th>
             <th>Borrar Películas</th>
         </tr>
@@ -23,9 +22,6 @@
                 <td>{{ $movi->genero }}</td>
                 <td>{{ $movi->fecha_lanzamiento }}</td>
                 <td>{{ $movi->duracion }}</td>
-                <td>
-                    <button class="bg-warning"><a href="{{ route('movies.create') }}"  class="text-decoration-none text-dark">Añadir</a></button>
-                </td>
                 <td>
                     <button class="bg-warning"><a href="{{route('form.edit', $movi->id)}}" class="text-decoration-none text-dark">Modificar</a></button>
                 </td>

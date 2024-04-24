@@ -53,7 +53,7 @@ class ComidaController extends Controller
         
         $comida->save();
 
-        return redirect()->route('comida.adminshow', ['id'=> $comida->id]);
+        return redirect()->route('comida.adminComshow', ['id'=> $comida->id]);
     }
 
     /*FUNCION LA CUAL SIRVE PARA EDITAR LOS MENUS Y FUNCIONA DE MANERA QUE MEDIANTE LA VRIABLE COGEMOS POR LA ID TODOS LOS OBJETOS CONTENIDOS EN LA TABLA

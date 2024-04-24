@@ -68,6 +68,8 @@ Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movi
 Route::delete('usuarios/{movie}', [MovieController::class, 'destroy'])->name('admin.destroy');
 Route::get('admin/movies', [MovieController::class, 'showAdmin'])->name('admin.movies.show');
 Route::post('movies', [MovieController::class, 'store'])->name('movies.store');
+Route::get('/movies/create', [MovieController::class, 'create'])->name('movies.create');
+Route::get('movies/{id}', [MovieController::class, 'show'])->name('movies.info');
 
 /*RUTAS COMIDA ADMIN*/
 Route::get('comida/adminshow', [ComidaController::class, 'adminComshow'])->name('comida.adminComshow');
@@ -85,7 +87,6 @@ Route::post('promocion/store', [PromocionesController::class, 'store'])->name('p
 Route::get('promocion/editar/{id}', [PromocionesController::class, 'edit'])->name('promociones.edit');
 Route::delete('promocion/{id}', [PromocionesController::class, 'destroy'])->name('promociones.destroy');
 Route::put('promocion/{id}', [PromocionesController::class, 'update'])->name('promociones.update');
-
 
 /*RUTAS MOVIE*/
 Route::get('/show/{id}', [MovieController::class, 'show'])->name('movies');

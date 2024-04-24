@@ -31,6 +31,20 @@
                         <a href="{{ route('promociones.adminshow') }}" class="nav-link text-white">Acciones Promociones</a>
                     </li>
 
+                    <li><a href="{{ route('movies.create') }}"  class="nav-link text-white">Añadir Películas</a></li>
+
+                    <li>
+                        <a href="{{ route('comida.add') }}" class="nav-link text-white">Añadir Comida</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('promociones.add') }}" class="nav-link text-white">Añadir Promociones</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('admin.add') }}" class="nav-link text-white">Añadir Usuario</a>
+                    </li>
+
                 </ul>
             </div>
 

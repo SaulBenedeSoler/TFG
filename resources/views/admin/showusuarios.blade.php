@@ -9,7 +9,6 @@
             <th>Correo</th>
             <th>Contraseña</th>
             <th>Tipo de usuario</th>
-            <th>Añadir Usuario</th>
             <th>Eliminar Usuario</th>
         </tr>
     </thead>
@@ -20,9 +19,6 @@
                 <td>{{$usuario->email}}</td>
                 <td>{{$usuario->password}}</td>
                 <td>{{$usuario->usertype}}</td>
-                <td>
-                    <button class="bg-warning"><a href="{{ route('admin.add') }}" class="nav-link text-dark">Añadir Usuario</a></button>
-                </td>
                 <td><form action="{{ route('admin.borrar', ['id' => $usuario->id]) }}" method="POST" class="nav-link text-dark">
                     @csrf
                     @method('DELETE')

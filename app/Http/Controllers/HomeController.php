@@ -63,7 +63,7 @@ class HomeController extends Controller
         /*Indico que se guarde*/
         $usuario->save();
 
-        return redirect()->route('admin.editar', ['id' => $usuario->id]);
+        return redirect()->route('usuarios.mostrar', ['id' => $usuario->id]);
     }
 
     /*FUNCION UTILIZADA POR EL ADMINISTRADOR EN LA CUAL SELECCIONAN LOS USUARIOS DE LA BASE DE DATOS MEDIANTE EL ID Y DEVUELVEN LA VISTA DE INFORMACION

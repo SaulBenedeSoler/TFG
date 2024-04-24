@@ -2,27 +2,28 @@
 
 @section('content')
     <div class="container">
-        <h1>Añadir Promocion</h1>
+        <h1>Añadir Promoción</h1>
 
         <form method="POST" action="{{ route('promociones.store') }}">
             @csrf
             <div class="mb-3">
-                <label class="form-label">Titulo</label>
-                <input type="string" class="form-control">
+                <label class="form-label">Título</label>
+                <input type="text" name="titulo" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Imagen</label>
-                <textarea class="form-control"></textarea>
+                <input type="text" name="imagen" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Descripcion</label>
-                <input type="string" class="form-control">
+                <label class="form-label">Descripción</label>
+                <textarea name="descripcion" class="form-control" required></textarea>
             </div>
             <div class="mb-3">
                 <label class="form-label">Precio</label>
-                <input type="string" class="form-control">
+                <input type="text" name="precio" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-danger">Añadir promocion</button>
+
+            <button type="submit" class="btn btn-warning">Añadir Promoción</button>
         </form>
     </div>
 @endsection

@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                       <a href="{{ route('show', ['id' => 1]) }}"  class="nav-link text-white" >Ver detalles</a>
+                       <a href="{{ route('show', ['id' => 1]) }}"  class="nav-link text-white" >Ver Películas</a>
                     </li>
                     <li class="nav-item">
                         <a  href="{{ route('promociones.show') }}" class="nav-link text-white">Promociones</a>

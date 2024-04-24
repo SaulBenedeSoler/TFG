@@ -9,7 +9,6 @@
             <th>imagen</th>
             <th>descripcion</th>
             <th>precio</th>
-            <th>Añadir Menu</th>
             <th>Modificar menu</th>
             <th>Eliminar Menu</th>
         </tr>
@@ -21,9 +20,6 @@
                 <td>{{$comi->imagen}}</td>
                 <td>{{$comi->descripcion}}</td>
                 <td>{{$comi->Precio}}</td>
-                <td>
-                    <button class="bg-warning"><a href="{{ route('comida.add') }}" class="nav-link text-dark">Añadir</a></button>
-                </td>
                 <td>
                     <form action="{{ route('comida.destroy', ['id' => $comi->id]) }}" method="POST">
                     @csrf

@@ -54,7 +54,7 @@
           <div class="card-body">
             <img src="/imagenes/peliculas.png" class="card-img-top FotoComida">
             <h5 class="card-title">Acceda al apartado de semanas y selecciona la semana la cual te intertesa ver las películas que se van a proyectar.</h5>
-            <button class="boton"><a href="{{ route('comida.index') }}" class="enlace">Ver Pelícuñas</a></button>
+            <button class="boton"><a href="{{ route('movies.show') }}" class="enlace">Ver Pelícuñas</a></button>
           </div>
         </div>
       </div>

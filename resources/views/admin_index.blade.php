@@ -29,6 +29,14 @@
 <li>Acciones Promociones: este apartado te redirige a una vista en la cual te muestra todas las promociones en una tabla y te da las opciones de 
     modificar, eliminar o añadir.
 </li>
+
+<li>Añadir Usuario: este apartado te redirige a un formulario para añadir usuarios</li>
+
+<li>Añadir Peliculas: este apartado te redirige a un formulario para añadir peliculas</li>
+
+<li>Añadir Promociones: este apartado te redirige a un formulario para añadir Promociones</li>
+
+<li>Añadir Menus: este apartado te redirige a un formulario para añadir Menus</li>
 </ul>
 
 

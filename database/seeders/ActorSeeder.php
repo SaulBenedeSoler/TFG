@@ -21,6 +21,12 @@ class ActorSeeder extends Seeder
             'movie_id' => '1',
          ]);
  
+         DB::table('actor')->insert([
+            'nombre' => 'Paul',
+            'apellido' => 'NewMan',
+            'movie_id' => '1',
+         ]);
+ 
  
          DB::table('actor')->insert([
              'nombre' => 'Arnold',

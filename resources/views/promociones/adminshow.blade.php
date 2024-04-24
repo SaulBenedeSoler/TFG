@@ -9,7 +9,6 @@
             <th>imagen</th>
             <th>descripcion</th>
             <th>precio</th>
-            <th>Añadir Promocion</th>
             <th>Modificar Promocion</th>
             <th>Eliminar Promocion</th>
         </tr>
@@ -21,9 +20,6 @@
                 <td>{{$promo->imagen}}</td>
                 <td>{{$promo->descripcion}}</td>
                 <td>{{$promo->Precio}}</td>
-                <td>
-                    <button class="bg-warning"><a href="{{ route('promociones.add') }}" class="nav-link text-dark">Añadir</a></button>
-                </td>
                 <td><form action="{{ route('promociones.destroy', ['id' => $promo->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')

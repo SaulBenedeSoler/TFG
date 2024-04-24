@@ -11,7 +11,8 @@ class Director extends Model
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'director';
     /*RELACION N:N CON LA TABLA PELICULAS*/
-    public function movies(){
-        return $this->belongsTo('App\Models\Movie');
+    public function director(){
+        return $this->belongsTo(Director::class);
     }
+    
 }

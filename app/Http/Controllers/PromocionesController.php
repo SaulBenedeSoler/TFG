@@ -57,16 +57,17 @@ class PromocionesController extends Controller
             'precio' => 'required', 
         ]);
     
-        $promociones = new Promociones();
-        $promociones->title = $validatedData['titulo'];
-        $promociones->descripcion = $validatedData['descripcion'];
-        $promociones->genero = $validatedData['imagen'];
-        $promociones->duracion = $validatedData['precio'];      
-        $promociones->imagen = $validatedData['imagen'];
+        $promocion = new Promociones();
+        $promocion->titulo = $validatedData['titulo'];
+        $promocion->descripcion = $validatedData['descripcion'];
+        $promocion->imagen = $validatedData['imagen'];
+        $promocion->precio = $validatedData['precio'];      
     
-        $promociones->save();
-        return redirect()->route('promociones.info', ['id' => $promociones->id]);
+        $promocion->save();
+    
+        return redirect()->route('promociones.adminshow', ['id' => $promocion->id]);
     }
+    
 
     /*FUNCION LA CUAL SIRVE PARA ELIMINAR PROMOCIONES Y SE ENCARGA DE BUSCAR MEDIANTE EL ID LA PROMOCION QUE QUEREMOS ELIMINAR*/
     public function destroy($id){

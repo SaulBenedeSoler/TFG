@@ -8,11 +8,11 @@
             @csrf
             <div class="mb-3">
                 <label class="form-label">Título</label>
-                <input type="text" name="title" class="form-control"  required>
+                <input type="text" name="title" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>
-                <input type="text" name="descripcion" class="form-control" required>
+                <textarea name="descripcion" class="form-control" required></textarea>
             </div>
             <div class="mb-3">
                 <label class="form-label">Género</label>
@@ -20,11 +20,11 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Fecha de Lanzamiento</label>
-                <input type="text" name="fecha_lanzamiento" class="form-control" required>
+                <input type="string" name="fecha_lanzamiento" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Duración</label>
-                <input type="text" name="duracion" class="form-control" required>
+                <input type="string" name="duracion" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">URL de la Imagen</label>
@@ -32,17 +32,18 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">ID del Director</label>
-                <input type="text" name="director_id" class="form-control" required>
+                <input type="number" name="director_id" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">ID del Actor</label>
-                <input type="text" name="actor_id" class="form-control" required>
+                <input type="number" name="actor_id" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">ID de la Semana</label>
-                <input type="text" name="semana_id" class="form-control" required>
+                <input type="number" name="semana_id" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary">Añadir Película</button>
+
+            <button type="submit" class="btn btn-warning">Añadir Película</button>
         </form>
     </div>
 @endsection

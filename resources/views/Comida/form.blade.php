@@ -28,7 +28,7 @@
                 <input type="string" name="precio" value="{{ $comida->Precio }}" class="form-control">
             </div>
 
-            <button type="submit" class="btn btn-danger">Guardar cambios</button>
+            <button type="submit" class="btn btn-warning">Guardar cambios</button>
         </form>
     </div>
 @endsection
