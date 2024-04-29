@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                       <a href="{{ route('show', ['id' => 1]) }}"  class="nav-link text-white" >Ver Películas</a>
+                       <a href="{{ route('show', ['id' => 1]) }}"  class="nav-link text-white" >Ver detalles</a>
                     </li>
                     <li class="nav-item">
                         <a  href="{{ route('promociones.show') }}" class="nav-link text-white">Promociones</a>
@@ -21,16 +21,18 @@
                     <li class="nav-item">
                         <a  href="{{ route('comida.index') }}" class="nav-link text-white">Packs de comida</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Contactanos</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="navbar-right">
                 @if(Auth::check())
                     <div class="dropdown">
-                        <button class="usuario bg-danger">{{ auth()->user()->name }}</button>
-                        <div class="dropdown-content |cerrarSesion bg-danger">
-                            <a href="{{ route('profile.edit') }}" class="cerrarSesion bg-danger">Ajustes</a>
+                        <button class="usuario">{{ auth()->user()->name }}</button>
+                        <div class="dropdown-content |cerrarSesion">
+                            <a href="{{ route('profile.edit') }}" class="cerrarSesion">Ajustes</a>
                             <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Cerrar sesión
                             </a>

@@ -1,31 +1,38 @@
 @extends('master')
 
 @section('content')
-<!--CREO UNA CARD CON UN BULCE FOREACH AL CUAL LO METO DENTRO DE UNA TABLA Y DIVIDO DE 4 EN 4 LAS FILAS GRACIAS AL IF LOOP-->
-<div class="container">
-    <div class="d-flex justify-content-center">
-    <table class="table">
-        <tr>
-            @foreach($PromoList as $promo)
-            <td>
-                <div class="card-w mb-4" class="tarjeta">
+
+<div class="row">
+    <div class="container-fluid content-container"> <!-- Usamos container-fluid para que ocupe casi toda la página -->
+        <div class="row">
+            <div class="col-md-6">
+                @foreach($PromoList->chunk(4)[0] as $promo)
+                <div class="card mb-4 promo-card">
                     <h1>{{ $promo->titulo }}</h1>
-                    <a href="{{ route('promociones.show', ['id' => $promo->id]) }}">
-                    </a>
-                    <div class="mt-3">
-                        <p>Descripcion: {{ $promo->descripcion }}</p>
+
+                    <div class="mt-5">
+                        <p>Descripción: {{ $promo->descripcion }}</p>
                         <p>Precio: {{ $promo->Precio }}</p>
                     </div>
                 </div>
-            </td>
-            @if($loop->iteration % 4 == 0)
-            </tr><tr>
-            @endif
-            @endforeach
-        </tr>
-    </table>
+                @endforeach
+            </div>
+            <div class="col-md-6">
+                @foreach($PromoList->chunk(4)[1] as $promo)
+                <div class="card mb-4 promo-card">
+                    <h1>{{ $promo->titulo }}</h1>
+
+                    <div class="mt-5">
+                        <p>Descripción: {{ $promo->descripcion }}</p>
+                        <p>Precio: {{ $promo->Precio }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 </div>
 
 @endsection
+
 

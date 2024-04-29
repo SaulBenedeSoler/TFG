@@ -2,7 +2,7 @@
     <head>
        <title>@yield('title')</title>
        <link type="text/css" rel="stylesheet" href="{{asset('css/estilos.css')}}">
-       <link rel="shortcut icon" type="image/png" href="{{url('imagenes/Logos/Icon.png')}}">
+       <link rel="shortcut icon" type="image/png" href="{{url('imagenes/icon.png')}}">
        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
        
     </head>

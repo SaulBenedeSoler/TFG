@@ -5,42 +5,44 @@
 
 <div class="intro">
 
-    <div class="Instrucciones">
-    <p><b>Asiento libre</b></p>
-    <img src="imagenes/asientoLibre.png" class="ins">
-    <p><b>Asiento Ocupado</b></p>
-    <img src="imagenes/asientoOcupado.png" class="ins">
-    </div>
 
-    @foreach ($salas as $sala)
-    <h2>{{ $sala['movie_id'] }}</h2>
-    <table class="Salas">
-        @foreach ($sala['estado_asiento'] as $index => $estado)
-            @if ($index % $sala['maximo_filas'] === 0)
-                <tr>
-            @endif
-            <td>
-                @if ($estado === 1)
-                    <img src="imagenes/asientoOcupado.png" class="Asientos">
-                @else
-                    @if (Auth::check())
-                        <form method="post" action="{{ route('marcar-asiento', ['asiento' => $index + 1]) }}">
-                            @csrf
-                            <button type="submit"><img src="imagenes/asientoLibre.png" class="Asientos"></button>
-                        </form>
+    <h1>Room Map</h1>
+    <p>Name: {{ $room->name }}</p>
+    <p>Max Seats: {{ $room->max_seats }}</p>
+    <p>Max Rows: {{ $room->max_rows }}</p>
+
+    <h2>Seating Map</h2>
+    <table border="1">
+        @for ($i = 1; $i <= $room->max_rows; $i++)
+            <tr>
+                @for ($j = 1; $j <= $room->max_seats; $j++)
+                    @if ($j % 4 == 0 && $j != 0)
+                        @if ($i * 4 - 3 == $j)
+                            @if ($j <= count($room->seats))
+                                <td>X</td>
+                            @else
+                                <td>0</td>
+                            @endif
+                        @else
+                            <td></td>
+                        @endif
                     @else
-                        O
+                        @if ($i * 4 - 3 <= $j && $j <= $i * 4)
+                            @if ($j <= count($room->seats))
+                                <td>X</td>
+                            @else
+                                <td>0</td>
+                            @endif
+                        @else
+                            <td></td>
+                        @endif
                     @endif
-                @endif
-            </td>
-            @if ($index % $sala['maximo_filas'] === $sala['maximo_filas'] - 1)
-                </tr>
-            @endif
-        @endforeach
+                @endfor
+            </tr>
+        @endfor
     </table>
-@endforeach
-    
-    
+
+  
   
       
 

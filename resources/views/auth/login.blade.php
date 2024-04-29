@@ -13,7 +13,7 @@
             @csrf
 
             <div class="TituloLogin">
-                <h2>Inicio de Sesión</h2>
+                <h2>Login</h2>
             </div>
 
             <!-- Email Address -->
@@ -39,7 +39,7 @@
             </div>
 
             <div class="Login">
-                <x-primary-button class="login bg-warning">
+                <x-primary-button class="ml-3 login">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>

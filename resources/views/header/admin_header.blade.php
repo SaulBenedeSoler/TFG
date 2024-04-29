@@ -4,8 +4,7 @@
 
     <nav class="navbar navbar-expand-lg bg-danger sticky-top">
         <div class="container-fluid">
-            <a href="{{ route('admin.index') }}" class="navbar-brand">
-
+            <a href="/" class="navbar-brand">
                 <img src="{{ url('imagenes/Logos/LogoFinal.png') }}" class="Logo" style="max-height: 50px;" alt="Logo">
             </a>
 
@@ -14,47 +13,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
-                        <a href="{{ route('admin.movies.show') }}" class="nav-link text-white">Acciones Películas</a>
+                        <a href="{{ route('movies.create') }}" class="nav-link text-white">Añadir Película</a>
                     </li>
-
-                    <li>
-                        <a href="{{ route('usuarios.mostrar') }}" class="nav-link text-white">Acciones Usuarios</a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('comida.adminComshow') }}" class="nav-link text-white">Acciones Menu</a>
-                    </li>
-                    
-                    <li>
-                        <a href="{{ route('promociones.adminshow') }}" class="nav-link text-white">Acciones Promociones</a>
-                    </li>
-
-                    <li><a href="{{ route('movies.create') }}"  class="nav-link text-white">Añadir Películas</a></li>
-
-                    <li>
-                        <a href="{{ route('comida.add') }}" class="nav-link text-white">Añadir Comida</a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('promociones.add') }}" class="nav-link text-white">Añadir Promociones</a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('admin.add') }}" class="nav-link text-white">Añadir Usuario</a>
-                    </li>
-
                 </ul>
             </div>
 
-            <div class="dropdown d-flex justify-content-end align-items-center">
+            <div class="dropdown d-flex justify-content-end align-items-center"> <!-- Cambiado a flexbox y alineado al final -->
                 @if(Auth::check())
-                <button class="btn btn-danger dropdown-toggle nomb" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-dark dropdown-toggle nomb" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    {{ auth()->user()->name }}
                 </button>
             
-                <div class="dropdown-menu dropdown-menu-end bg-danger" aria-labelledby="dropdownMenu2">
+                <div class="dropdown-menu dropdown-menu-end bg-dark" aria-labelledby="dropdownMenu2"> <!-- Cambiado a dropdown-menu-end para alinear a la derecha -->
                     <a href="{{ route('profile.edit') }}" class="dropdown-item text-light">Ajustes</a>
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item text-light">Cerrar sesión</a>
                     
