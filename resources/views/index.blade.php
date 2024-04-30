@@ -18,7 +18,7 @@
           <img src="imagenes/Carrousel/cars.jpg" class="carrouselimg d-block mx-auto img-fluid imgC">
         </div>
         <div class="carousel-item">
-          <img src="imagenes/Carrousel/torrente.jpg" class="d-block mx-auto img-fluid imgC">
+          <img src="imagenes/Carrousel/viven.jpg" class="d-block mx-auto img-fluid imagen">
         </div>
         <div class="carousel-item">
           <img src="imagenes/Carrousel/spider-manCarrou.jpg" class="carrouselimg d-block mx-auto img-fluid imgC">
@@ -36,14 +36,14 @@
   
       
 
-      <h2 class="h2Index">SALAS</h2>  
+      <h2 class="h2Index">Películas</h2>  
 
       <div class="mx-auto" style="max-width: 400px;">
         <div class="card">
             <div class="card-body">
                 <img src="/imagenes/Inicio.jpg" class="card-img-top FotoComida">
-                <h5 class="card-title">Visita nuestra carta de menus para disfrutar de nuestras películas.</h5>
-                <button class="boton"><a href="{{ route('comida.index') }}" class="enlace">Ver menús</a></button>
+                <h5 class="card-title">Visita nuestro apartado de semanas y elige que películas deseas ver</h5>
+                <button class="boton"><a href="{{ route('comida.index') }}" class="enlace">Ver películas</a></button>
             </div>
         </div>
     </div>

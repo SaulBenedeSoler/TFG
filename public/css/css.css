@@ -78,32 +78,54 @@ body{
 }
 
 /*CSS para la vista Mostrar de Movies*/
-.numeros{
-    border-radius: 50%;
-    color: white;
-    background-color: sandybrown;
-    font-size: 20px;
-    padding: 3px 10px;
+.centrado {
+    margin-left: 180px;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
 }
-.semana{
-    color: white;
-    font-size: 23px;
-    font-weight: 700;
+
+.tablaPelis {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
-.menus{
+
+.tablaPelis tr {
+
+    display: flex;
+    justify-content: center;
+}
+
+.tablaPelis td {
+    width: 25%;
+    padding: 15px;
+    margin-left: 50px;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+.imagenes {
     width: 200px;
-    height: 200px;
+    height: auto;
 }
 
 /*INDEX*/
 /*Titulo del carrousel*/
-.h2Index {
-    padding-top: 40px;
-    padding-bottom: 40px;
+.carrouselimg{
+    width: 900px;
+    height: auto;
 }
-.FotoComida {
-    width: 450px;
-    height: 450px;
+
+.imagen{
+    width: 1500px;
+}
+
+.carru{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -138,96 +160,41 @@ body{
 }
 
 /*CSS DE LA TABLA PELICULAS Y VISTA mostrar.blade.php de MOVIES*/
-.contenido {
+.row{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
+    height: 200px;
 }
 
-
-.titulo-imagen {
-    margin-right: 20px;
-}
-
-.titulo-imagen img {
-    width: 500px;
-    max-width: 350px;
-}
-
-.parrafos {
-    text-align: left;
-    margin-top: 50px;
-}
-
-.parrafos p {
-    margin-top: 50px;
-}
-
-.enlace {
-    text-decoration: none;
-    color: white;
-}
-
-.botonSala {
-    background-color: orange;
-}
-
-.texto {
-    color: white;
-    text-decoration: none;
-}
-.cent {
+.divPriMostrar{
+    width: 150px;
+    height: 300px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.centrado {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.tablaPelis {
-    border-collapse: collapse;
-    margin-top: 70px; 
-}
-
-.tr {
-    display: flex;
-}
-
-.mover {
-    padding: 50px; 
-}
-
-.imagenes {
-    width: 250px;
+.imagenMostrar{
+    width: 200px;
     height: auto;
 }
 
-
 /*CSS PARA LA VISTA DE COMIDA*/
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.comida-card{
+
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
 }
 
-.card {
-    width: 500px;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-.tarjeta{
-    width: 250px;
-}
-.menus{
+.comida-card img{
     width: 200px;
+    height: 200px;
 }
+
+
 
 
 /*Estilos PROMOS*/
