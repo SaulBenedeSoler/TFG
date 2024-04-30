@@ -71,6 +71,7 @@ Route::get('/promociones', [PromocionesController::class, 'index'])->name('promo
 
 
 
-Route::get('/sala/{id}', 'SalaController@showSala')->name('sala.show');
+Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('generarSala');
+Route::post('/marcar-asiento/{asiento}', [SalaController::class, 'marcarAsiento'])->name('marcar-asiento');
 
 

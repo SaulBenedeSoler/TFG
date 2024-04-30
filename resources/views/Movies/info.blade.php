@@ -8,6 +8,8 @@
         <p><b>Duración:</b> {{ $movie->duracion }}</p>
         <p><b>Descripción:</b> {{ $movie->descripcion }}</p>
         <img src="{{ asset('imagenes/' . $movie->imagen) }}" alt="{{ $movie->title }}">
-        <a href="{{ route('movies.sala', ['id' => $movie->id]) }}">Ver Sala</a>
+        <button type="submit" class="botonSala bg-warning"><<a href="{{ route('generarSala', ['movieID' => $movie->id]) }}">Ver Sala</a></button>
+
+
     </div>
 @endsection

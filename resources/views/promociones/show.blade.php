@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-    <div class="container-fluid content-container"> <!-- Usamos container-fluid para que ocupe casi toda la página -->
+    <div class="container-fluid content-container">
         <div class="row">
             <div class="col-md-6">
                 @foreach($PromoList->chunk(4)[0] as $promo)

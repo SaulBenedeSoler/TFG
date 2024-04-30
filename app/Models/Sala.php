@@ -10,4 +10,9 @@ class Sala extends Model
     use HasFactory;
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'sala';
+
+    public function movie(){
+    return $this->hasOne(Movie::class);
+    }
+
 }
