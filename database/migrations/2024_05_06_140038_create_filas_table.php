@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('sala', function (Blueprint $table) {
-            $table->text('estado_asiento')->nullable();
+        Schema::create('filas', function (Blueprint $table) {
+            $table->id();
+            $table->integer('sala_id');
+            $table->integer('numero_fila');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('sala', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('filas');
     }
 };

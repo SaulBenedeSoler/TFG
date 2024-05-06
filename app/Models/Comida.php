@@ -10,4 +10,10 @@ class Comida extends Model
     use HasFactory;
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'Comida';
+
+    public function tickets(){
+        return $this->hasMany(Ticket::class);
+    }
+
+
 }

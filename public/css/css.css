@@ -152,6 +152,14 @@ body{
     height: 100px;
 }
 
+.bienvenida{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100pxblack;
+}
+
+
 /* Semanas show */
 .enla{
     background-color: sandybrown;

@@ -12,47 +12,70 @@ class SalaController extends Controller
 // FUNCION USADA PARA VISUALIZAR LAS SALAS
 public function showSala($movieID)
 {
-    $movie = Movie::with('sala')->get();
-    $sala = Sala::where('movie_id', $movieID)->first();
-    return view('sala.show', compact('sala'));
+    $movie = Movie::findOrFail($movieID);
+    $sala = Sala::where('movie_id', $movieID)->firstOrFail();
+    return view('sala.show', compact('sala', 'movie'));
 }
+
 
 // FUNCION ENCARGADA DE GENERAR SALAS DE MANERA QUE CREA UN OBJETO MOVIES Y UN ARRAY SALAS, MEDIANTE EL FOREACH DEFINE LOS ASIENTOS
 // Y FILAS MAXIMAS Y EL ESTADO DEL ASIENTO MEDIANTE UN ARRAYFILL Y BUSCA LA PELICULA MEDIANTE EL ID PARA PODE ASOCIARLA A ESA PELICULA
 public function generarSala($movieID)
 {
-    $movies = Movie::all();
-    $salas = [];
-    foreach ($movies as $movie) {
-        if ($movie->id == $movieID) {
-            $sala = [
-                'maximo_asientos' => 20, 
-                'maximo_filas' => 4, 
-                'movie_id' => $movie->id,                    
-                'estado_asiento' => array_fill(0, 20, 0)
-            ];
-            $salas[] = $sala;
-            break;
-        }
-    }
-    return view('sala.show', compact('salas'));
-}
-
-// FUNCION INCOMPLETA FINALIZAR EN EL 2ºSPRINT
-public function marcarAsiento($asiento, $movieID)
-{
-
+    $movie = Movie::findOrFail($movieID);
     $sala = Sala::where('movie_id', $movieID)->first();
+    $max_filas = $sala->maximo_filas;
+    $max_asientos = $sala->maximo_asientos;
 
-    if ($sala->estado_asiento[$asiento - 1] === 1) {
-        return redirect()->back()->with('Error', 'El asiento ya esta ocupado');
+    $salas = [];
+    for ($filas = 1; $filas <= $max_filas; $filas++) {
+        $filas_sala = [];
+        for ($asientos = 1; $asientos <= $max_asientos; $asientos++) {
+            $filas_sala[] = [
+                'id' => $asientos,
+                'asiento' => $asientos,
+                'estado_asiento' => true,
+                'movie_id' => $movie->id,
+            ];
+        }
+        $salas[] = [
+            'maximo_asientos' => $max_asientos,
+            'movie_id' => $movie->id,
+            'filas' => $filas_sala,
+        ];
     }
 
-    $sala->estado_asiento[$asiento - 1] = 1;
-    $sala->save();
-
-    return redirect()->route('show-sala', ['movieID' => $movieID])->with('Ocupado', 'El asiento ha sido marcado correctamente');
+    return view('sala.show', [
+        'salas' => $salas,
+        'movie' => $movie,
+    ]);
 }
+
+
+public function create(Request $request)
+{
+    $request->validate([
+        'nombre' => 'required|string|max:255',
+        'maximo_asientos' => 'required|integer|min:1',
+        'maximo_filas' => 'required|integer|min:1',
+        'movie_id' => 'required|integer|exists:movies,id',
+    ]);
+
+    $sala = Sala::create([
+        'nombre' => $request->nombre,
+        'maximo_asientos' => $request->maximo_asientos,
+        'maximo_filas' => $request->maximo_filas,
+        'movie_id' => $request->movie_id,
+        'estado_asiento' => true,
+    ]);
+
+    $sala->generateSeatPositions();
+
+    return redirect()->route('salas.index')->with('success', 'Sala creada exitosamente.');
+}
+
+
+
 
 }
 

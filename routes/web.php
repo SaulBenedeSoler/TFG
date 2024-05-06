@@ -7,6 +7,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromocionesController;
 use App\Http\Controllers\SalaController;
+use App\Http\Controllers\ticketController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -70,8 +71,12 @@ Route::get('/entradas', [EntradaController::class, 'index'])->name('entrada.inde
 Route::get('/promociones', [PromocionesController::class, 'index'])->name('promociones.show');
 
 
-
+Route::get('/salas/create', [SalaController::class, 'create'])->name('salas.create');
 Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('generarSala');
-Route::post('/marcar-asiento/{asiento}', [SalaController::class, 'marcarAsiento'])->name('marcar-asiento');
 
+
+
+
+Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
+Route::get('/tickets', [TicketController::class, 'store'])->name('entradas.store');
 

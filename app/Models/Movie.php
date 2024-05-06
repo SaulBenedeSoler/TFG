@@ -22,9 +22,16 @@ class Movie extends Model
         return $this->belongsTo(Actor::class, 'actor_id');
     }
 
-    public function salas()
-{
-    return $this->hasOne(Sala::class);
-}
+    public function sala()
+    {
+        return $this->belongsTo(Sala::class);
+    }
+
+
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 
 }

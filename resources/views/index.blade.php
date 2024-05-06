@@ -5,10 +5,25 @@
 
 <div class="intro">
 
+
+      
+
+    <div class="bienenida">
+      <h1>Bienvenido a Cine Temporal</h1>
+      <br>
+      <p>En esta web vas a poder disfrutar de la emision de diferentes películas durante 4 semanas, las cuales tienen una temática que es el paso del tiempo.</p>
+      <br>
+      <p>Con este proyecto se busca la atracción de jóvenes al cine y mostrar la mejora del cine durante el paso del tiempo</p>
+    </div>
+
+    
+
+
+
+
     <h2 class="h2Index">Peliculas más destacadas de cada semana</h2>
 
- 
-      
+
     <div id="carouselExample" class="carousel slide mb-5 carru">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -34,7 +49,6 @@
       </button>
     </div>
   
-      
 
       <h2 class="h2Index">Películas</h2>  
 
