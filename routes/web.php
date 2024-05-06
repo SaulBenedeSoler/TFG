@@ -78,5 +78,5 @@ Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('gen
 
 
 Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
-Route::get('/tickets', [TicketController::class, 'store'])->name('entradas.store');
+Route::post('entradas/store/{movieID}/{fila}/{asiento}', [TicketController::class, 'store'])->name('entradas.store');
 

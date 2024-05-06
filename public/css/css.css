@@ -337,6 +337,11 @@ footer div.copyright a{
     margin: 0 10px;
 }
 
+.titPel{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
 
 /*CSS PARA EL APARTADO SHOWADMIN.PHP*/
 .table {

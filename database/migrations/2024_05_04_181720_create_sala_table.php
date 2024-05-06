@@ -16,11 +16,9 @@ return new class extends Migration
         Schema::create('sala', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->integer('maximo_asientos')->default(5);
+            $table->integer('maximo_asientos')->default(20);
             $table->integer('maximo_filas')->default(4);
-            $table->string('asientos')->nullable();
             $table->integer('movie_id');
-            $table->boolean('estado_asiento')->default(true);
             $table->timestamps();
         });
     }
@@ -34,4 +32,3 @@ return new class extends Migration
         Schema::dropIfExists('sala');
     }
 };
-

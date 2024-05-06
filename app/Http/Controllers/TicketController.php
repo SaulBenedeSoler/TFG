@@ -13,35 +13,25 @@ class ticketController extends Controller
     public function show($id)
     {
         $ticket = Ticket::findOrFail($id);
-        $movie = Movie::findOrFail($ticket->movie_id);
+        $movie = $ticket->movie;
         $sala = $ticket->sala;
         $fila = $sala->fila;
         $asiento = $sala->asiento;
-
-
-
-    return view('entradas.show', compact('ticket', 'movie', 'sala'));
+    
+        return view('entradas.show', compact('ticket', 'movie', 'sala', 'fila'));
     }
-    public function store(Request $request)
+    public function store($movieID, $fila, $asiento)
     {
-        $maxAsientos = (int) $request->input('max_asientos', 1);
-        $asientoId = (int) $request->input('asiento');
-        $salaId = (int) $request->input('sala_id');
-    
-        if ($maxAsientos === 0) {
-            abort(400, 'El máximo de asientos no puede ser cero.');
-        }
-    
-        $fila = floor($asientoId / $maxAsientos) ;
-        $asiento = ($asientoId % $maxAsientos);
+        $maxAsientos = 1;
+        $salaId = $fila;
     
         $ticket = new Ticket([
-            'movie_id' => $request->input('movieID'),
-            'row' => $fila,
-            'seat' => $asiento,
-            'sala_id' => $salaId, 
+            'movie_id' => $movieID,
+            'fila_id' => $fila,
+            'asiento' => $asiento,
+            'sala_id' => $salaId,
         ]);
-        dd($fila,$asiento);
+
         $ticket->save();
     
         return view('entradas.show', compact('fila', 'asiento'));
