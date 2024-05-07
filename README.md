@@ -1,66 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>Cine Temporal</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<br>
 
-## About Laravel
+<p>Cine temporal es el proyecto de fin de grado que actualmente estoy desarrollando.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p>Uso difrentes herramientas de programación que son:</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<ul>
+    <li>1-Html</li>
+    <li>2-CSS</li>
+    <li>3-Laravel</li>
+    <li>4-Bootstrap</li>
+    <li>5-MySQL</li>
+</ul>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p>El proyecto consta de una innovadora idea la cual consiste en la implementación de 7 películas por semana (1 por día) y que estas tienen una temática concreta que en este caso es el paso del tiempo y la evolución y profesionalización del cine durante el paso del tiempo  (El paso del tiempo de ahi se hace referencia y se da sentido al nombre del proyecto).</p>
 
-## Learning Laravel
+<p>El proyecto en cuanto a usuarios cuenta con dos que son el usuario o "persona que interactua con la web" y el administrador encargado de llevar la gestióny el control de la web.</p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p>¿Qué funciones o acciones podra realizar el usuario?</p>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<p>El usuario podra realizar diferentes funciones que le permitiran adquirir diferentes objetos o simplemente ver la web (Las funciones que podra realizar estaran limitadas de forma que no podra realizar ninguna acción de administrador)</p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p>Dentro de las acciones a realizar por el usuario son:</p>
 
-## Laravel Sponsors
+<ul>
+    <li>Iniciar Sesión (Este caso solo se dara si el usuario tiene una cuenta creada y guardada en la base de datos)</li>
+    <li>Registrarse</li>
+    <li>Navegar y visualizar todas las pantallas de la página web</li>
+    <li>Adiquirir los diferentes servicios que se ofrecen en la página web (Exceptuando el caso de que el usuario no este registrado o no haya iniciado sesión)</li>
+</ul>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<p>Por parte del administador podra realizar las siguientes acciones: </p>
 
-### Premium Partners
+<ul>
+    <li>Visualizar toda la información almacenada en la base de datos (Películas,Menus,Promociones,Usuario)</li>
+    <li>Modificar toda la informacion (Exceptuando el usuario por derechos de privacidad)</li>
+    <li>Añadir información dentro de las tablas de la base de datos</li>
+    <li>Eliminar información dentro de la base de datos</li>
+</ul>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<p>Dentro de las funcionalidades hay unas pocas que pueden realizar tanto el usuario como el administrador (En el caso de usuario solo lo podra realizar si esta registrado o a iniciado sesión)</p>
 
-## Contributing
+<ul>
+    <li>Cerrar sesión</li>
+    <li>Modificar su usuario que esto se divide en dos puntos</li>
+        <ul>
+            <li>Cambiar su nombre de usuario o correo electrónico</li>
+            <li>Cambiar su contraseña</li>
+    </ul>
+</ul>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p>El desarrollo o cuerpo del proyecto va a estar formado por diferentes vistas y funciones desarrolladas con las herramientas de programación: </p>
 
-## Code of Conduct
+<ul>
+    <li>Desarrollo de Controladores con funciones encargadas de realizar las diferentes acciones del proyecto (Laravel)</li>
+    <li>Diseño de las vistas que contendran la información que se mostraran tanto al usuario como al administrador del programa (Html,CSS,Bootstrap)</li>
+    <li>Diseño de las rutas para poder implementar las funciones en las vistas, desarrollo de modelos (Laravel)</li>
+    <li>Diseño de la base de datos (MySQL y Laravel)</li>
+</ul>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
