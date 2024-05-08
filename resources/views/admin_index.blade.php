@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="intro">
-
+<!---Index del administrador Insertar breve explicación de que hace cada cosa del header y aplicar estilos-->
 <h1 class="tituloAdmin">Panel de administrador</h1>
 
 <br>

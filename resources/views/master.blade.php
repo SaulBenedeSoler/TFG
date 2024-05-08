@@ -1,5 +1,6 @@
 <html>
     <head>
+      <!--Creación del head y le implemento los estilos css y el shortcut de la página, ademas de los enlaces de boostrap-->
        <title>@yield('title')</title>
        <link type="text/css" rel="stylesheet" href="{{asset('css/estilos.css')}}">
        <link rel="shortcut icon" type="image/png" href="{{url('imagenes/icon.png')}}">
@@ -7,12 +8,13 @@
        
     </head>
     <body>
+      <!--Indico que si el usuario es administrador le muestre el heeder admin y si no el de usuario-->
       @if(Auth::check() && Auth::user()->usertype == 'admin')
       @include('header/admin_header')
     @else
       @include('header/header')
    @endif
-
+      <!--Implemento el contenido de las páginas--->
         <section>
           
         <main class="main">

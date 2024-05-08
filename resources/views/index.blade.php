@@ -7,7 +7,7 @@
 
 
       
-
+  <!--Código Temporal, revisar y en caso de implementarlo finalmente asignarle los estilos convenientes-->
     <div class="bienenida">
       <h1>Bienvenido a Cine Temporal</h1>
       <br>
@@ -15,15 +15,8 @@
       <br>
       <p>Con este proyecto se busca la atracción de jóvenes al cine y mostrar la mejora del cine durante el paso del tiempo</p>
     </div>
-
-    
-
-
-
-
+    <!--Creo un h2 para informar de que trata la información y inserto un carrousel con diferentes imágenes sobre diferentes películas de cine--->
     <h2 class="h2Index">Peliculas más destacadas de cada semana</h2>
-
-
     <div id="carouselExample" class="carousel slide mb-5 carru">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -50,6 +43,11 @@
     </div>
   
 
+
+
+
+
+    <!--Card que lleva al apartado de peliculas FALTA POR IMPLEMENTAR ESTILOS Y MODIFICAR--->
       <h2 class="h2Index">Películas</h2>  
 
       <div class="mx-auto" style="max-width: 400px;">
@@ -61,10 +59,7 @@
             </div>
         </div>
     </div>
-
-
-
-
+    <!--Card que lleva al apartado de promociones FALTA POR IMPLEMENTAR ESTILOS Y MODIFICAR--->
     <h2 class="h2Index">Promociones</h2>
 
         <div class="col-lg-4 col-md-6 mb-4">
@@ -77,8 +72,5 @@
                 </div>
             </div>
         </div>
-  
-
-
     </body>
 @endsection
