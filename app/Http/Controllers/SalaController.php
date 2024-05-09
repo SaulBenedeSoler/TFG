@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use App\Models\Sala;
+use App\Models\ticket;
 
 class SalaController extends Controller
 {
@@ -23,20 +24,21 @@ public function showSala($movieID)
 public function generarSala($movieID)
 {
     $movie = Movie::findOrFail($movieID);
-    $sala = Sala::where('movie_id', $movieID)->first();
+    $sala = Sala::where('movie_id', $movieID)->firstOrFail();
     $max_filas = $sala->maximo_filas;
     $max_asientos = $sala->maximo_asientos;
 
-
     $salas = [];
-    for ($filas = 1; $filas <= $max_filas; $filas++) {
+    for ($fila = 1; $fila <= $max_filas; $fila++) {
         $filas_sala = [];
-        for ($asientos = 1; $asientos <= $max_asientos; $asientos++) {
+        for ($asiento = 1; $asiento <= $max_asientos; $asiento++) {
+
             $filas_sala[] = [
-                'id' => $filas,
-                'asiento' => $asientos,
-                'estado_asiento' => true,
+                'id' => $fila,
+                'asiento' => $asiento,
+
                 'movie_id' => $movie->id,
+                'max_asientos' => $max_asientos, 
             ];
         }
         $salas[] = [
@@ -45,11 +47,18 @@ public function generarSala($movieID)
             'filas' => $filas_sala,
         ];
     }
+
     return view('sala.show', [
         'salas' => $salas,
         'movie' => $movie,
     ]);
 }
+
+
+
+
+
+
 
 
 

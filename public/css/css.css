@@ -210,9 +210,13 @@ body{
     padding-top: 20px;
 }
 .promo-card {
-    padding: 20px; 
+    padding: 50px; 
+    width: 300px;
 }
 
+.promimg{
+    width: 300px;
+}
 
 
 /*ESTILOS LOGIN*/
@@ -424,3 +428,26 @@ button[type="submit"] {
     margin: 4px 2px;
     cursor: pointer;
 }
+.container {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .container img {
+    width: 200px;
+    height: 400px;
+    margin-right: 2rem;
+  }
+
+  .container h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .botonSala {
+    margin-top: 2rem;
+    text-decoration: none;
+  }
+
+  .enlaceS{color: white;}

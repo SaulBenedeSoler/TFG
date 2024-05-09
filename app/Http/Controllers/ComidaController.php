@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 class ComidaController extends Controller
 {
     public function index(){
-        $ComidaList = Comida::all();
-        return view('comida.show', ['ComidaList' => $ComidaList]); 
+        $comidaList = Comida::all();
+        return view('comida.show', ['comidaList' => $comidaList]); 
     }
+    
 
     public function show($id){
         $comida = Comida::findOrFail($id);
@@ -81,6 +82,8 @@ class ComidaController extends Controller
         $comida->delete();
         return redirect()->route('admin.index');
     }
+
+
 
 
 }

@@ -1,20 +1,16 @@
 @extends('master')
 
 @section('content')
-    <div class="cent">
-        <div class="centrado">
-            <table class="tablaPelis">
-                @foreach($movies as $movie)
-                    <td>
-                        <a href="{{ route('movies.info', ['id' => $movie->id]) }}">
-                            <img src="{{ asset('imagenes/'. $movie->imagen) }}" class="imagenes">
-                        </a>
-                    </td>
-                    @if($loop->iteration % 4 == 0)
-                        </tr><tr>
-                    @endif
-                @endforeach
-            </table>
+<div class="centrado">
+<div class="container-fluid">
+    <div class="row">
+      @foreach($movies as $movie)
+        <div class="col-md-3 mb-4">
+          <a href="{{ route('movies.info', ['id' => $movie->id]) }}">
+            <img src="{{ asset('imagenes/'. $movie->imagen) }}" class="img-fluid rounded-3">
+          </a>
         </div>
+      @endforeach
     </div>
+  </div>
 @endsection

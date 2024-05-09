@@ -19,6 +19,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 1',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '1'
         ]);
 
@@ -26,6 +27,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 2',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '2'
         ]);
 
@@ -33,6 +35,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 3',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '3'
         ]);
 
@@ -40,6 +43,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 4',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '4'
         ]);
 
@@ -47,6 +51,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 5',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '5'
         ]);
 
@@ -54,6 +59,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 6',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '6'
         ]);
 
@@ -61,6 +67,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 7',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '7'
         ]);
 
@@ -68,6 +75,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 8',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '8'
         ]);
 
@@ -75,6 +83,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 9',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '9'
         ]);
 
@@ -82,6 +91,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 10',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '10'
         ]);
 
@@ -89,6 +99,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 11',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '11'
         ]);
 
@@ -96,6 +107,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 12',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '12'
         ]);
 
@@ -103,6 +115,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 13',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '13'
         ]);
 
@@ -110,6 +123,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 14',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '14'
         ]);
 
@@ -117,6 +131,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 15',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '15'
         ]);
 
@@ -124,6 +139,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 16',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '16'
         ]);
 
@@ -131,6 +147,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 17',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '17'
         ]);
 
@@ -138,6 +155,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 18',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '18'
         ]);
 
@@ -145,6 +163,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 19',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '19'
         ]);
 
@@ -152,6 +171,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 5',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '5'
         ]);
 
@@ -159,6 +179,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 21',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '21'
         ]);
 
@@ -166,6 +187,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 22',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '22'
         ]);
 
@@ -173,6 +195,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 23',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '23'
         ]);
 
@@ -180,6 +203,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 24',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '24'
         ]);
 
@@ -187,6 +211,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 25',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '25'
         ]);
 
@@ -194,6 +219,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 26',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '26'
         ]);
 
@@ -201,6 +227,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 27',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '27'
         ]);
 
@@ -208,6 +235,7 @@ class SalaSeeder extends Seeder
             'nombre' => 'Sala 28',
             'maximo_asientos' => 5,
             'maximo_filas' => 4,
+            'precio' => '5.50',
             'movie_id' => '28'
         ]);
 

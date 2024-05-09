@@ -20,6 +20,7 @@ class ticketController extends Controller
     
         return view('entradas.show', compact('ticket', 'movie', 'sala', 'fila'));
     }
+
     public function store($movieID, $fila, $asiento)
     {
         $maxAsientos = 1;
@@ -28,13 +29,20 @@ class ticketController extends Controller
         $ticket = new Ticket([
             'movie_id' => $movieID,
             'fila_id' => $fila,
-            'asiento' => $asiento,
             'sala_id' => $salaId,
         ]);
 
         $ticket->save();
     
-        return view('entradas.show', compact('fila', 'asiento'));
-    }
+        return view('comida.show',  ['id' => $ticket->id]);
     }
 
+    public function create(Request $request, Ticket $ticket){
+    $menu = Comida::findOrFail($request->menu_id);
+
+    $ticket->menu()->associate($menu);
+    $ticket->save();
+
+    return view('entradas.create', compact('ticket'));
+    }
+}

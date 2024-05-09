@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('maximo_asientos')->default(20);
             $table->integer('maximo_filas')->default(4);
             $table->integer('movie_id');
+            $table->float('precio');
             $table->timestamps();
         });
     }

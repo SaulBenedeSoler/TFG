@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ComidaController;
 use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\HomeController;
@@ -8,6 +9,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromocionesController;
 use App\Http\Controllers\SalaController;
 use App\Http\Controllers\ticketController;
+use App\Models\Bebidas;
+use App\Models\Food_Solo;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -62,7 +65,10 @@ Route::get('/show/{id}', [MovieController::class, 'show'])->name('show');
 /*RUTAS COMIDAS*/
 Route::get('/menus', [ComidaController::class, 'index'])->name('comida.index');
 
-Route::get('/menus/{id}', 'ComidaController@show')->name('comida.show');
+Route::get('/menus/{id}', [ComidaController::class, 'show'])->name('comida.show');
+
+
+Route::get('/bevidas/{id}', [Bebidas::class, 'show'])->name('comida.show');
 
 /*RUTA ENTRADAS*/
 Route::get('/entradas', [EntradaController::class, 'index'])->name('entrada.index');
@@ -75,7 +81,8 @@ Route::get('/salas/create', [SalaController::class, 'create'])->name('salas.crea
 Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('generarSala');
 
 
-
+Route::post('/menu/select', [ComidaController::class, 'seleccionarMenu'])->name('comida.select');
 
 Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
-Route::post('entradas/store/{movieID}/{fila}/{asiento}', [TicketController::class, 'store'])->name('entradas.store');
+Route::post('/entradas/store/{movieID}/{fila}/{asiento}', [ticketController::class, 'store'])->name('entradas.store');
+

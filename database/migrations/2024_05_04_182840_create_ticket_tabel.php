@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->integer('movie_id');
             $table->integer('sala_id');
+            $table->integer('menu_id')->nullable();
             $table->timestamps();
         });
     }
