@@ -23,11 +23,11 @@
                 <td><form action="{{ route('promociones.destroy', ['id' => $promo->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="bg-warning">Eliminar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
                 </form>
                 </td>
                 <td>
-                    <a href="{{ route('promociones.edit', ['id' => $promo->id]) }}" class="btn btn-warning">Modificar Promocion</a>
+                    <a href="{{ route('promociones.edit', ['id' => $promo->id]) }}" class="btn btn-danger">Modificar Promocion</a>
                 </td>
 
             </tr>

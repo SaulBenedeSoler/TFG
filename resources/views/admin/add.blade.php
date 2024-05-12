@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<div class="centrado">
         <h1>Añadir Usuario</h1>
 
         <form method="POST" action="{{ route('admin.store') }}">
@@ -23,7 +23,7 @@
                 <input type="password" name="password" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir usuario</button>
+            <button type="submit" class="btn btn-danger">Añadir usuario</button>
         </form>
     </div>
 @endsection

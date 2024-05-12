@@ -75,90 +75,62 @@ body{
 .cerrar {
     background-color: transparent;
     color: white;
+    background-color: black;
 }
 
-/*CSS para la vista Mostrar de Movies*/
-.centrado {
-    margin-left: 180px;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    display: flex;
-    flex-direction: column; 
+.user-dropdown{
+    background-color: black;
+    color: white;
 }
 
-.tablaPelis {
-    width: auto;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
 
-.tablaPelis tr {
-
-    display: flex;
-    justify-content: center;
-}
-
-.tablaPelis td {
-    width: 25%;
-    padding: 15px;
-    margin-left: 50px;
-    box-sizing: border-box;
-    text-align: center; 
-}
-
-.imagenes {
-    width: 200px;
-    height: auto;
-}
 
 /*INDEX*/
 /*Titulo del carrousel*/
-.carrouselimg{
-    width: 900px;
-    height: auto;
-}
+.carousel {
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 
-.imagen{
-    width: 1500px;
+  
+
+.ftoc{
+    margin: auto;
+    display: block;
+    width: 1300px;
+    height: 1000px;
 }
 
 .carru{
+    justify-content: center;
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-
-.carrouselimg{
-    height: 2800px;
-    width: 1500px;
-}
-
-/*CARDS DEL INDEX*/
-.cardindex{
-    width: 200px;
-    height: 400px;
-}
-.cardindex .FotoComida{
-    width: 200px;
-    height: 300px;
-}
-.h2index{
+/*CSS CARDS INDEX*/
+.card-c {
+    display: flex;
     justify-content: center;
-}
+    padding-left: 50px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+  }
 
-.cardindex .fotomen{
-    width: 100px;
-    height: 100px;
-}
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
-.bienvenida{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 100pxblack;
-}
 
+  .card-img-top {
+    height: 350px; 
+    object-fit: cover;
+  }
 
 /* Semanas show */
 .enla{
@@ -167,56 +139,141 @@ body{
     text-decoration: none;
 }
 
+
+/*Comentarios*/
+.containerp{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
 /*CSS DE LA TABLA PELICULAS Y VISTA mostrar.blade.php de MOVIES*/
-.row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+
+.listaMostrar{
+    list-style: none;
+    padding-top: 50px;
+    
 }
 
-.divPriMostrar{
+.listaMostrar img{
+    padding-bottom: 15px;
+    width: 100px;
+    height: 170px;
+    margin-right: 10px;
+}
+
+
+/*Modal*/
+
+    .modal-content{
+        width: 700px;
+    }
+
+    .modalul{
+        padding-top: 15px;
+    list-style: none;
+    }
+  
+    .modal-header{
+        background-color: red;
+        color: white;
+    }
+
+  .info {
+    margin-left: 20px;
+  }
+  
+  .imgMostrar{
+    width: 20px;
+    height: 20px;
+  }
+  .lado {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+#Modal{
+    padding-top: 15px;
+}
+
+.botonModal{
+    border: none;
+    color: white;
+}
+
+
+/*CSS PARA VISTA TICKETS*/
+.card-header{
+    background-color: red;
+    color: white;
+}
+
+.card-body{
+    border: 2px black solid;
+}
+
+.card{
+    border: none;
+}
+
+
+
+/* CSS para la vista de comida */
+
+
+.card-container {
+    width: 500px;
+    justify-content: center;
+
+}
+
+.card-w {
+    width: 350px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.menus{
     width: 150px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.imagenMostrar{
-    width: 200px;
-    height: auto;
-}
-
-/*CSS PARA LA VISTA DE COMIDA*/
-
-.comida-card{
-
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 40px;
-}
-
-.comida-card img{
-    width: 200px;
     height: 200px;
+
 }
-
-
-
 
 /*Estilos PROMOS*/
-.content-container {
-    padding-top: 20px;
+
+.row{
+    width: 1200px;
+    padding: -250px;
 }
-.promo-card {
-    padding: 50px; 
-    width: 300px;
+
+.container{
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: max-content;
+}
+
+.content-container {
+    padding-top: 20px; 
+}
+
+.desc{
+    font-size: smaller;
 }
 
 .promimg{
-    width: 300px;
+    width: 30px;
+    height: 30px;
 }
+
+.tituloP{
+    padding: 15px;
+}
+
 
 
 /*ESTILOS LOGIN*/
@@ -244,7 +301,6 @@ body{
     text-decoration: none;
     color: white;
 }
-
 
 
 .Login{
@@ -393,16 +449,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-textarea,
-input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
+
 
 button[type="submit"] {
     padding: 10px 20px;
@@ -412,8 +459,6 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 16px;
 }
-
-
 
 
 .boton {
@@ -451,3 +496,17 @@ button[type="submit"] {
   }
 
   .enlaceS{color: white;}
+
+
+ .rox{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ }
+
+
+ .containerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }

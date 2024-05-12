@@ -16,9 +16,10 @@ return new class extends Migration
     {
         Schema::create('ticket', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->integer('movie_id');
             $table->integer('sala_id');
-            $table->integer('menu_id')->nullable();
+            $table->integer('asiento')->nullable();
             $table->timestamps();
         });
     }

@@ -23,13 +23,13 @@
                 <td>{{ $movi->fecha_lanzamiento }}</td>
                 <td>{{ $movi->duracion }}</td>
                 <td>
-                    <button class="bg-warning"><a href="{{route('form.edit', $movi->id)}}" class="text-decoration-none text-dark">Modificar</a></button>
+                    <button class="btn btn-danger text-light"><a href="{{route('form.edit', $movi->id)}}" class="text-decoration-none text-light">Modificar</a></button>
                 </td>
                 <td>
                     <form action="{{route('movies.destroy', $movi->id)}}" method="POST">
                         @csrf
                         @method("DELETE")
-                        <input type="submit" value="Borrar" class="bg-warning">
+                        <input type="submit" value="Borrar" class="btn btn-danger">
                     </form>
                 </td>
             </tr>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ComidaController;
 use App\Http\Controllers\EntradaController;
@@ -49,10 +50,44 @@ require __DIR__.'/auth.php';
 
 /*RUTA AL INDEX DEL ADMINISTRADOR*/
 Route::get('admin_index', [HomeController::class, 'index'])->name('admin.index');
+/*RUTA A LA VISTA DE CREACIÓN DE PELÍCULAS DEL ADMINISTRADOR*/
 Route::get('movies/create', [MovieController::class, 'create'])->name('movies.create');
+/*RUTAS USUARIOS ADMIN*/
+Route::post('/usuarios/store', [HomeController::class, 'store'])->name('admin.store');
+Route::get('/admin', [HomeController::class, 'index'])->name('admin.index');
+Route::get('/usuarios', [HomeController::class, 'showUsuarios'])->name('usuarios.mostrar');
+Route::get('/usuarios/{id}/usuario', [HomeController::class, 'infoPeli'])->name('movies.info');
+Route::put('usuarios/{id}', [HomeController::class, 'update'])->name('admin.update');
+Route::get('admin/editar/{id}', [HomeController::class, 'adedit'])->name('admin.editar');
+Route::put('admin/actualizar/{id}', [HomeController::class, 'adupdate'])->name('admin.actualizar');
+Route::delete('admin/borrar/{id}', [HomeController::class, 'adborrar'])->name('admin.borrar');
+Route::post('admin/store', [HomeController::class, 'store'])->name('admin.store');
+Route::get('admin/add', [HomeController::class, 'create'])->name('admin.add');
+/*RUTAS MOVIE ADMIN*/
+Route::delete('/eliminarPelícula/{id}', [MovieController::class, 'eliminarPelicula'])->name('eliminar.pelicula');
+Route::get('/movies/{id}/edit', [MovieController::class, 'edit'])->name('form.edit');
+Route::put('movies/update/{id}', [MovieController::class, 'update'])->name('movies.update');
+Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
+Route::delete('usuarios/{movie}', [MovieController::class, 'destroy'])->name('admin.destroy');
+Route::get('admin/movies', [MovieController::class, 'showAdmin'])->name('admin.movies.show');
 Route::post('movies', [MovieController::class, 'store'])->name('movies.store');
-Route::get('/eliminar-pelicula/{id}', [MovieController::class, 'eliminarPelicula'])->name('eliminar.pelicula');
+Route::get('/movies/create', [MovieController::class, 'create'])->name('movies.create');
+Route::get('movies/{id}', [MovieController::class, 'show'])->name('movies.info');
 
+/*RUTAS COMIDA ADMIN*/
+Route::get('comida/adminshow', [ComidaController::class, 'adminComshow'])->name('comida.adminComshow');
+Route::get('comida/add', [ComidaController::class, 'create'])->name('comida.add');
+Route::post('comida/store', [ComidaController::class, 'store'])->name('comida.store');
+Route::get('comida/editar/{id}', [ComidaController::class, 'edit'])->name('comida.edit');
+Route::delete('comida/{id}', [ComidaController::class, 'destroy'])->name('comida.destroy');
+Route::put('movies/{id}', [ComidaController::class, 'update'])->name('comida.update');
+/*RUTAS PROMOCION ADMIN*/ 
+Route::get('promocion/adminshow', [PromocionesController::class, 'showProm'])->name('promociones.adminshow');
+Route::get('promocion/add', [PromocionesController::class, 'create'])->name('promociones.add');
+Route::post('promocion/store', [PromocionesController::class, 'store'])->name('promociones.store');
+Route::get('promocion/editar/{id}', [PromocionesController::class, 'edit'])->name('promociones.edit');
+Route::delete('promocion/{id}', [PromocionesController::class, 'destroy'])->name('promociones.destroy');
+Route::put('promocion/{id}', [PromocionesController::class, 'update'])->name('promociones.update');
 
 
 /*RUTAS MOVIE*/
@@ -68,7 +103,6 @@ Route::get('/menus', [ComidaController::class, 'index'])->name('comida.index');
 Route::get('/menus/{id}', [ComidaController::class, 'show'])->name('comida.show');
 
 
-Route::get('/bevidas/{id}', [Bebidas::class, 'show'])->name('comida.show');
 
 /*RUTA ENTRADAS*/
 Route::get('/entradas', [EntradaController::class, 'index'])->name('entrada.index');
@@ -77,12 +111,14 @@ Route::get('/entradas', [EntradaController::class, 'index'])->name('entrada.inde
 Route::get('/promociones', [PromocionesController::class, 'index'])->name('promociones.show');
 
 
-Route::get('/salas/create', [SalaController::class, 'create'])->name('salas.create');
-Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('generarSala');
 
+Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('generarSala');
+Route::get('/sala/{id}', [SalaController::class, 'showSala'])->name('sala.show');
 
 Route::post('/menu/select', [ComidaController::class, 'seleccionarMenu'])->name('comida.select');
 
+Route::post('entradas/store/{movieID}/{fila}/{asiento}', [TicketController::class, 'store'])->name('entradas.store');
 Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
-Route::post('/entradas/store/{movieID}/{fila}/{asiento}', [ticketController::class, 'store'])->name('entradas.store');
 
+Route::get('/{id}', [CarritoController::class, 'show'])->name('carrito.show');
+Route::post('/', [CarritoController::class, 'agregarAlCarrito'])->name('carrito.agregar');

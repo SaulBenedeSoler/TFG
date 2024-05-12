@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg bg-danger sticky-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand">
-                <img src="{{ url('imagenes/Logos/LogoFinal.png') }}" class="Logo" style="max-height: 50px;" alt="Logo">
+                <img src="{{ url('imagenes/Logos/LogoFinal.png') }}" class="logo" alt="Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS" aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,17 +12,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                       <a href="{{ route('show', ['id' => 1]) }}"  class="nav-link text-white" >Ver detalles</a>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ver Semanas</a>
+                        <div class="dropdown-menu" aria-labelledby="week-dropdown">
+                            <a href="{{ route('Movies.mostrar', ['numeroSemana' => 1]) }}" class="dropdown-item">Semana 1</a>
+                            <a href="{{ route('Movies.mostrar', ['numeroSemana' => 2]) }}" class="dropdown-item">Semana 2</a>
+                            <a href="{{ route('Movies.mostrar', ['numeroSemana' => 3]) }}" class="dropdown-item">Semana 3</a>
+                            <a href="{{ route('Movies.mostrar', ['numeroSemana' => 4]) }}" class="dropdown-item">Semana 4</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a  href="{{ route('promociones.show') }}" class="nav-link text-white">Promociones</a>
+                        <a href="{{ route('promociones.show') }}" class="nav-link text-white">Promociones</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="{{ route('comida.index') }}" class="nav-link text-white">Packs de comida</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Contactanos</a>
+                        <a href="{{ route('comida.index') }}" class="nav-link text-white">Packs de comida</a>
                     </li>
                 </ul>
             </div>
@@ -31,8 +34,8 @@
                 @if(Auth::check())
                     <div class="dropdown">
                         <button class="usuario">{{ auth()->user()->name }}</button>
-                        <div class="dropdown-content |cerrarSesion">
-                            <a href="{{ route('profile.edit') }}" class="cerrarSesion">Ajustes</a>
+                        <div class="dropdown-content user-dropdown">
+                            <a href="{{ route('profile.edit') }}" class="dropdown-item">Ajustes</a>
                             <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Cerrar sesión
                             </a>

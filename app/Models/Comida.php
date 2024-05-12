@@ -15,14 +15,11 @@ class Comida extends Model
         return $this->hasMany(Ticket::class);
     }
 
-    public function bebidas()
+    public function carritos()
     {
-        return $this->hasMany(Bebidas::class);
+        return $this->hasMany(Carrito::class);
     }
 
-    public function food_solo()
-    {
-        return $this->hasMany(food_solo::class);
-    }
+
 
 }

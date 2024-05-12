@@ -22,7 +22,7 @@
                 <td><form action="{{ route('admin.borrar', ['id' => $usuario->id]) }}" method="POST" class="nav-link text-dark">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-warning">Borrar</button>
+                    <button type="submit" class="btn btn-danger">Borrar</button>
                 </form>
                 </td>
             </tr>

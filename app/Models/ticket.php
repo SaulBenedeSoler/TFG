@@ -10,13 +10,8 @@ class ticket extends Model
     use HasFactory;
 
     protected $table = 'ticket';
-    protected $fillable = [
-        'movie_id',
-        'row',
-        'seat',
-        'sala_id',
-        'estado_ticket',
-    ];
+    protected $fillable = ['movie_id', 'sala_id', 'asiento', 'user_id'];
+
 
     public function movie()
     {
@@ -32,5 +27,11 @@ class ticket extends Model
     {
         return $this->belongsTo(Comida::class);
     }
+
+    public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
 
 }

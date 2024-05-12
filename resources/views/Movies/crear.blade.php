@@ -1,48 +1,58 @@
 @extends('master')
-
 @section('content')
-    <div class="container">
+<div class="centrado">
         <h1>Añadir Película</h1>
-
         <form method="POST" action="{{ route('movies.store') }}">
             @csrf
+
             <div class="mb-3">
-                <label for="title" class="form-label">Título</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <label class="form-label">Título</label>
+                <input type="text" name="title" class="form-control" required>
             </div>
+
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>
-                <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                <textarea name="descripcion" class="form-control" required></textarea>
             </div>
+
             <div class="mb-3">
-                <label for="genero" class="form-label">Género</label>
-                <input type="text" class="form-control" id="genero" name="genero">
+                <label class="form-label">Género</label>
+                <input type="text" name="genero" class="form-control" required>
             </div>
+
             <div class="mb-3">
-                <label for="fecha_lanzamiento" class="form-label">Fecha de Lanzamiento</label>
-                <input type="text" class="form-control" id="fecha_lanzamiento" name="fecha_lanzamiento">
+                <label class="form-label">Fecha de Lanzamiento</label>
+                <input type="string" name="fecha_lanzamiento" class="form-control" required>
             </div>
+
             <div class="mb-3">
-                <label for="duracion" class="form-label">Duración</label>
-                <input type="text" class="form-control" id="duracion" name="duracion">
+                <label class="form-label">Duración</label>
+                <input type="string" name="duracion" class="form-control" required>
             </div>
+
             <div class="mb-3">
-                <label for="imagen" class="form-label">URL de la Imagen</label>
-                <input type="text" class="form-control" id="imagen" name="imagen">
+                <label class="form-label">URL de la Imagen</label>
+                <input type="text" name="imagen" class="form-control" required>
             </div>
+
             <div class="mb-3">
-                <label for="director_id" class="form-label">ID del Director</label>
-                <input type="text" class="form-control" id="director_id" name="director_id">
+                <label class="form-label">ID del Director</label>
+                <input type="number" name="director_id" class="form-control" required>
             </div>
+
             <div class="mb-3">
-                <label for="actor_id" class="form-label">ID del Actor</label>
-                <input type="text" class="form-control" id="actor_id" name="actor_id">
+                <label class="form-label">ID del Actor</label>
+                <input type="number" name="actor_id" class="form-control" required>
             </div>
+
             <div class="mb-3">
-                <label for="semana_id" class="form-label">ID de la Semana</label>
-                <input type="text" class="form-control" id="semana_id" name="semana_id">
+                <label class="form-label">ID de la Semana</label>
+                <input type="number" name="semana_id" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary">Añadir Película</button>
+
+
+            <button type="submit" class="btn btn-danger">Añadir Película</button>
         </form>
     </div>
+
 @endsection

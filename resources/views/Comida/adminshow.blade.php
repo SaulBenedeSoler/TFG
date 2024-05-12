@@ -24,11 +24,11 @@
                     <form action="{{ route('comida.destroy', ['id' => $comi->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button class="bg-warning" type="submit">Borrar</button>
+                    <button class="btn btn-danger text-light" type="submit">Borrar</button>
                 </form>
                 </td>
                 <td>
-                    <button class="bg-warning"><a href="{{ route('comida.edit', ['id' => $comi->id]) }}" class="btn btn-warning">Modificar</a></button>
+                    <button class="btn btn-danger text-light"><a href="{{ route('comida.edit', ['id' => $comi->id]) }}" class="text-decoration-none text-light">Modificar</a></button>
                 </td>
 
             </tr>

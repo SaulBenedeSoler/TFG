@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<div class="centrado">
         <h1>Añadir Comida</h1>
 
         <form method="POST" action="{{ route('comida.store') }}">
@@ -23,7 +23,7 @@
                 <input type="text" name="precio" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Comida</button>
+            <button type="submit" class="btn btn-danger">Añadir Comida</button>
         </form>
     </div>
 @endsection

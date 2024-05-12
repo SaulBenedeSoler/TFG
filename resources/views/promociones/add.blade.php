@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<div class="centrado">
         <h1>Añadir Promoción</h1>
 
         <form method="POST" action="{{ route('promociones.store') }}">
@@ -23,7 +23,7 @@
                 <input type="text" name="precio" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Promoción</button>
+            <button type="submit" class="btn btn-danger">Añadir Promoción</button>
         </form>
     </div>
 @endsection

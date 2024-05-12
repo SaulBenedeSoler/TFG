@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Promociones extends Model
 {
     use HasFactory;
-    /*SE DESARROLLARAN EN EL 2ºSPRINT CUANDO SE IMPLEMENTEN SUS FUNCIONES CON LAS DEMAS TABLAS*/
+    
+    public function carritos()
+    {
+        return $this->hasMany(Carrito::class);
+    }
 }

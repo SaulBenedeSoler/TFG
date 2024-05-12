@@ -24,6 +24,7 @@ return new class extends Migration
             $table->bigInteger('director_id');
             $table->bigInteger('actor_id');
             $table->bigInteger('semana_id');
+            $table->string('trailer');
             $table->timestamps();
         });
     }
