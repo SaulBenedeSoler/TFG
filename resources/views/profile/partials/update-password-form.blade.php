@@ -1,38 +1,38 @@
-<section class="bg-dark text-white flex flex-col justify-center items-center">
-    <header class="text-center">
+<section class="container CambiarContrasena">
+
+    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6 text-center">
+
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Update Password') }}
+            {{ __('Cambiar Contraseña') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
+            {{ __('Asegurate de poner una contraseña segura y dificil de adivinar para evitar posibles accesos indeseados en tu cuenta.') }}
         </p>
-    </header>
 
-    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6 text-center"> <!-- Agrega la clase text-center aquí -->
         @csrf
         @method('put')
 
         <div>
-            <x-input-label for="current_password" :value="__('Current Password')" />
+            <x-input-label for="current_password" :value="__('Contraseña Actual')" />
             <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
             <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-label for="password" :value="__('New Password')" />
+            <x-input-label for="password" :value="__('Nueva Contraseña')" />
             <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" />
             <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+            <x-input-label for="password_confirmation" :value="__('Confirmar Contraseña')" />
             <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
             <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button class="bg-warning">{{ __('Save') }}</x-primary-button>
+            <x-primary-button class="bg-danger">{{ __('Guardar') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')
                 <p

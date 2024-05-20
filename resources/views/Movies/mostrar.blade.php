@@ -26,7 +26,9 @@
             </div>
             <div class="modal-body">
               <ul class="modalul">
-                <iframe src="{{ asset('imagenes/' . $movie->trailer)  }}" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+                <video width="640" height="360" controls muted>
+                  <source src="{{ asset('imagenes/' . $movie->trailer) }}" type="video/mp4">
+              </video>
                 <div class="container">
 
                   <div style="width: 70%;">
@@ -47,5 +49,14 @@
     </li>
     @endforeach
   </ul>
+
+  <script>
+    window.onload = function() {
+      var videos = document.getElementsByTagName('video');
+      for (var i = 0; i < videos.length; i++) {
+        videos[i].muted = true;
+      }
+    }
+  </script>
 
 @endsection

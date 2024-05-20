@@ -1,7 +1,8 @@
 @extends('master')
 
 @section('content')
-<div class="centrado">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form UsuarioForm">
         <h1>Añadir Usuario</h1>
 
         <form method="POST" action="{{ route('admin.store') }}">

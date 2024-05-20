@@ -1,7 +1,8 @@
 @extends('master')
 
 @section('content')
-<div class="centrado">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form AnadirMenu">
         <h1>Añadir Comida</h1>
 
         <form method="POST" action="{{ route('comida.store') }}">
@@ -23,7 +24,7 @@
                 <input type="text" name="precio" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-danger">Añadir Comida</button>
+            <button type="submit" class="btn btn-warning">Añadir Comida</button>
         </form>
     </div>
 @endsection

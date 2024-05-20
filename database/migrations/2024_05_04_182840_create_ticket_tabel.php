@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('movie_id');
-            $table->integer('sala_id');
             $table->integer('asiento')->nullable();
+            $table->integer('fila')->nullable();
             $table->timestamps();
         });
     }

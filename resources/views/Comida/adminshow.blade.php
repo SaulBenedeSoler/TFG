@@ -20,15 +20,17 @@
                 <td>{{$comi->imagen}}</td>
                 <td>{{$comi->descripcion}}</td>
                 <td>{{$comi->Precio}}</td>
+
+                <td>
+                    <button class="btn btn-danger text-light"><a href="{{ route('comida.edit', ['id' => $comi->id]) }}" class="text-decoration-none text-light">Modificar</a></button>
+                </td>
+
                 <td>
                     <form action="{{ route('comida.destroy', ['id' => $comi->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger text-light" type="submit">Borrar</button>
                 </form>
-                </td>
-                <td>
-                    <button class="btn btn-danger text-light"><a href="{{ route('comida.edit', ['id' => $comi->id]) }}" class="text-decoration-none text-light">Modificar</a></button>
                 </td>
 
             </tr>

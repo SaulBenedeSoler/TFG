@@ -1,7 +1,8 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form ModificarMenu">
         <h1>Modificar Menu</h1>
         <form method="POST" action="{{ route('comida.update', $comida->id) }}" class="user-form">
             @csrf

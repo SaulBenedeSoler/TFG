@@ -2,7 +2,6 @@
 
 @section('content')
 
-  <h2 class="section-title">Peliculas más destacadas de cada semana</h2>
   <div id="carouselExample" class="carousel slide mb-5">
     <div class="carousel-inner">
       <div class="carousel-item active ce">
@@ -32,16 +31,18 @@
   <section class="card-c">
     <div class="card" style="height: 100%;">
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <img src="/imagenes/Promociones.png" class="card-img-top img-fluid" alt="Promociones">
         <h5 class="card-title">Promociones</h5>
+        <img src="imagenes/promociones/prom.png" class="imagenPromIn">
+        <p>Para acceder al apartado de promociones simplemente debes pulsar sobre el botón.</p>
         <a href="{{ route('promociones.show') }}" class="btn btn-warning">Ver promociones</a>
       </div>
     </div>
   
     <div class="card" style="height: 100%;">
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <img src="/imagenes/Menus/menu.png" class="card-img-top img-fluid" alt="Menús">
         <h5 class="card-title">Menús</h5>
+        <img src="imagenes/Menus/SoloPalomitas.png" class="imgMenuIn">
+        <p>Para acceder al apartado de packs de comida simplemente debes pulsar sobre el botón.</p>
         <a href="{{ route('comida.index') }}" class="btn btn-warning">Ver menús</a>
       </div>
     </div>

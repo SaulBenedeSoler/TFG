@@ -53,14 +53,17 @@ Route::get('admin_index', [HomeController::class, 'index'])->name('admin.index')
 /*RUTA A LA VISTA DE CREACIÓN DE PELÍCULAS DEL ADMINISTRADOR*/
 Route::get('movies/create', [MovieController::class, 'create'])->name('movies.create');
 /*RUTAS USUARIOS ADMIN*/
-Route::post('/usuarios/store', [HomeController::class, 'store'])->name('admin.store');
+
+/*RUTA A LA VISTA INDEX DEL ADMINISTRADOR*/
 Route::get('/admin', [HomeController::class, 'index'])->name('admin.index');
+/*RUTAS A LAS FUNCIONES AÑADIR, MOSTRAR,MODIFICAR Y ELIMINAR USUARIOS DEL ADMINSITRADOR*/ 
+Route::post('/usuarios/store', [HomeController::class, 'store'])->name('admin.store');
 Route::get('/usuarios', [HomeController::class, 'showUsuarios'])->name('usuarios.mostrar');
-Route::get('/usuarios/{id}/usuario', [HomeController::class, 'infoPeli'])->name('movies.info');
 Route::put('usuarios/{id}', [HomeController::class, 'update'])->name('admin.update');
 Route::get('admin/editar/{id}', [HomeController::class, 'adedit'])->name('admin.editar');
 Route::put('admin/actualizar/{id}', [HomeController::class, 'adupdate'])->name('admin.actualizar');
 Route::delete('admin/borrar/{id}', [HomeController::class, 'adborrar'])->name('admin.borrar');
+Route::get('/usuarios/{id}/usuario', [HomeController::class, 'infoPeli'])->name('movies.info');;
 Route::post('admin/store', [HomeController::class, 'store'])->name('admin.store');
 Route::get('admin/add', [HomeController::class, 'create'])->name('admin.add');
 /*RUTAS MOVIE ADMIN*/
@@ -69,7 +72,7 @@ Route::get('/movies/{id}/edit', [MovieController::class, 'edit'])->name('form.ed
 Route::put('movies/update/{id}', [MovieController::class, 'update'])->name('movies.update');
 Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
 Route::delete('usuarios/{movie}', [MovieController::class, 'destroy'])->name('admin.destroy');
-Route::get('admin/movies', [MovieController::class, 'showAdmin'])->name('admin.movies.show');
+Route::get('admin/movies', [MovieController::class, 'showAdmin'])->name('admin.moviesShow');
 Route::post('movies', [MovieController::class, 'store'])->name('movies.store');
 Route::get('/movies/create', [MovieController::class, 'create'])->name('movies.create');
 Route::get('movies/{id}', [MovieController::class, 'show'])->name('movies.info');

@@ -1,6 +1,7 @@
 <header>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+   <link rel="shortcut icon" type="image/png" href="{{ url('public/imagenes/Logos/icon.png') }}">
     <nav class="navbar navbar-expand-lg bg-danger sticky-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand">
@@ -34,7 +35,7 @@
                 @if(Auth::check())
                     <div class="dropdown">
                         <button class="usuario">{{ auth()->user()->name }}</button>
-                        <div class="dropdown-content user-dropdown">
+                        <div class="dropdown-content user-dropdown bg-danger">
                             <a href="{{ route('profile.edit') }}" class="dropdown-item">Ajustes</a>
                             <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Cerrar sesión

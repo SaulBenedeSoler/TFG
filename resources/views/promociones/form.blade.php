@@ -1,7 +1,8 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form ModificarProm">
         <h1>Modificar Promociones</h1>
         <form method="POST" action="{{ route('promociones.update', $promociones->id) }}" class="user-form">
             @csrf

@@ -132,6 +132,30 @@ body{
     object-fit: cover;
   }
 
+  .imagenPromIn{
+    width: 300px;
+  }
+
+
+
+    .imgMenuIn{
+    width: 218px;
+    }
+
+.pHeader{
+    background-color: white;
+    border: 2px solid black;
+}
+
+.cardPI{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+
 /* Semanas show */
 .enla{
     background-color: sandybrown;
@@ -225,24 +249,13 @@ body{
 /* CSS para la vista de comida */
 
 
-.card-container {
-    width: 500px;
-    justify-content: center;
-
-}
-
-.card-w {
-    width: 350px;
-    margin-bottom: 20px;
-    padding: 10px;
+.comidaImg{
+    height: 10%;
+    object-fit: over;
 }
 
 
-.menus{
-    width: 150px;
-    height: 200px;
 
-}
 
 /*Estilos PROMOS*/
 
@@ -510,3 +523,154 @@ button[type="submit"] {
     justify-content: center;
     align-items: center;
  }
+
+
+ /*Resetear contraseña*/
+
+ .centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    }
+
+ .resetear{
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+ }
+
+ .botonRes{
+    padding-top: 25px;
+    width: 100px;
+    margin-left: 33px;
+ }
+
+.infoRes{
+    padding-top: 25px;
+}
+
+.INFORES{
+    padding-top: 25px;
+}
+
+
+/*CSS GENÉRICO PARA EL APARTADO DE MODIFICAR DEL ADMINISTRADOR*/
+
+.ModificarForm{
+    width: 700px;
+    height: 700px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+}
+
+/*CSS PARA EL FORMILARIO DE AÑADIR PELÍCULA*/
+.AñadirForm{
+    width: 1200px;
+    height: 1050px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+}
+
+/*CSS PARA EL FORMULARIO DE AÑADIR USUARIOS*/
+.UsuarioForm{
+    width: 400px;
+    height: 500px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+}
+
+/*CSS PARA EL FORMULARIO DE MODFIFICAR PROMOCIONES*/
+.ModificarProm{
+    width: 500px;
+    height: 500px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+/*CSS PARA EL FORMULARIO AÑADIR PROMOCIONES*/
+.AnadirProm{
+    width: 500px;
+    height: 600px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+/*CSS PARA EL FORMULARIO MODIFCAR MENUS*/
+.ModificarMenu{
+    width: 500px;
+    height: 500px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+/*CSS PARA EL FORMULARIO AÑADIR MENUS*/
+.AnadirMenu{
+    width: 500px;
+    height: 550px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+
+/*CSS PARA EL APARTADO AJUSTES DE USUARIOS*/
+
+.ActualizarPerfil{
+background-color: black;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: row;
+width: 500px;
+height: 400px;
+}
+
+
+/*CSS PARA EL APARTADO CAMBIAR CONTRASEÑA*/
+.CambiarContrasena{
+    background-color: black;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: row;
+width: 500px;
+height: 400px;
+}
+
+
+
+
+
+
+
+
+

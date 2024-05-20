@@ -15,6 +15,7 @@
                     <p>Usuario: </p>
                     <p><b>{{$userName}}</b></p>
 
+
                     <p>Película</p>
                     <p><b>{{$movieName}}</b></p>
 
@@ -24,8 +25,6 @@
                     <p>Asiento:</p>
                     <p><b>{{$asiento}}</b></p>
 
-                    <p>Sala: </p>
-                    <p><b>{{$salaName}}</b></p>
 
                     <p>Precio:</p>
                     <p>{{$precio}}</p>

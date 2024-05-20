@@ -33,7 +33,7 @@ public function generarSala(int $movieID)
         $asientos = [];
         for ($asiento = 1; $asiento <= $maxAsientos; $asiento++) {
             $asientos[] = [
-                'id' => $fila,
+                'fila' => $fila,
                 'asiento' => $asiento,
                 'movie_id' => $movie->id,
                 'max_asientos' => $maxAsientos,

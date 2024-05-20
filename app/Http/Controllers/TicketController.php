@@ -25,24 +25,22 @@ class ticketController extends Controller
 
     public function store($movieID, $fila, $asiento)
     {
-        $userId = Auth::id();
-        $maxAsientos = 1;
-        $salaId = $fila;
 
-        $ticket = new Ticket([
-            'movie_id' => $movieID,
-            'fila_id' => $fila,
-            'asiento' => $asiento,
-            'sala_id' => $salaId,
-            'user_id' => $userId,
-        ]);
+        $userId = Auth::id();
+
+
+        $ticket = new Ticket();
+        $ticket->movie_id = $movieID;
+        $ticket->fila = $fila;
+        $ticket->asiento = $asiento;
+        $ticket->user_id = $userId;
 
         $userName = Auth::user()->name;
         $movieName = Movie::findOrFail($movieID)->title;
-        $salaName = Sala::findOrFail($salaId)->nombre;
         $precio = Sala::findOrFail($movieID)->precio;
+
         $ticket->save();
 
-        return view('entradas.show', compact('fila', 'asiento','userName', 'movieName', 'salaName', 'precio'));
+        return view('entradas.show', compact('fila', 'asiento','userName', 'movieName', 'precio'));
     }
 }

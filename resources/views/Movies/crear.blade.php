@@ -1,6 +1,8 @@
 @extends('master')
+
 @section('content')
-<div class="centrado">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form AñadirForm">
         <h1>Añadir Película</h1>
         <form method="POST" action="{{ route('movies.store') }}">
             @csrf
@@ -36,6 +38,11 @@
             </div>
 
             <div class="mb-3">
+                <label class="form-label">URL del Trailer</label>
+                <input type="text" name="trailer" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
                 <label class="form-label">ID del Director</label>
                 <input type="number" name="director_id" class="form-control" required>
             </div>
@@ -51,7 +58,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-danger">Añadir Película</button>
+            <button type="submit" class="btn btn-warning">Añadir Película</button>
         </form>
     </div>
 

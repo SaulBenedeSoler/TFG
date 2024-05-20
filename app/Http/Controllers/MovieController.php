@@ -27,7 +27,7 @@ class MovieController extends Controller
     /*FUNCION PARA EL USUARIO LA CUAL SE ENCARGA DE MOSTRAR TODOS LOS DATOS DE LA PELICULA OBTENIENDOLAS POR ID*/
     public function infoPeli($id){
         $movie = Movie::findOrFail($id);
-        return view('Movies.info', ['movie' => $movie]);
+        return view('Movies.mostrar', ['movie' => $movie]);
 
     }
 
@@ -60,6 +60,7 @@ class MovieController extends Controller
             'genero' => 'required',
             'duracion' => 'required', 
             'imagen' => 'required',
+            'trailer' => 'required',
             'director_id' => 'required',
             'actor_id' => 'required',
             'semana_id' => 'required'
@@ -75,11 +76,12 @@ class MovieController extends Controller
         $movie->actor_id = $validatedData['actor_id'];
         $movie->imagen = $validatedData['imagen'];
         $movie->semana_id = $validatedData['semana_id']; 
+        $movie->trailer = $validatedData['trailer'];
         $movie->fecha_lanzamiento = now(); 
 
         $movie->save();
         
-        return redirect()->route('movies.info', ['id' => $movie->id]);
+        return redirect()->route('admin.index', ['id' => $movie->id]);
     }
     
     /*FUNCION PARA EL ADMINISTRADOR LA CUAL SIRVE PARA EDITAR LAS PELICULAS Y REDIRIGE AL FORMULARIO, ADEMAS DE BUSCAR LAS PELICULAS POR ID*/
@@ -99,15 +101,21 @@ class MovieController extends Controller
         $movie->duracion = $request->duracion;
         $movie->fecha_lanzamiento = $request->fecha_lanzamiento;
         $movie->save();
-        return redirect()->route('admin.index');
+        return redirect()->route('Movies.showAdmin');
     }
     
 
     /*FUNCION LA CUAL SIRVE PARA ELIMINAR MOVIES Y SE ENCARGA DE BUSCAR MEDIANTE EL ID EL MENU QUE QUEREMOS ELIMINAR*/
     public function destroy($id){
         $movie = Movie::find($id);
-        $movie->delete();
-        return redirect()->route('admin.index');
-    }
+    
+        if ($movie) {
+            $movie->delete();
+            return redirect()->route('admin.moviesShow');
+        } else {
 
+            return redirect()->back()->withErrors(['error' => 'La película no se encontró']);
+        }
+
+}
 }

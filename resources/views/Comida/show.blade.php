@@ -5,15 +5,14 @@
 
 
 <div class="container">
-
-    <div class="row" style="padding: -250px">
+    <div class="row">
         @foreach($comidaList as $comida)
         <div class="col-md-4">
-            <div class="card- promo-card">
-                <h2 class="tituloP">{{$comida->titulo}}</h2>
-                <a href="{{ route('comida.show', ['id' => $comida->id]) }}" class="enlaceFC">
-                    <img src="{{ url('imagenes/Menus') . '/' . $comida->imagen }}" class="menus" style="width: 50px height: 50px">
-                </a>
+            <div class="card mb-4 h-100">
+                <h1>{{ $comida->titulo }}</h1>
+
+                    <img src="{{ url('imagenes/Menus') . '/' . $comida->imagen }}" class="comidaImg img-Fluid">
+
                 <div class="mt-5">
                     <p>Descripcion: {{ $comida->descripcion }}</p>
                     <p>Precio: {{ $comida->Precio }}</p>

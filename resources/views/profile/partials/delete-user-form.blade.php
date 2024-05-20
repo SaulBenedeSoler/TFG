@@ -28,7 +28,7 @@
                 {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
             </p>
 
-            <div class="mt-6 text-center"> <!-- Añade la clase text-center aquí -->
+            <div class="mt-6 text-center">
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
                 <x-text-input

@@ -20,15 +20,17 @@
                 <td>{{$promo->imagen}}</td>
                 <td>{{$promo->descripcion}}</td>
                 <td>{{$promo->Precio}}</td>
+                <td>
+                    <a href="{{ route('promociones.edit', ['id' => $promo->id]) }}" class="btn btn-danger">Modificar Promocion</a>
+                </td>
+                
                 <td><form action="{{ route('promociones.destroy', ['id' => $promo->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Eliminar</button>
                 </form>
                 </td>
-                <td>
-                    <a href="{{ route('promociones.edit', ['id' => $promo->id]) }}" class="btn btn-danger">Modificar Promocion</a>
-                </td>
+
 
             </tr>
             @endforeach

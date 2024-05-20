@@ -1,7 +1,8 @@
 @extends('master')
 
 @section('content')
-<div class="centrado">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form AnadirProm">
         <h1>Añadir Promoción</h1>
 
         <form method="POST" action="{{ route('promociones.store') }}">
@@ -23,7 +24,7 @@
                 <input type="text" name="precio" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-danger">Añadir Promoción</button>
+            <button type="submit" class="btn btn-warning">Añadir Promoción</button>
         </form>
     </div>
 @endsection
