@@ -4,36 +4,55 @@
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Entrada</h2>
-                </div>
-                <div class="card-body">
+    <div class="ticket">
 
-                    <p>Usuario: </p>
+        <div class="ticketPrincipal">
+
+            <div class="ticketHeader">
+                <p><b>{{$movieName}}</b></p>
+            </div>
+
+            <div class="ticketUsuario">
+                <div class="infoN">Usuario</div>
+
+                <div class="infoNombre">
                     <p><b>{{$userName}}</b></p>
-
-
-                    <p>Película</p>
-                    <p><b>{{$movieName}}</b></p>
-
-                    <p>Fila</p>
-                    <p><b>{{$fila}}</b></p>
-
-                    <p>Asiento:</p>
-                    <p><b>{{$asiento}}</b></p>
-
-
-                    <p>Precio:</p>
-                    <p>{{$precio}}</p>
-
                 </div>
             </div>
-        </div>
-    </div>
+            
+            <div class="infoAsiento">
+                <div class="infoA">Asiento</div>
 
-</div>
+                <div class="infoasiento">
+                    <p><b>{{$asiento}}</b></p>
+                </div>
+            </div>
+
+            <div class="infoFila">
+                <div class="infoF">        
+                    <p>Fila</p>
+                </div>
+                <div class="infofila">
+                    <p><b>{{$fila}}</b></p>
+                </div>
+            </div>
+
+
+            <div class="infoPrecio">
+
+                <div class="infoP">        
+                    <p>Precio:</p>
+                </div>
+
+                <div class="infoprecio">
+                    <p><b>{{$precio}}</b></p>
+                </div>
+
+            </div>
+
+
 
 @endsection
+
+
+

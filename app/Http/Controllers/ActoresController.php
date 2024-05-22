@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class ActoresController extends Controller
 {
-    /*FUNCION LA CUAL SIRVE PARA MOSTRAR LOS ACTORES*/
+    /*Funcion que sirve para obtener los datos de los actores mediante
+    la llamada a la tabla Actor de la base de datos y lo almacena todo en la variable actor*/
     public function index()
     {
         $actor = Actor::all();

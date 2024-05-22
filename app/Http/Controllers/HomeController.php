@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-    /*FUNCION LA CUAL SE ENCARGA DE DIRIGIR AL INDEX DE USUARIO O AL INDEX DE ADMINSITRADOR REALIZANDO LA COMPROBACION MEDIANTE EL IF AUTH CHECK
-    Y COMPROBANDO SI EL USERTYPE ES USUARIO O ADMINISTRADOR*/
+    /*Se encarga mediante la comprobacion de los ifs de comprobar que tipo de usuario es el que esta iniciando sesión
+    y de esta manera puede redirigir al usuario a un index u otro*/
     public function index(){
         if (Auth::check()) {
             if (auth()->user()->usertype === 'admin') {
@@ -23,8 +23,8 @@ class HomeController extends Controller
 
     /*FUNCIONES DE ADMINISTRADOR*/
 
-    /*FUNCION ENCARGADA DE COMPROBAR SI ES ADMINISTRADOR Y EN CASO DE SERLO SELECCIONAR TODOS LOS USUARIOS DE LA BASE DE DATOS
-    Y REDIRIGIR A LA VISTA DE SHOWUSUARIOS*/
+    /*Se encarga de comprobar que el usuario es administrador gracias al if y en caso de serlo se encarga de mostrar
+    todos los usuarios almacenados en la base de datos*/
     public function showUsuarios(){
         if(auth()->user()->usertype === 'admin'){
 
@@ -33,13 +33,12 @@ class HomeController extends Controller
         }
     }
 
-    /*FUNCION QUE SE USA PARA CREAR USUARIOS NUEVOS Y QUE REDIRIGE A LA VISTA ADD DE AMDINISTRADOR*/
+    /*Se encarga de permitir crear nuevos usuarios*/
     public function create(){
         return view('admin.add');
     }
 
-    /*FUNCION ENCARGADA DE ACTUALIZAR LOS FORMULARIOS Y QUE PIDE COMO REQUERIDO LOS DATOS DE LA TABLA DE USUARIOS, ADEMAS DE CREAR UN OBJETO USUARIO NUEVO
-    Y COMPROBAR Y VALIDAR LSO DATOS*/
+    /*Se necarga de actualizar los datos de los usuarios validarlos*/
     public function store(Request $request){
         $validatedData = $request->validate([
             'name' => 'required',
@@ -66,14 +65,13 @@ class HomeController extends Controller
         return redirect()->route('usuarios.mostrar', ['id' => $usuario->id]);
     }
 
-    /*FUNCION UTILIZADA POR EL ADMINISTRADOR EN LA CUAL SELECCIONAN LOS USUARIOS DE LA BASE DE DATOS MEDIANTE EL ID Y DEVUELVEN LA VISTA DE INFORMACION
-    JUNTO CON LOS DATOS DE LOS USUARIOS*/
+    /*Se encarga de permitir editar los usuarios que se encuentran en la base de datos*/
     public function adedit($id){
         $usuario = User::find($id);
         return view('admin.info', ['user' => $usuario]);
     }
     
-    /*FUNCION ENCARGADA DE ACTUALIZAR LOS USUARIOS MEDIANTE LA BUSQUEDA DE ESTOS POR ID Y DEVUELVE LA VISTA INDEX DEL ADMINSITRADOR*/
+    /*Relaiza la busqueda de todos los usuarios por id y permite atualizarlos*/
     public function adupdate($id, Request $request){
         $usuario = User::find($id);
         $usuario->name = $request->name;
@@ -84,7 +82,7 @@ class HomeController extends Controller
         return redirect()->route('admin.index');
     }
 
-    /*FUNCION USADA PARA BORRAR LOS USUARIOS BUSCADOS MEDIANTE EL ID*/
+    /*Se encarga de buscar los usurios por id y de eliminarlos*/
     public function adborrar($id){
         $usuario = User::find($id);
         $usuario->delete();

@@ -1,12 +1,11 @@
 @extends('master')
+
 @section('content')
 
     <div class="intro">
 
         <div class="titPel">
-
             <h1>{{$movie->title}}</h1>
-        
         </div>
 
     <div class="Instrucciones">
@@ -37,5 +36,9 @@
             </tr>
         </table>
     @endforeach
+
+        <div class="pantallaCines">
+            <img src="{{ asset("imagenes/PnatallaCines.png") }}" class="pantalla">
+        </div>
 
 @endsection

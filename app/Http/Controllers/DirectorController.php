@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class DirectorController extends Controller
 {
-    /*FUNCION LA CUAL SE ENCARHA DE COGER TODOS LOS DATOS ALMACENADOS EN LA BASE QUE ESTEN RELACIONADOS CON DIRECTOR*/
+    /*Se encarga de buscar todos los datos de la tabla Director de la base de datos y almacenarlo en la variable
+    director para poder mostrarlo*/
     public function index(){
         $director = Director::all();
         return view('director', ['director' => $director]);

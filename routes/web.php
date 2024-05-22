@@ -106,22 +106,18 @@ Route::get('/menus', [ComidaController::class, 'index'])->name('comida.index');
 Route::get('/menus/{id}', [ComidaController::class, 'show'])->name('comida.show');
 
 
-
-/*RUTA ENTRADAS*/
-Route::get('/entradas', [EntradaController::class, 'index'])->name('entrada.index');
-
 /*RUTA PROMOCIONES*/
 Route::get('/promociones', [PromocionesController::class, 'index'])->name('promociones.show');
 
 
-
-Route::get('/sala/{movieID}', [SalaController::class, 'generarSala'])->name('generarSala');
+Route::get('/generarSala/{movieID}/{horario?}', [SalaController::class, 'generarSala'])->name('generarSala');
 Route::get('/sala/{id}', [SalaController::class, 'showSala'])->name('sala.show');
 
 Route::post('/menu/select', [ComidaController::class, 'seleccionarMenu'])->name('comida.select');
 
 Route::post('entradas/store/{movieID}/{fila}/{asiento}', [TicketController::class, 'store'])->name('entradas.store');
 Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
+
 
 Route::get('/{id}', [CarritoController::class, 'show'])->name('carrito.show');
 Route::post('/', [CarritoController::class, 'agregarAlCarrito'])->name('carrito.agregar');

@@ -16,9 +16,8 @@
 
       <!--VENTANA MODAL CON LA INFO Y BOTÓN PARA IR A LA SALA--->
 
-
       <div class="modal fade" id="infoModal-{{ $movie->id }}" tabindex="-1" aria-labelledby="infoModalLabel-{{ $movie->id }}" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="infoModalLabel-{{ $movie->id }}">{{$movie->title}}</h5>
@@ -26,29 +25,36 @@
             </div>
             <div class="modal-body">
               <ul class="modalul">
-                <video width="640" height="360" controls muted>
+                <video width="100%" height="auto" controls muted> 
                   <source src="{{ asset('imagenes/' . $movie->trailer) }}" type="video/mp4">
-              </video>
+                </video>
                 <div class="container">
-
                   <div style="width: 70%;">
-                      <p><b>Género:</b> {{ $movie->genero }}</p>
-                      <p><b>Fecha de Lanzamiento:</b> {{ $movie->fecha_lanzamiento }}</p>
-                      <p><b>Actor: </b> {{$movie->actor->nombre}} {{$movie->actor->apellido}}</p>
-                      <p><b>Director: </b> {{$movie->director->nombre}} {{$movie->director->apellido}}</p>
-                      <p><b>Duración:</b> {{ $movie->duracion }}</p>
-                      <p><b>Descripción:</b> {{ $movie->descripcion }}</p>
-                      <button type="submit" class="botonSala bg-warning"><a href="{{ route('generarSala', ['movieID' => $movie->id]) }}" class=" enlaceS text-decoration-none">Ver Sala</a></button>
+                    <p><b>Género:</b> {{ $movie->genero }}</p>
+                    <p><b>Fecha de Lanzamiento:</b> {{ $movie->fecha_lanzamiento }}</p>
+                    <p><b>Actor: </b> {{$movie->actor->nombre}} {{$movie->actor->apellido}}</p>
+                    <p><b>Director: </b> {{$movie->director->nombre}} {{$movie->director->apellido}}</p>
+                    <p><b>Duración:</b> {{ $movie->duracion }}</p>
+                    <p><b>Descripción:</b> {{ $movie->descripcion }}</p>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-warning dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                        Selecciona Horario
+                      </button>
+                      <ul class="dropdown-menu bg-warning">
+                        <li class="bg-warning"><a class="dropdown-item text-white bg-warning" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '10:30']) }}" class="btn btn-warning">10:30</a></li>
+                        <li><a class="dropdown-item text-white bg-warning" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '12:30']) }}" class="btn btn-warning">12:30</a></li>
+                        <li><a class="dropdown-item text-white bg-warning" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '17:30']) }}" class="btn btn-warning">17:30</a></li>
+                      </ul>
+                    </div>
                   </div>
-              </div>
+                </div>
               </ul>
             </div>
           </div>
+          @endforeach
         </div>
       </div>
-    </li>
-    @endforeach
-  </ul>
+      
 
   <script>
     window.onload = function() {

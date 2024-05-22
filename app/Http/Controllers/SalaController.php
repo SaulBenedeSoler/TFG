@@ -10,17 +10,21 @@ use App\Models\ticket;
 class SalaController extends Controller
 {
 
-// FUNCION USADA PARA VISUALIZAR LAS SALAS
+/*Se encarga de buscar el id de la pelicula y la sala que esta tiene asignada y mostrarla al usuario*/
 public function showSala($movieID)
 {
     $movie = Movie::findOrFail($movieID);
     $sala = Sala::where('movie_id', $movieID)->firstOrFail();
-    return view('sala.show', compact('sala', 'movie'));
+    $maxFilas = $sala->maximo_filas;
+
+    return view('sala.show', compact('sala', 'movie', 'maxFilas'));
 }
 
 
-// FUNCION ENCARGADA DE GENERAR SALAS DE MANERA QUE CREA UN OBJETO MOVIES Y UN ARRAY SALAS, MEDIANTE EL FOREACH DEFINE LOS ASIENTOS
-// Y FILAS MAXIMAS Y EL ESTADO DEL ASIENTO MEDIANTE UN ARRAYFILL Y BUSCA LA PELICULA MEDIANTE EL ID PARA PODE ASOCIARLA A ESA PELICULA
+/*Se encarga de genera la sala meidiante la busqueda del id de la película y que coincida con el id que tiene en la tabla de salas.
+Mediante el maxFila y maxAsientos recibe los datos de la sala.
+Crea un array llamado sala
+Mediante los bulces for se encarga de crear los asientos y las filas que contendran la sala*/
 public function generarSala(int $movieID)
 {
     $movie = Movie::findOrFail($movieID);

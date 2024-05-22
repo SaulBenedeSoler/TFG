@@ -138,9 +138,17 @@ body{
 
 
 
-    .imgMenuIn{
+.imgMenuIn{
     width: 218px;
-    }
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    columns: 2;
+}
 
 .pHeader{
     background-color: white;
@@ -155,6 +163,15 @@ body{
 
 }
 
+
+/*Apartado comentarios*/
+.testimonial-section {
+    padding-top: 50px; 
+}
+
+.section-title {
+    text-align: left;
+}
 
 /* Semanas show */
 .enla{
@@ -231,18 +248,38 @@ body{
 
 
 /*CSS PARA VISTA TICKETS*/
-.card-header{
-    background-color: red;
-    color: white;
-}
 
-.card-body{
-    border: 2px black solid;
-}
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ticket {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f3f1c9;
+    border-radius: 10px;
+    border: 2px solid #222;
+    cursor: default;
+    margin-top: 4em;
+  }
+  
 
-.card{
-    border: none;
-}
+  .ticketPrincipal {
+    display: grid;
+    padding: 10px;
+    width: 500px;
+  }
+
+  .ticketHeader {
+    grid-column: span 2;
+    color: tomato;
+
+  }
+
+ 
+ 
+
 
 
 
@@ -415,6 +452,17 @@ footer div.copyright a{
     padding-bottom: 15px;
 }
 
+
+.pantallaCines{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.pantalla{
+    width: 500px;
+}
 
 /*CSS PARA EL APARTADO SHOWADMIN.PHP*/
 .table {
@@ -668,6 +716,42 @@ height: 400px;
 
 
 
+
+
+
+/*RESPONSIVE*/
+
+
+/*RESPONSIVE IPAD AIR*/
+
+/*Responsive para el index*/
+@media (min-width: 768px) {
+
+    /*INDEX USUARIO*/
+    .card-c {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    /*HEADER USUARIO*/
+    .navbar-right {
+        align-items: center;
+    }
+    .navbar-right .btn {
+        width: auto;
+    }
+    .navbar-right .dropdown-toggle {
+        width: auto;
+    }
+
+
+
+}
+
+    
 
 
 
