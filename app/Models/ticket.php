@@ -13,25 +13,17 @@ class ticket extends Model
     protected $fillable = ['movie_id', 'sala_id', 'asiento', 'user_id'];
 
 
-    public function movie()
-    {
+    public function movie(){
         return $this->belongsTo(Movie::class);
     }
 
-    public function sala()
-    {
+    public function sala(){
         return $this->belongsTo(Sala::class);
     }
 
-    public function comida()
-    {
-        return $this->belongsTo(Comida::class);
+    public function users(){
+        return $this->belongsToMany(User::class);
     }
-
-    public function user()
-{
-    return $this->belongsTo(User::class);
-}
 
 
 }

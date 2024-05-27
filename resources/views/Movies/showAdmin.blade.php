@@ -3,7 +3,8 @@
 @section('content')
 
 <table class="table">
-    <thead>
+    
+    <thead class="cabeceraGenerica">
         <tr>
             <th>Título</th>
             <th>Descripción</th>
@@ -14,9 +15,10 @@
             <th>Borrar Películas</th>
         </tr>
     </thead>
-    <tbody>
+
+    <tbody class="cuerpobody">
         @foreach ($movie as $movi)
-            <tr>
+            <tr class="infor">
                 <td>{{ $movi->title }}</td>
                 <td>{{ $movi->descripcion }}</td>
                 <td>{{ $movi->genero }}</td>

@@ -5,7 +5,8 @@
        <link type="text/css" rel="stylesheet" href="{{asset('css/estilos.css')}}">
        <link rel="shortcut icon" type="image/png" href="{{url('imagenes/icon.png')}}">
        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-       
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
     <body>
       <!--Indico que si el usuario es administrador le muestre el heeder admin y si no el de usuario-->

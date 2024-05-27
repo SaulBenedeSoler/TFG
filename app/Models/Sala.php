@@ -18,6 +18,7 @@ class Sala extends Model
         'movie_id',
         'estado_asiento',
         'asientos',
+        'horario',
     ];
     
     public function movie(){

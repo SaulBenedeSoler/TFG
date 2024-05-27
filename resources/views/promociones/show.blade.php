@@ -12,7 +12,10 @@
         <img src="{{ asset('imagenes/promociones/' . $promo->imagen) }}" class="promimg" style="height: 100px">
         <p class="desc">Descripcion: {{$promo->descripcion}}</p>
         <p>Precio: {{$promo->Precio}}
-
+            <form action="{{ route('compra.store', ['promocionid' => $promo->id]) }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger">Comprar</button>
+            </form>
     </div>
 
 

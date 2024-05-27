@@ -1,4 +1,3 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -14,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ticket', function (Blueprint $table) {
+        Schema::create('prombuy', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->integer('movie_id');
-            $table->integer('asiento')->nullable();
-            $table->integer('fila')->nullable();
-            $table->string('horario')->nullable();
+            $table->integer('promocion_id');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ticket');
+        Schema::dropIfExists('prombuy');
     }
 };

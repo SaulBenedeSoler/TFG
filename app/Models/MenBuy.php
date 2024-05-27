@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Promociones extends Model
+class MenBuy extends Model
 {
     use HasFactory;
+
+    protected $table = 'menbuy';
     
-    protected $table = 'promociones';
-
-
-    public function user(){
+    public function users(){
         return $this->belongsToMany(User::class);
     }
 
-    public function prombuy(){
-        return $this->hasMany(PromBuy::class);
+    
+    public function comida(){
+        return $this->belongsTo(Comida::class, 'menu_id', 'id');
     }
-
 
 }

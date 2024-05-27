@@ -249,35 +249,53 @@ body{
 
 /*CSS PARA VISTA TICKETS*/
 
-.container {
-    display: flex;
+
+.ticket {
+    margin: auto;
     justify-content: center;
-  }
-  
-  .ticket {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    display: flex;
     background: #f3f1c9;
     border-radius: 10px;
     border: 2px solid #222;
-    cursor: default;
-    margin-top: 4em;
-  }
-  
+    width: 800px;
+    height: 400px;
+    margin-top: 100px;
+    margin-bottom: 259px;
+}
 
-  .ticketPrincipal {
+.ticketPrincipal {
     display: grid;
-    padding: 10px;
     width: 500px;
-  }
+}
 
-  .ticketHeader {
+.ticketHeader {
     grid-column: span 2;
     color: tomato;
 
-  }
+}
 
- 
+.codigo {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    width: 180px;
+    height: 190px;
+    padding-right: 150px;
+    padding-bottom: 150px;
+}
+
+
+.qr{
+    margin-right: 150px;
+    margin-top: 50px;
+    width: 300px;
+}
+
+
  
 
 
@@ -286,13 +304,56 @@ body{
 /* CSS para la vista de comida */
 
 
-.comidaImg{
-    height: 10%;
-    object-fit: over;
+
+/*CSS PARA LAS VISTAS DE COMPRAR Y VER MENUS COMPRADOS*/
+
+.Container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: max-content;
+}
+
+.Row{
+    width: 1200px;
+    padding: -250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 242px;
+}
+
+.menBuy-card{
+    width: 400px;
+    border:1px solid black;
+}
+
+.card-header{
+    width: 400px;
+    border: 1px solid black;
+}
+
+.menBuy-card img{
+    width: 700px;
 }
 
 
+.datosUsu{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
 
+.datosUsu h1{
+    display: inline;
+}
 
 /*Estilos PROMOS*/
 
@@ -379,25 +440,15 @@ body{
 
 /* Estilos footer */
 footer{
-    height: 88px;
-    width: 100%;
-    background-color: #212529;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
 }
-footer div.info{
-    margin-left: 10%;
-}
-footer div.copyright{
-    margin-right: 3%;
-}
-footer div.copyright a{
-    color: #9b9d9e;
-}
+
 .imgfooter{
     width: 200px;
     height: 100px;
@@ -465,30 +516,25 @@ footer div.copyright a{
 }
 
 /*CSS PARA EL APARTADO SHOWADMIN.PHP*/
-.table {
-    width: 100%;
-    border-collapse: collapse;
+
+.table{
+    padding-top: 50px;
+    margin-top: 30px;
+    border: 2px solid black;
 }
 
-.table th, .table td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+.table tr{
+    border: 1px solid black;
 }
 
-.table th {
-    background-color: #f2f2f2;
+.table th{
+    border: 1px solid black;
 }
 
-.table tr:hover {
-    background-color: #f5f5f5;
+.table td{
+    border: 1px solid black;
 }
 
-
-.mod{
-    color: white;
-    text-decoration: none;
-}
 
 
 /*CSS PARA EL APARTADO FORM DE ADMIN*/
@@ -627,6 +673,12 @@ button[type="submit"] {
     background-color: red;
     color: white;
 }
+
+.titulo{
+    margin: 0;
+    padding: 0;
+}
+
 
 /*CSS PARA EL FORMULARIO DE AÑADIR USUARIOS*/
 .UsuarioForm{

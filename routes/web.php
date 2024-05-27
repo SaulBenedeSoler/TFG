@@ -5,8 +5,10 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ComidaController;
 use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenBuyController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PromBuyController;
 use App\Http\Controllers\PromocionesController;
 use App\Http\Controllers\SalaController;
 use App\Http\Controllers\ticketController;
@@ -110,14 +112,22 @@ Route::get('/menus/{id}', [ComidaController::class, 'show'])->name('comida.show'
 Route::get('/promociones', [PromocionesController::class, 'index'])->name('promociones.show');
 
 
-Route::get('/generarSala/{movieID}/{horario?}', [SalaController::class, 'generarSala'])->name('generarSala');
+Route::get('/generarSala/{movieID}/{horario}', [SalaController::class, 'generarSala'])->name('generarSala');
 Route::get('/sala/{id}', [SalaController::class, 'showSala'])->name('sala.show');
 
 Route::post('/menu/select', [ComidaController::class, 'seleccionarMenu'])->name('comida.select');
 
-Route::post('entradas/store/{movieID}/{fila}/{asiento}', [TicketController::class, 'store'])->name('entradas.store');
+/*Compra Y muestra de entradas*/
+Route::post('entradas/store/{movieID}/{fila}/{asiento}/{horario}', [TicketController::class, 'store'])->name('entradas.store');
 Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
+Route::get('entradas/ver', [TicketController::class, 'ver'])->name('entradas.ver');
+
+/*Compra Y muestra de promociones*/
+Route::post('/comprar/{promocionid}', [PromBuyController::class, 'store'])->name('compra.store');
+Route::get('comp/show', [PromBuyController::class, 'show'])->name('prom.show');
+Route::delete('promocion/{id}/delete', [PromBuyController::class, 'delete'])->name('prom.delete');
 
 
-Route::get('/{id}', [CarritoController::class, 'show'])->name('carrito.show');
-Route::post('/', [CarritoController::class, 'agregarAlCarrito'])->name('carrito.agregar');
+/*Compra Y muestra de menus*/
+Route::post('/menu/{menuid}', [MenBuyController::class, 'store'])->name('menu.store');
+Route::get('menu/show', [MenBuyController::class, 'show'])->name('menu.show');

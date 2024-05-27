@@ -20,6 +20,9 @@ class Comida extends Model
         return $this->hasMany(Carrito::class);
     }
 
+    public function menbuy(){
+        return $this->hasMany(MenBuy::class);
+    }
 
 
 }

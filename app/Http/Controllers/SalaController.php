@@ -25,13 +25,16 @@ public function showSala($movieID)
 Mediante el maxFila y maxAsientos recibe los datos de la sala.
 Crea un array llamado sala
 Mediante los bulces for se encarga de crear los asientos y las filas que contendran la sala*/
-public function generarSala(int $movieID)
+public function generarSala(int $movieID, string $horario)
 {
     $movie = Movie::findOrFail($movieID);
-    $sala = Sala::where('movie_id', $movieID)->firstOrFail();
+    $sala = Sala::where('movie_id', $movieID)->where('horario', $horario)->firstOrFail();
     $maxFilas = $sala->maximo_filas;
     $maxAsientos = $sala->maximo_asientos;
 
+    
+    $asientosOcupados = Ticket::where('movie_id', $movieID)->where('horario', $horario)->get();
+    
     $salas = [];
     for ($fila = 1; $fila <= $maxFilas; $fila++) {
         $asientos = [];
@@ -40,7 +43,6 @@ public function generarSala(int $movieID)
                 'fila' => $fila,
                 'asiento' => $asiento,
                 'movie_id' => $movie->id,
-                'max_asientos' => $maxAsientos,
             ];
         }
         $salas[] = [
@@ -53,8 +55,11 @@ public function generarSala(int $movieID)
     return view('sala.show', [
         'salas' => $salas,
         'movie' => $movie,
+        'asientosOcupados' => $asientosOcupados,
+        'horario' => $horario,
     ]);
 }
+
 
 
 

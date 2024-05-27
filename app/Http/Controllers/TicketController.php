@@ -26,7 +26,7 @@ class ticketController extends Controller
         $fila = $sala->fila;
         $asiento = $sala->asiento;
         $userId = Auth::id();
-
+        $horario = $sala->horario; 
         return view('entradas.show', compact('ticket', 'movie', 'sala', 'fila', 'userId'));
     }
 
@@ -40,38 +40,42 @@ class ticketController extends Controller
         1-userName que se encarga de realizar una llamada a los datos del usuario para mostrar su nombre en el ticket
         2-movieName que se encarga de realizar una llamada a los datos de la película para poder mostrar el titulo en el ticket
         3-precio que se encarga de realizar una llamada a los datos de la sala para poder mostrar el precio */
-    public function store($movieID, $fila, $asiento)
-    {
+        public function store($movieID, $fila, $asiento, $horario)
+        {
+            $userId = Auth::id();
+        
+            $ticket = new Ticket();
+            $ticket->movie_id = $movieID;
+            $ticket->fila = $fila;
+            $ticket->asiento = $asiento;
+            $ticket->user_id = $userId;
+            $ticket->horario = $horario;
+            $ticket->save();
+        
+            $sala = Sala::where('movie_id', $movieID)->where('horario', $horario)->firstOrFail();
+            $asientosOcupados = Ticket::where('movie_id', $movieID)->where('horario', $horario)->get();
+            $sala->horario = $horario; 
 
-        $userId = Auth::id();
+            $sala->save();
+         
+            $userName = Auth::user()->name;
+            $movieName = Movie::findOrFail($movieID)->title;
+            $precio = Sala::where('movie_id', $movieID)->firstOrFail()->precio;
+            $qr = Movie::findOrFail($movieID)->qr;
 
+            $QR = asset('imagenes/'. $qr);
 
-        $ticket = new Ticket();
-        $ticket->movie_id = $movieID;
-        $ticket->fila = $fila;
-        $ticket->asiento = $asiento;
-        $ticket->user_id = $userId;
+            return view('entradas.show', compact('ticket', 'fila', 'asiento', 'userName', 'movieName', 'precio', 'horario', 'QR'));
+        }
 
-        $userName = Auth::user()->name;
-        $movieName = Movie::findOrFail($movieID)->title;
-        $precio = Sala::findOrFail($movieID)->precio;
-
-        $ticket->save();
-
-        return view('entradas.show', compact('fila', 'asiento','userName', 'movieName', 'precio'));
-    }
-
-    /*Con esta funcion llamo al usuario para que busque su id, despues le digo a tickets que en la base de datos
-    busque el id del usuario y lo encuentre de manera que devuelve en la vista todos los tickets que tiene el usuario*/
-    public function ticketsTotal(){
-        $userID = Auth::id();
-        $tickets = Ticket::where('user_id', $userID)->get();
-
-        return view('entradas.verTickets', compact('tickets'));
-
-    }
-
-
+        public function ver(){
+            $userId = Auth::id();
+            $userName = Auth::user()->name;
+            $tickets = Ticket::where('user_id', $userId)->get();
+            
+            return view('entradas.ver', compact('userId', 'userName', 'tickets'));
+        }
+        
 
 
 

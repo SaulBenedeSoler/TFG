@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Promociones;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PromocionesController extends Controller
 {
@@ -12,7 +13,6 @@ class PromocionesController extends Controller
         $PromoList = Promociones::all();
         return view('promociones.show', ['PromoList' => $PromoList]);
     }
-
 
     /*FUNCIONES ADMINISTRADOR*/
 

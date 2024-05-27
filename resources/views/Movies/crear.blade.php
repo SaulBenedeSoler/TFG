@@ -3,9 +3,14 @@
 @section('content')
 <div class="container d-flex justify-content-center align-items-center">
     <div class="user-form AñadirForm">
+
+        <div class="titulo">
         <h1>Añadir Película</h1>
+        </div>
         <form method="POST" action="{{ route('movies.store') }}">
             @csrf
+
+            <div class="conteni">
 
             <div class="mb-3">
                 <label class="form-label">Título</label>
@@ -60,6 +65,7 @@
 
             <button type="submit" class="btn btn-warning">Añadir Película</button>
         </form>
+    </div>
     </div>
 
 @endsection

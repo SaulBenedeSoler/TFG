@@ -2,14 +2,13 @@
 
 @section('content')
 
-<div class="container">
 
     <div class="ticket">
 
         <div class="ticketPrincipal">
 
             <div class="ticketHeader">
-                <p><b>{{$movieName}}</b></p>
+                <h1><b>{{$movieName}}</b></h1>
             </div>
 
             <div class="ticketUsuario">
@@ -19,7 +18,7 @@
                     <p><b>{{$userName}}</b></p>
                 </div>
             </div>
-            
+
             <div class="infoAsiento">
                 <div class="infoA">Asiento</div>
 
@@ -29,7 +28,7 @@
             </div>
 
             <div class="infoFila">
-                <div class="infoF">        
+                <div class="infoF">
                     <p>Fila</p>
                 </div>
                 <div class="infofila">
@@ -37,19 +36,38 @@
                 </div>
             </div>
 
-
             <div class="infoPrecio">
 
-                <div class="infoP">        
+                <div class="infoP">
                     <p>Precio:</p>
                 </div>
 
                 <div class="infoprecio">
                     <p><b>{{$precio}}</b></p>
                 </div>
+            </div>
+
+            <div class="inforH">
+
+            <div class="infoH">
+                <p>Horario: </p>
+                </div>
+
+            <div class="horario">
+                <p><b>{{$horario}}</b></p>
+            </div>
 
             </div>
 
+        </div>
+
+            <div class="codigo">
+                <div class="qr">
+                    <img src="{{$QR}}">
+                </div>
+            </div>
+      
+    </div>
 
 
 @endsection
