@@ -24,7 +24,7 @@
                 <input type="text" name="precio" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Comida</button>
+            <button type="submit" class="btn btn-danger">Añadir Comida</button>
         </form>
     </div>
 @endsection

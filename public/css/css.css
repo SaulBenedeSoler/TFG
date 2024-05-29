@@ -110,6 +110,14 @@ body{
     margin-bottom: 50px;
 }
 
+.sic{
+    color: black;
+}
+
+.anc{
+    color: black;
+}
+
 /*CSS CARDS INDEX*/
 .card-c {
     display: flex;
@@ -163,6 +171,16 @@ body{
 
 }
 
+/*CSS PARA APARTADO VER TODAS LAS PROMOCIONES*/
+
+.promBuy-header{
+    width: 300px;
+}
+
+.promBuy-card{
+    border: 2px solid black;
+    width: 200px;
+}
 
 /*Apartado comentarios*/
 .testimonial-section {
@@ -297,12 +315,149 @@ body{
 
 
  
+/*CSS PARA LAS VISTAS DE VISUALIZACIÓN DE TICKETS*/
+
+.ticke {
+    margin: auto;
+    background: #f3f1c9;
+    border-radius: 10px;
+    border: 2px solid #222;
+    width: 800px;
+    margin-top: 100px;
+    margin-bottom: 319px;
+    padding: 20px;
+
+}
+
+.tickePrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.tickeHeader {
+    color: tomato;
+}
+
+.tickeInfo {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+.ticketDetalles {
+    
+    margin-right: 20px; 
+    margin-top: 140px;
+
+}
+
+.code {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
 
 
-
+.Qr {
+    margin-right: 150px;
+    margin-top: 50px;
+    width: 150px;
+    margin-left: 200px;
+}
 
 /* CSS para la vista de comida */
 
+
+.row{
+    width: 1200px;
+    padding: -250px;
+}
+
+.Container{
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: max-content;
+}
+
+.comida-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 20px; 
+}
+
+.desc{
+    margin-top: 10px;
+    font-size: smaller;
+}
+
+.comida-header {
+    width: 300px;
+    border: 1px solid black;
+}
+
+.tituloP{
+ 
+    
+}
+
+
+
+/*CSS COMPRAS SOLO*/
+.Container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 200px;
+    width: max-content;
+    margin-bottom: 500px;
+}
+
+.menOnly-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 303px; 
+}
+
+.menOnly-header{
+    width: 300px;
+    border: 1px solid black;
+}
+
+
+.menOnly-card img{
+    width: 700px;
+}
+
+
+.datosUsu{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.datosUsu h1{
+    display: inline;
+}
+
+.imgSolo{
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+}
 
 
 /*CSS PARA LAS VISTAS DE COMPRAR Y VER MENUS COMPRADOS*/
@@ -314,28 +469,23 @@ body{
     text-align: center;
     margin-bottom: 100px;
     margin-top: 100px;
+    margin-right: 200px;
     width: max-content;
 }
 
-.Row{
-    width: 1200px;
-    padding: -250px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 242px;
+
+
+.menBuy-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 20px; 
 }
 
-.menBuy-card{
-    width: 400px;
-    border:1px solid black;
-}
-
-.card-header{
-    width: 400px;
+.menBuy-header {
+    width: 300px;
     border: 1px solid black;
 }
+
 
 .menBuy-card img{
     width: 700px;
@@ -353,6 +503,12 @@ body{
 
 .datosUsu h1{
     display: inline;
+}
+
+.imgSolo{
+    justify-content: center;
+    width: 150px;
+    height: 200px;
 }
 
 /*Estilos PROMOS*/
@@ -385,7 +541,53 @@ body{
     padding: 15px;
 }
 
+/*PROMO SOLO UNO*/
 
+
+.ROw{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.Coontainer{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 500px;
+    width: max-content;
+}
+
+.promOnly-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 133px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 600px;
+}
+
+.promOnly-header{
+    width: 300px;
+    border: 1px solid black;
+    margin-left: 600px;
+}
+
+
+.promOnly-card img{
+    width: 400px;
+}
+
+.imgSolo{
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+}
 
 /*ESTILOS LOGIN*/
 
@@ -509,6 +711,11 @@ footer{
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-left: 450px;
+    background-color: black;
+    color: white;
+    width: 1000px;
+    height: 100px;
 }
 
 .pantalla{
@@ -521,6 +728,7 @@ footer{
     padding-top: 50px;
     margin-top: 30px;
     border: 2px solid black;
+
 }
 
 .table tr{
@@ -711,6 +919,7 @@ button[type="submit"] {
     background-color: red;
     color: white;
     justify-content: center;
+    margin-bottom: 500px;
 }
 
 /*CSS PARA EL FORMULARIO MODIFCAR MENUS*/
@@ -724,6 +933,11 @@ button[type="submit"] {
     justify-content: center;
 }
 
+/*form*/
+
+.form{
+    margin-bottom: 400px;
+}
 
 /*CSS PARA EL FORMULARIO AÑADIR MENUS*/
 .AnadirMenu{
@@ -767,6 +981,13 @@ height: 400px;
 }
 
 
+/*FOOTER*/
+.footer{
+    align-items: flex-end;
+}
+
+/*CSS ADMIN ACTORES*/
+
 
 
 
@@ -805,8 +1026,42 @@ height: 400px;
 
     
 
+@media (max-width: 767.98px) {
+    .listaMostrar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .list-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
+    .imgMostrar {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
 
+    .info {
+      width: 100%;
+      text-align: center;
+    }
+  }
 
+  /* Estilos para pantalla mediana y grande (768px o más de ancho) */
+  @media (min-width: 768px) {
+    .listaMostrar {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    .list-item {
+      flex: 0 0 50%; 
+    }
+
+    .info {
+      margin-left: 20px;
+    }
+  }

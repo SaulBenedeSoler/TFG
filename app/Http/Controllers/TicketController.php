@@ -64,20 +64,27 @@ class ticketController extends Controller
             $qr = Movie::findOrFail($movieID)->qr;
 
             $QR = asset('imagenes/'. $qr);
-
+     
             return view('entradas.show', compact('ticket', 'fila', 'asiento', 'userName', 'movieName', 'precio', 'horario', 'QR'));
         }
 
+        /*Funcion la cual se encarga de coger el id de usuario y mediante este buscar la pelicula y la sala guardada en ticket asociado al usuario 
+        para mostrar los tickets que tiene el usuario*/ 
         public function ver(){
-            $userId = Auth::id();
-            $userName = Auth::user()->name;
-            $tickets = Ticket::where('user_id', $userId)->get();
-            
-            return view('entradas.ver', compact('userId', 'userName', 'tickets'));
+            $userID = Auth::id();
+            $ticket = Ticket::with(['movie', 'sala'])->where('user_id', $userID)->get();
+
+            return view('entradas.ver', compact('userID', 'ticket'));
+        
         }
         
 
-
+        /*Funcion para eliminar el ticket*/
+        public function delete($id){
+            $ticket = Ticket::find($id);
+            $ticket->delete();
+            return redirect()->route('entradas.ver');
+        }
 
 
 }

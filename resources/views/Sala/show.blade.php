@@ -47,9 +47,9 @@
         </table>
     @endforeach
 
-    <div class="pantallaCines">
-        <img src="{{ asset("imagenes/PnatallaCines.png") }}" class="pantalla">
-    </div>
+        <div class="pantallaCines">
+        <h2>Pantalla</h2>
+        </div>
 </div>
 
 @endsection

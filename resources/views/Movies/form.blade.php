@@ -42,7 +42,7 @@
         
             
 
-            <button type="submit" class="btn btn-warning">Guardar cambios</button>
+            <button type="submit" class="btn btn-danger">Guardar cambios</button>
         </form>
     </div>
 </div>

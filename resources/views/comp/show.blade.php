@@ -12,11 +12,11 @@
         <img src="{{ asset('imagenes/promociones/' . $promo->promociones->imagen) }}" class="promimg" style="height: 100px">
         <p class="desc">Descripcion: {{$promo->promociones->descripcion}}</p>
         <p>Precio: {{$promo->promociones->Precio}}
-            <form action="{{ route('prom.delete', ['id' => $promo->promociones->id]) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit">Eliminar promoción</button>
-            </form>
+        <form action="{{ route('prom.destroy', ['id' => $promo->id]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
     </div>
 
 

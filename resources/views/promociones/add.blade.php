@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-<div class="container d-flex justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center for">
     <div class="user-form AnadirProm">
         <h1>Añadir Promoción</h1>
 

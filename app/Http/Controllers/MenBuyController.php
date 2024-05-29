@@ -23,8 +23,15 @@ class MenBuyController extends Controller
         $userID = Auth::id();
         $userName = Auth::user()->name;
         $menbuy = MenBuy::where('user_id', $userID)->get();
+        $menuName = Comida::findOrFail($menuid)->titulo;
+        $precio = Comida::where('id', $menuid)->firstOrFail()->Precio;
+        $desc =Comida::where('id', $menuid)->firstOrFail()->descripcion;
 
-        return view('menu.show',  compact('userID', 'menbuy', 'userName'));
+        $imagen = Comida::findOrFail($menuid)->imagen;
+
+        $IMAGEN = asset('imagenes/Menus/'. $imagen);
+
+        return view('menu.menus',  compact('userID', 'menbuy', 'userName', 'menuName','precio','IMAGEN','desc'));
 
 
     }
@@ -32,14 +39,17 @@ class MenBuyController extends Controller
     public function show(){
         $userID = Auth::id();
         $userName = Auth::user()->name;
-        $menbuy = MenBuy::where('user_id', $userID)->get();
-        
+        $menbuy = MenBuy::with('comida')->where('user_id', $userID)->get();
+    
         return view('menu.show', compact('userID', 'menbuy', 'userName'));
 
     }
 
-
-
+    public function delete($id){
+        $menbuy = MenBuy::find($id);
+        $menbuy->delete();
+        return redirect()->route('menu.show');
+    }
 
 
 

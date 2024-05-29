@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ActoresController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ComidaController;
+use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenBuyController;
@@ -14,6 +16,7 @@ use App\Http\Controllers\SalaController;
 use App\Http\Controllers\ticketController;
 use App\Models\Bebidas;
 use App\Models\Food_Solo;
+use App\Models\MenBuy;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -93,7 +96,20 @@ Route::post('promocion/store', [PromocionesController::class, 'store'])->name('p
 Route::get('promocion/editar/{id}', [PromocionesController::class, 'edit'])->name('promociones.edit');
 Route::delete('promocion/{id}', [PromocionesController::class, 'destroy'])->name('promociones.destroy');
 Route::put('promocion/{id}', [PromocionesController::class, 'update'])->name('promociones.update');
-
+/*RUTAS ACTOR ADMIN*/
+Route::get('actor/adminshow', [ActoresController::class, 'adminACshow'])->name('actor.adminshow');
+Route::get('actor/add', [ActoresController::class, 'create'])->name('actor.add');
+Route::post('actor/store', [ActoresController::class, 'store'])->name('actor.store');
+Route::get('actor/editar/{id}', [ActoresController::class, 'edit'])->name('actor.edit');
+Route::delete('actor/{id}', [ActoresController::class, 'destroy'])->name('actor.destroy');
+Route::put('actor/{id}', [ActoresController::class, 'update'])->name('actor.update');
+/*RUTAS DIRECTOR ADMIN*/
+Route::get('director/adminshow', [DirectorController::class, 'adminDCshow'])->name('director.adminshow');
+Route::get('director/add', [DirectorController::class, 'create'])->name('director.add');
+Route::post('director/store', [DirectorController::class, 'store'])->name('director.store');
+Route::get('director/editar/{id}', [DirectorController::class, 'edit'])->name('director.edit');
+Route::delete('director/{id}', [DirectorController::class, 'destroy'])->name('director.destroy');
+Route::put('director/{id}', [DirectorController::class, 'update'])->name('director.update');
 
 /*RUTAS MOVIE*/
 Route::get('/show/{id}', [MovieController::class, 'show'])->name('movies');
@@ -120,14 +136,16 @@ Route::post('/menu/select', [ComidaController::class, 'seleccionarMenu'])->name(
 /*Compra Y muestra de entradas*/
 Route::post('entradas/store/{movieID}/{fila}/{asiento}/{horario}', [TicketController::class, 'store'])->name('entradas.store');
 Route::get('entradas/{ticket}', [ticketController::class, 'show'])->name('entradas.show');
-Route::get('entradas/ver', [TicketController::class, 'ver'])->name('entradas.ver');
+Route::get('/entradas', [TicketController::class, 'ver'])->name('entradas.ver');
+Route::delete('entradas/{id}', [ticketController::class, 'delete'])->name('entradas.destroy');
 
 /*Compra Y muestra de promociones*/
 Route::post('/comprar/{promocionid}', [PromBuyController::class, 'store'])->name('compra.store');
 Route::get('comp/show', [PromBuyController::class, 'show'])->name('prom.show');
-Route::delete('promocion/{id}/delete', [PromBuyController::class, 'delete'])->name('prom.delete');
+Route::delete('comp/{id}', [PromBuyController::class, 'delete'])->name('prom.destroy');
 
 
 /*Compra Y muestra de menus*/
 Route::post('/menu/{menuid}', [MenBuyController::class, 'store'])->name('menu.store');
 Route::get('menu/show', [MenBuyController::class, 'show'])->name('menu.show');
+Route::delete('menu/{id}', [MenBuyController::class, 'delete'])->name('menu.destroy');

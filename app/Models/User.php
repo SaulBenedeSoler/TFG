@@ -50,7 +50,7 @@ class User extends Authenticatable
 
 
     public function prombuy(){
-        return $this->belongsTo(PromBuy::class);
+        return $this->belongsTo(PromBuy::class, 'user_id');
     }
 
     public function ticket(){

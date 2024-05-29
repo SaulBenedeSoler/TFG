@@ -44,27 +44,55 @@
                         </li>
                     </ul>
 
+
+         
                     <!--ACCIONES MENUS-->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menus</a>
                             <div class="dropdown-menu" aria-labelledby="week-dropdown">
                                 <a href="{{ route('comida.adminComshow') }}"  class="nav-link text-black">Ver menus</a>
-                                <a href="{{ route('comida.add') }}""  class="nav-link text-black">Añadir menus</a>
+                                <a href="{{ route('comida.add') }}"  class="nav-link text-black">Añadir menus</a>
                             </div>
                         </li>
                     </ul>
 
+                    <!--ACCIONES ACTORES-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actores</a>
+                            <div class="dropdown-menu" aria-labelledby="week-dropdown">
+                                <a href="{{ route('actor.adminshow') }}"  class="nav-link text-black">Ver Actor</a>
+                                <a href="{{ route('actor.add') }}"  class="nav-link text-black">Añadir Actor</a>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!--ACCIONES ACTORES-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Directores</a>
+                                <div class="dropdown-menu" aria-labelledby="week-dropdown">
+                                    <a href="{{ route('director.adminshow') }}"  class="nav-link text-black">Ver Director</a>
+                                    <a href="{{ route('director.add') }}"  class="nav-link text-black">Añadir Director</a>
+                                    </div>
+                        </li>
+                    </ul>
+                                              
                 </ul>
             </div>
 
+
+      
+
+
             <div class="navbar-right">
                 @if(Auth::check())
-                    <div class="dropdown">
+                    <div class="dropdown bg-danger">
                         <button class="usuario">{{ auth()->user()->name }}</button>
                         <div class="dropdown-content user-dropdown">
-                            <a href="{{ route('profile.edit') }}" class="dropdown-item">Ajustes</a>
-                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a href="{{ route('profile.edit') }}" class="dropdown-item bg-danger">Ajustes</a>
+                            <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-danger">
                                 Cerrar sesión
                             </a>
                             

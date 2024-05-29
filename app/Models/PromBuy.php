@@ -11,6 +11,12 @@ class PromBuy extends Model
 
     protected $table = 'prombuy';
 
+    protected $fillable = [
+        'promocion_id',
+        'user_id',
+    ];
+
+
     public function promociones(){
         return $this->belongsTo(Promociones::class, 'promocion_id', 'id');
     }

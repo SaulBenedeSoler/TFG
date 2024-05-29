@@ -39,7 +39,7 @@
                             <div class="dropdown-menu bg-danger" aria-labelledby="week-dropdown">
                                   <a href="{{ route('menu.show')}}" class="dropdown-item text-white bg-danger">Ver Menus</a>
                                   <a href="{{ route('prom.show')}}" class="dropdown-item text-white bg-danger">Ver Promociones</a>
-                                  <a href="{{route('entradas.ver')}}" class="dropdown-item text-white bg-danger">Ver Tickets</a>
+                                  <a href="{{ route('entradas.ver') }}" class="dropdown-item text-white bg-danger">Ver Tickets</a>
                             </div>
                         </li>
                     </ul>
@@ -66,10 +66,10 @@
                         </li>
                     @else
                         <li class="nav-item">
-                            <a href="{{ route('login') }}" class="nav-link text-white">Iniciar Sesión</a>
+                            <a href="{{ route('login') }}" class="nav-link text-white bg-danger">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link text-white">Registrarse</a>
+                            <a href="{{ route('register') }}" class="nav-link text-white bg-danger">Registrarse</a>
                         </li>
                     @endif
                 </ul>

@@ -11,13 +11,19 @@ class MenBuy extends Model
 
     protected $table = 'menbuy';
     
+    protected $fillable = [
+        'menu_id',
+        'user_id',
+    ];
+
+
     public function users(){
         return $this->belongsToMany(User::class);
     }
 
     
     public function comida(){
-        return $this->belongsTo(Comida::class, 'menu_id', 'id');
+        return $this->belongsTo(Comida::class, 'menu_id');
     }
 
 }

@@ -5,25 +5,25 @@
   <div id="carouselExample" class="carousel slide mb-5">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="imagenes/Carrousel/gooniescarrou.jpg" class="d-block w-100">
+        <img src="imagenes/Carrousel/gooniescarrou.jpg" class="d-block w-50 ftoc">
       </div>
       <div class="carousel-item">
-        <img src="imagenes/Carrousel/cars.jpg" class="d-block w-100">
+        <img src="imagenes/Carrousel/cars.jpg" class="d-block w-50 ftoc">
       </div>
       <div class="carousel-item">
-        <img src="imagenes/Carrousel/viven.jpg" class="d-block w-100">
+        <img src="imagenes/Carrousel/viven.jpg" class="d-block w-50 ftoc">
       </div>
       <div class="carousel-item">
-        <img src="imagenes/Carrousel/spider-manCarrou.jpg" class="d-block w-100">
+        <img src="imagenes/Carrousel/spider-manCarrou.jpg" class="d-block w-50 ftoc">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="anc">Anterior</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
+      <span class="sic">Siguiente</span>
     </button>
   </div>
 
@@ -38,6 +38,8 @@
       </div>
     </div>
   
+
+    
     <div class="card" style="width: 18rem;">
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
         <h5 class="card-title">Menús</h5>

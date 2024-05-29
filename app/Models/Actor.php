@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Actor extends Model
 {
     use HasFactory;
+
+    
+    protected $fillable = [
+        'nombre',
+        'apellido',
+        'movie_id',
+    ];
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'actor';
     /*RELACION N:N CON LA TABLA PELICULAS*/

@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Director extends Model
 {
+
+    protected $fillable = [
+        'nombre',
+        'apellido',
+        'movie_id',
+    ];
+
+
     use HasFactory;
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'director';

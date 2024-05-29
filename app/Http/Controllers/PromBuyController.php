@@ -19,12 +19,18 @@ class PromBuyController extends Controller
         $prombuy->promocion_id = $promocionid;
         $prombuy->user_id = $userID;
         $prombuy->save();
-
         $userID = Auth::id();
         $userName = Auth::user()->name;
-        $prombuy = PromBuy::where('user_id', $userID)->get();
+        $menbuy = PromBuy::where('user_id', $userID)->get();
+        $menuName = Promociones::findOrFail($promocionid)->titulo;
+        $precio = Promociones::where('id', $promocionid)->firstOrFail()->Precio;
+        $desc =Promociones::where('id', $promocionid)->firstOrFail()->descripcion;
 
-        return view('comp.show',  compact('userID', 'prombuy', 'userName'));
+        $imagen = Promociones::findOrFail($promocionid)->imagen;
+
+        $IMAGEN = asset('imagenes/promociones/'. $imagen);
+
+        return view('comp.promos',  compact('userID', 'menbuy', 'userName', 'menuName','precio','IMAGEN','desc'));
 
 
     }
@@ -40,13 +46,10 @@ class PromBuyController extends Controller
     }
 
     public function delete($id){
-        $userID = Auth::id();
-        $promBuy = PromBuy::where('user_id', $userID)->findOrFail($id);
-        $promBuy->delete();
-    
-        return view('index');
+        $prombuy = PromBuy::find($id);
+        $prombuy->delete();
+        return redirect()->route('prom.show');
     }
-    
 
 
 }

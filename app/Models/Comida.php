@@ -11,6 +11,14 @@ class Comida extends Model
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'Comida';
 
+    protected $fillable = [
+        'titulo',
+        'imagen',
+        'descripcion',
+        'tipo',
+        'precio',
+    ];
+
     public function tickets(){
         return $this->hasMany(Ticket::class);
     }
@@ -21,7 +29,7 @@ class Comida extends Model
     }
 
     public function menbuy(){
-        return $this->hasMany(MenBuy::class);
+        return $this->hasMany(MenBuy::class, 'menu_id');
     }
 
 
