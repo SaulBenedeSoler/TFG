@@ -1,7 +1,10 @@
 @extends('master')
 
 @section('content')
-
+    <!--Mediante un for each y varios divs creo una estructura
+    Que se encarga de mostrar toods los tickets obtenidos por el usuario
+    Creo un formulario que llama a la función de entradas.destroy para que el usario
+    pueda cancelar la reserva-->
         @foreach ($ticket as $ticke)
             <div class="ticke">
                 <div class="tickePrincipal">

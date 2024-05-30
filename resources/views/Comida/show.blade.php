@@ -3,7 +3,10 @@
 @section('content')
 
 <div class="Container">
-
+    <!--Creo diferentes divc modificads con bootstrap y css
+    Muestro toda la información de los menus gracias al uso del foreach
+    Creo un formulario el cual llama a la función menu.store y busca el id del menu
+    y compra el menu-->
     <div class="row justify-content-center mb-3" style="padding: -250px">
         @foreach($comidaList as $comida)
     <div class="col-md-6 mb-4">

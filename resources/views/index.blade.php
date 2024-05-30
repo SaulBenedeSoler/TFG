@@ -2,6 +2,7 @@
 
 @section('content')
 
+<!--Crep im carrousel el cual muestra diferentes fotos de diferentes películas-->
   <div id="carouselExample" class="carousel slide mb-5">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -27,7 +28,8 @@
     </button>
   </div>
 
-  <!--SECCION DE ENLACES--->
+  <!--SECCION DE ENLACES
+    Creo diferentes cards qu llevan a diferentes apartados--->
   <section class="card-c d-flex flex-column flex-md-row justify-content-around">
     <div class="card mb-3 mb-md-0" style="width: 18rem;">
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
@@ -50,7 +52,8 @@
     </div>
   </section>
 
-  <!--SECCION DE COMENTARIOS-->
+  <!--SECCION DE COMENTARIOS
+  Donde se ven los comentarios de usuarios-->
   <section class="testimonial-section mt-5">
     <h2 class="section-title">¿Qué dicen nuestros clientes?</h2>
 

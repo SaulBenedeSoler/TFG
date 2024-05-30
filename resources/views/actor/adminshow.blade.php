@@ -1,7 +1,10 @@
 @extends('master')
 
 @section('content')
-
+<!--Creo un div par asignar el responsive
+Creo una tabla que contiene los datos necesarios para mostrar de los actores y que es posible
+debido al foreach creado
+Creo un formulario que llama a la funcion destroy y que busca por id del actor para eliminarlo-->
 <div class="table-responsive">
 <table class="table">
     <thead>

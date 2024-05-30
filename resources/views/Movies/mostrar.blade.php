@@ -1,7 +1,11 @@
 @extends('master')
 
 @section('content')
-
+  
+  <!--Creo una serie de desplegable con un foreach para poder llamar a los datos de la tabla movie
+  Asigno un enlace moda al boton el cal busc apor id de la película 
+  Dentro de esta muestro los datos de la película y hay un bitón qu meustra los diferentes horarios
+  de las salas y me llevan a estas-->
   <ul class="listaMostrar">
     @foreach($movies as $movie)
     <li class="list-item d-flex">
@@ -55,7 +59,7 @@
         </div>
       </div>
       
-
+    <!--Crep in script el cual hace que los videos de los trailer esten muteados-->
   <script>
     window.onload = function() {
       var videos = document.getElementsByTagName('video');

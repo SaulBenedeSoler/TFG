@@ -3,7 +3,9 @@
 @section('content')
 
 <div class="container">
-
+<!--Creo una serie de divs adecuados con css y bootstrap a mi gusto
+    Creo una card con un foreach que muestra toda la información de las promociones
+    Hago un formulario que llama a compra-store y busca el id de la promo seleccionada para comprarlo--->
     <div class="row" style="padding: -250px">
     @foreach($PromoList as $promo)
     <div class="col-md-4">

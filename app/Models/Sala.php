@@ -10,7 +10,7 @@ class Sala extends Model
     use HasFactory;
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'sala';
-
+    /*Protego los datos de la tabla*/
     protected $fillable = [
         'nombre',
         'maximo_asientos',
@@ -20,7 +20,7 @@ class Sala extends Model
         'asientos',
         'horario',
     ];
-    
+    /*Creación de la relación con la tabla movie*/
     public function movie(){
     return $this->hasOne(Movie::class);
     }

@@ -1,6 +1,9 @@
 @extends('master')
 
 @section('content')
+<!--Creo una serie de divs con caracteristicas de bootstrap para adecuarlo a mi gusto
+    Dentro de esto creo un formulario con meotod post y que realiza la acción de llamar a la funcion
+    update y buscar el id del director para mostrar sus datos en el formulario y que estos sean cambiados--->
 <div class="container d-flex justify-content-center align-items-center">
     <div class="user-form ModificarDirector">
         <h1>Modificar Director</h1>

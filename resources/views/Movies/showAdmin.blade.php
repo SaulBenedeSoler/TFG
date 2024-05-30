@@ -1,7 +1,11 @@
 @extends('master')
 
 @section('content')
-
+<!--Creo un div par asignar el responsive
+Creo una tabla que contiene los datos necesarios para mostrar de las películas y que es posible
+debido al foreach creado
+Creo un formulario que llama a la funcion destroy y que busca por id de la película para eliminarlo
+Y mediante un botón llamo  a la función movies.edit y busca el id de la película seleccionado y permite modificarlo-->
 <div class="table-responsive">
     <table class="table">
         <thead class="cabeceraGenerica">

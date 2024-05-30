@@ -29,7 +29,7 @@ class ActoresController extends Controller
     }
 
     /*Se encarga mediante un request de
-    validar los datos que se piden para poder crear los nuevos menis
+    validar los datos que se piden para poder crear los nuevos actores
     LLamar mediante la variable actor a la tabla de actor de la base de datos y crear un nuevo espacio en la tabla
     Añade mediante el metodo de validacion todos los datos necesarios y los almacena en la variable actor
     Guarda esos datos*/
@@ -53,7 +53,7 @@ class ActoresController extends Controller
     }
 
     /*Se encarga de buscar mediante el id de la actor almacenada en la tbla actor de la base de datos
-    y permite editar los menus que se encuentren registrados*/
+    y permite editar los actores que se encuentren registrados*/
     public function edit($id){
         $actor = Actor::find($id);
         return view('actor.form', ['actor' => $actor]);
@@ -69,7 +69,7 @@ class ActoresController extends Controller
         return redirect()->route('admin.index');
     }
 
-    /*Se encarga de buscar mediante la variable actor en la tabla de la base de datos Comdida por id
+    /*Se encarga de buscar mediante la variable actor en la tabla de la base de datos Actor por id
     y de eliminarlo*/
     public function destroy($id){
         $actor = actor::find($id);

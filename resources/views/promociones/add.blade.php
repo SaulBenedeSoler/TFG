@@ -1,6 +1,10 @@
 @extends('master')
 
 @section('content')
+<!--Creo una serie de divs los cuales son mdoificados con bootstrap para conseguir los ajustes deseados
+Dentro de estos divs creo un formulario el cual usa el metodo POST
+Realiza la accion sobre la ruta promociones.store el cual sirve para añadir las promociones
+Dentro del formulario pongo los datos a rellenar-->
 <div class="container d-flex justify-content-center align-items-center for">
     <div class="user-form AnadirProm">
         <h1>Añadir Promoción</h1>

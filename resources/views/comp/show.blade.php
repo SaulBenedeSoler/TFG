@@ -3,7 +3,10 @@
 @section('content')
 
 <div class="container">
-
+    <!--Creo diferentes divs con sus caracteristicas para mostrarlos a mi gusto usando css y bootstrap
+        Uso un foreach para mostrar toda la información de todas las promociones adquiridas por el usuario
+        Creo un formulario el cual llama a la función prom.destroy y busca el id de la promoción y usa el metod post
+        y se encarga de eliminar esa promoción adquirida por el usuario--->
     <div class="row" style="padding: -250px">
     @foreach($prombuy as $promo)
     <div class="col-md-4">
@@ -15,7 +18,7 @@
         <form action="{{ route('prom.destroy', ['id' => $promo->id]) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <button type="submit" class="btn btn-danger">Devolver</button>
         </form>
     </div>
 

@@ -10,7 +10,7 @@ class Comida extends Model
     use HasFactory;
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'Comida';
-
+    /*Proteccion de los datos que contiene la tabla comida*/
     protected $fillable = [
         'titulo',
         'imagen',
@@ -18,16 +18,11 @@ class Comida extends Model
         'tipo',
         'precio',
     ];
-
+    /*Creo la relación con la tabla ticket*/ 
     public function tickets(){
         return $this->hasMany(Ticket::class);
     }
-
-    public function carritos()
-    {
-        return $this->hasMany(Carrito::class);
-    }
-
+    /*Creo la relación con la tabla menbuy*/
     public function menbuy(){
         return $this->hasMany(MenBuy::class, 'menu_id');
     }

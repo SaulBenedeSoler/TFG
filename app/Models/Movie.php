@@ -21,12 +21,12 @@ class Movie extends Model
     public function actor(){
         return $this->belongsTo(Actor::class, 'actor_id');
     }
-
+    /*Creación de la relación con la tabla sala*/
     public function sala()
     {
         return $this->belongsTo(Sala::class);
     }
-
+    /*Creación de la relación con la tabla tikcets*/
     public function tickets()
     {
         return $this->hasMany(Ticket::class);

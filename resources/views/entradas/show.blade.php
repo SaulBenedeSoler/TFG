@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    <!--Mediante diferentes divs creo la estructura del ticket que se motrara al adquirir uno-->
     <div class="ticket">
 
         <div class="ticketPrincipal">

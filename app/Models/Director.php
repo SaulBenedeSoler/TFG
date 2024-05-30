@@ -7,15 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Director extends Model
 {
-
+    use HasFactory;
+    /*Protección de los datos de la tabla*/
     protected $fillable = [
         'nombre',
         'apellido',
         'movie_id',
     ];
-
-
-    use HasFactory;
     /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
     protected $table = 'director';
     /*RELACION N:N CON LA TABLA PELICULAS*/

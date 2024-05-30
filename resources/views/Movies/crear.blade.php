@@ -1,6 +1,10 @@
 @extends('master')
 
 @section('content')
+<!--Creo una serie de divs los cuales son mdoificados con bootstrap para conseguir los ajustes deseados
+Dentro de estos divs creo un formulario el cual usa el metodo POST
+Realiza la accion sobre la ruta movies.store el cual sirve para añadir películas
+Dentro del formulario pongo los datos a rellenar-->
 <div class="container d-flex justify-content-center align-items-center">
     <div class="user-form AñadirForm">
 

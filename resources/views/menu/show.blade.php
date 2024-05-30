@@ -3,7 +3,10 @@
 @section('content')
 
 <div class="Container">
-
+    <!--Mediante un for each y varios divs creo una estructura
+    Que se encarga de mostrar toods los menus obtenidos por el usuario
+    Creo un formulario que llama a la función de menu.destroy para que el usario
+    pueda cancelar la reserva-->
     <div class="row justify-content-center mb-3" style="padding: -250px">
         @foreach($menbuy as $menBuy)
     <div class="col-md-6 mb-4">

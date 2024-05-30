@@ -1,6 +1,9 @@
 @extends('master')
 
 @section('content')
+<!--Creo una serie de divs con caracteristicas de bootstrap para adecuarlo a mi gusto
+    Dentro de esto creo un formulario con meotod post y que realiza la acción de llamar a la funcion
+    update y buscar el id de la promocion para mostrar sus datos en el formulario y que estos sean cambiados--->
 <div class="container d-flex justify-content-center align-items-center">
     <div class="user-form ModificarProm">
         <h1>Modificar Promociones</h1>

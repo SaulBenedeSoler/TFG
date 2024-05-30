@@ -28,7 +28,7 @@ class DirectorController extends Controller
     }
 
     /*Se encarga mediante un request de
-    validar los datos que se piden para poder crear los nuevos menis
+    validar los datos que se piden para poder crear los nuevos directores
     LLamar mediante la variable director a la tabla de director de la base de datos y crear un nuevo espacio en la tabla
     Añade mediante el metodo de validacion todos los datos necesarios y los almacena en la variable director
     Guarda esos datos*/
@@ -53,7 +53,7 @@ class DirectorController extends Controller
     }
 
     /*Se encarga de buscar mediante el id de la director almacenada en la tbla director de la base de datos
-    y permite editar los menus que se encuentren registrados*/
+    y permite editar los directores que se encuentren registrados*/
     public function edit($id){
         $director = director::find($id);
         return view('director.form', ['director' => $director]);

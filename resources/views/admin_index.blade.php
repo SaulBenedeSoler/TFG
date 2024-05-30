@@ -1,6 +1,9 @@
 @extends('master')
 
 @section('content')
+
+
+<!--Creo un div que contiene una lista con instrucciones para el administrador-->
 <div class="intro">
 <h1 class="tituloAdmin">Panel de administrador</h1>
 <br>

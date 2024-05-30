@@ -43,20 +43,20 @@ class User extends Authenticatable
     ];
 
 
-
+    /*Creo la relación con la tabla promociones*/
     public function promociones(){
         return $this->belongsToMany(Promociones::class);
     }
 
-
+    /*Creo la relación con la tabla prombuy*/
     public function prombuy(){
         return $this->belongsTo(PromBuy::class, 'user_id');
     }
-
+    /*Creo la relación con la tabla ticket*/
     public function ticket(){
         return $this->belongsTo(ticket::class);
     }
-
+    /*Creo la relación con la tabla menbuy*/
     public function menbuy(){
         return $this->belongsTo(MenBuy::class);
     }

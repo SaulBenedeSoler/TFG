@@ -39,7 +39,8 @@ class ticketController extends Controller
     Para mostrar más información se han implementado los siguientes variables con llamadas:
         1-userName que se encarga de realizar una llamada a los datos del usuario para mostrar su nombre en el ticket
         2-movieName que se encarga de realizar una llamada a los datos de la película para poder mostrar el titulo en el ticket
-        3-precio que se encarga de realizar una llamada a los datos de la sala para poder mostrar el precio */
+        3-precio que se encarga de realizar una llamada a los datos de la sala para poder mostrar el precio 
+        4-QR que se encarga de realizar una llamada a los datos de movie y buscar mediante el id el qr*/
         public function store($movieID, $fila, $asiento, $horario)
         {
             $userId = Auth::id();

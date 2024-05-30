@@ -9,7 +9,7 @@ class Actor extends Model
 {
     use HasFactory;
 
-    
+    /*Protección de los datos que contiene actores*/
     protected $fillable = [
         'nombre',
         'apellido',

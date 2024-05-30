@@ -2,9 +2,11 @@
 
 @section('content')
 
-
+<!--Creo diferentes divs con su adecuación con css y bootstrap 
+Llamo  a los datos y esto sirve para mostrarle al usuario la promoción
+adquirida-->
 <div class="ROw justify-content-center mb-3" style="padding: -250px">
- 
+    
     <div class="Coontainer">
     <div class="col-md-6 mb-4">
         <div class="card-header bg-danger promOnly-header text-white">

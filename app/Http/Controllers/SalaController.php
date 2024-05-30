@@ -21,10 +21,18 @@ public function showSala($movieID)
 }
 
 
-/*Se encarga de genera la sala meidiante la busqueda del id de la película y que coincida con el id que tiene en la tabla de salas.
-Mediante el maxFila y maxAsientos recibe los datos de la sala.
-Crea un array llamado sala
-Mediante los bulces for se encarga de crear los asientos y las filas que contendran la sala*/
+/*Se encarga de generar las salas de cine
+Recibe las variable de movieID y horario
+Busca el id de la película
+Busca la sala donde coincida el id de la película y los horarios
+Se busca los asientos y filas de salas
+Obtiene mediante la tabla ticket los asientos ocupados buscando la película y el horario concreto
+Creo un array salas el cual se forma mediante:
+La generacion de dos fors los cuales se encargan de generar los asientos y filas de las salas
+Creo un array asientos el cual almacena la fila el asiento y el id de película
+Almaceno todo en el array salas
+Devuelvo la vista sala y le paso los datos correspondientes
+*/
 public function generarSala(int $movieID, string $horario)
 {
     $movie = Movie::findOrFail($movieID);
