@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="code">
-                            <img class="QR" src="{{ asset('imagenes/' . $ticke->movie->qr) }}">
+                            <img class="Qr" src="{{ asset('imagenes/' . $ticke->movie->qr) }}">
                         </div>
 
 

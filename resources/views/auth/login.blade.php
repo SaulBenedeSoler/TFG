@@ -39,7 +39,7 @@
             </div>
 
             <div class="Login">
-                <x-primary-button class="ml-3 login bg-warning">
+                <x-primary-button class="ml-3 login bg-danger text-white">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>

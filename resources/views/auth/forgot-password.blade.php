@@ -25,7 +25,7 @@
         </div>
 
         <div class="mt-4 botonRes">
-            <x-primary-button class="bg bg-warning text-white ">
+            <x-primary-button class="bg bg-danger text-white ">
                 {{ __('Enviar correo de reestablecimiento') }}
             </x-primary-button>
         </div>

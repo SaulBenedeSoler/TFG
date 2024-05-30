@@ -24,7 +24,7 @@ Dentro del formulario pongo los datos a rellenar-->
                 <input type="number" name="movie_id" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Director</button>
+            <button type="submit" class="btn btn-danger">Añadir Director</button>
         </form>
     </div>
 @endsection

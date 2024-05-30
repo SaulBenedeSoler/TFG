@@ -1,4 +1,4 @@
-<section class="container CambiarContrasena">
+<section class="container CambiarContrasena bg-danger">
 
     <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6 text-center">
 
@@ -31,7 +31,7 @@
             <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center  guardar bg-danger">
             <x-primary-button class="bg-danger">{{ __('Guardar') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')

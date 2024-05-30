@@ -51,6 +51,7 @@ class ticketController extends Controller
             $ticket->asiento = $asiento;
             $ticket->user_id = $userId;
             $ticket->horario = $horario;
+            
             $ticket->save();
         
             $sala = Sala::where('movie_id', $movieID)->where('horario', $horario)->firstOrFail();
@@ -74,7 +75,6 @@ class ticketController extends Controller
         public function ver(){
             $userID = Auth::id();
             $ticket = Ticket::with(['movie', 'sala'])->where('user_id', $userID)->get();
-
             return view('entradas.ver', compact('userID', 'ticket'));
         
         }

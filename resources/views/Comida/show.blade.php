@@ -14,7 +14,7 @@
             <h2 class="tituloP">{{$comida->titulo}}</h2>
         </div>
     <div class="card- menBuy-card">
-        <img src="{{ asset('imagenes/Menus/' . $comida->imagen) }}" style="height: 200px">
+        <img src="{{ asset('imagenes/Menus/' . $comida->imagen) }}" style="height: 200px" class="menimg">
         <p class="desc">Descripcion: {{$comida->descripcion}}</p>
         <p>Precio: {{$comida->Precio}}</p>
         <form action="{{ route('menu.store', ['menuid' => $comida->id]) }}" method="POST">

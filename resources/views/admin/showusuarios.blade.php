@@ -6,7 +6,7 @@ Creo una tabla que contiene los datos necesarios para mostrar de los usuarios y 
 debido al foreach creado
 Creo un formulario que llama a la funcion destroy y que busca por id del usuario para eliminarlo-->
 <div class="table-responsive">
-    <table class="table">
+    <table class="table modUsu">
         <thead>
             <tr>
                 <th>Nombre</th>

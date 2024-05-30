@@ -4,9 +4,10 @@
    <link rel="shortcut icon" type="image/png" href="{{ url('public/imagenes/Logos/icon.png') }}">
     <nav class="navbar navbar-expand-lg bg-danger sticky-top">
         <div class="container-fluid">
-            <a href="/" class="navbar-brand">
+            <a href="{{ route('admin.index') }}" class="navbar-brand">
                 <img src="{{ url('imagenes/Logos/LogoFinal.png') }}" class="logo" alt="Logo">
             </a>
+            
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS" aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -86,11 +87,11 @@
       
 
 
-            <div class="navbar-right">
+            <div class="navbar-right bg-danger">
                 @if(Auth::check())
                     <div class="dropdown bg-danger">
                         <button class="usuario">{{ auth()->user()->name }}</button>
-                        <div class="dropdown-content user-dropdown">
+                        <div class="dropdown-content user-dropdown bg-danger">
                             <a href="{{ route('profile.edit') }}" class="dropdown-item bg-danger">Ajustes</a>
                             <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-danger">
                                 Cerrar sesión

@@ -1,4 +1,4 @@
-<div class="container ActualizarPerfil">
+<section class="container ActualizarPerfil bg-danger">
         <form id="send-verification" method="post" action="{{ route('verification.send') }}">
             @csrf
         </form>
@@ -62,4 +62,4 @@
             </div>
         </form>
     </section>
-</div>
+

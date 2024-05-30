@@ -87,7 +87,7 @@ class PromocionesController extends Controller
     public function destroy($id){
         $promociones = Promociones::find($id);
         $promociones->delete();
-        return redirect()->route('admin.index');
+        return redirect()->route('promociones.adminshow');
     }
 
 }

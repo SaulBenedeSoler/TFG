@@ -8,7 +8,7 @@ adquirida-->
 
 <div class="Container">
 
-    <div class="row justify-content-center mb-3" style="padding: -250px">
+    <div class="row justify-content-center mb-3 promF" style="padding: -250px">
     
 
     <div class="col-md-6 mb-4">
@@ -17,11 +17,9 @@ adquirida-->
         </div>
   
     <div class="card- menBuy-card">
-
-        <img src="{{$IMAGEN}}" style="height: 200px; ">
+        <img src="{{$IMAGEN}}" style="height: 150px; " class="promimg">
         <p class="desc">Descripción:  {{$desc}}</p>
         <p>Precio: {{ $precio }}</p>
-
     </div>
         </div>
 

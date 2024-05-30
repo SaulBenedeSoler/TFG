@@ -30,27 +30,30 @@
 
   <!--SECCION DE ENLACES
     Creo diferentes cards qu llevan a diferentes apartados--->
-  <section class="card-c d-flex flex-column flex-md-row justify-content-around">
-    <div class="card mb-3 mb-md-0" style="width: 18rem;">
-      <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <h5 class="card-title">Promociones</h5>
-        <img src="imagenes/promociones/prom.png" class="img-fluid mb-2">
-        <p>Para acceder al apartado de promociones simplemente debes pulsar sobre el botón.</p>
-        <a href="{{ route('promociones.show') }}" class="btn btn-warning">Ver promociones</a>
+    <section class="card-c d-flex flex-column flex-md-row justify-content-around">
+      <div class="card mb-3 mb-md-0" style="width: 18rem;">
+          <div class="card-header bg-danger text-white text-center"> 
+              <h5 class="card-title">Promociones</h5>
+          </div>
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+              <img src="imagenes/promociones/prom.png" class="img-fluid mb-2">
+              <p>Para acceder al apartado de promociones simplemente debes pulsar sobre el botón.</p>
+              <a href="{{ route('promociones.show') }}" class="btn btn-danger">Ver promociones</a>
+          </div>
       </div>
-    </div>
   
-
-    
-    <div class="card" style="width: 18rem;">
-      <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <h5 class="card-title">Menús</h5>
-        <img src="imagenes/Menus/SoloPalomitas.png" class="img-fluid mb-2">
-        <p>Para acceder al apartado de packs de comida simplemente debes pulsar sobre el botón.</p>
-        <a href="{{ route('comida.index') }}" class="btn btn-warning">Ver menús</a>
+      <div class="card" style="width: 18rem;">
+          <div class="card-header bg-danger text-white text-center"> 
+              <h5 class="card-title">Menús</h5>
+          </div>
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+              <img src="imagenes/Menus/SoloPalomitas.png" class="img-fluid mb-2">
+              <p>Para acceder al apartado de packs de comida simplemente debes pulsar sobre el botón.</p>
+              <a href="{{ route('comida.index') }}" class="btn btn-danger">Ver menús</a>
+          </div>
       </div>
-    </div>
   </section>
+  
 
   <!--SECCION DE COMENTARIOS
   Donde se ven los comentarios de usuarios-->

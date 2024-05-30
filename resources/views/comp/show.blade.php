@@ -8,6 +8,7 @@
         Uso un foreach para mostrar toda la información de todas las promociones adquiridas por el usuario
         Creo un formulario el cual llama a la función prom.destroy y busca el id de la promoción y usa el metod post
         y se encarga de eliminar esa promoción adquirida por el usuario--->
+        <div class="comP">
         <div class="row justify-content-center mb-3" style="padding: -250px">
             @foreach($prombuy as $promo)
 

@@ -41,13 +41,13 @@
                     <p><b>Duración:</b> {{ $movie->duracion }}</p>
                     <p><b>Descripción:</b> {{ $movie->descripcion }}</p>
                     <div class="btn-group">
-                      <button type="button" class="btn btn-warning dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button type="button" class="btn btn-danger dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
                         Selecciona Horario
                       </button>
-                      <ul class="dropdown-menu bg-warning">
-                        <li class="bg-warning"><a class="dropdown-item text-white bg-warning" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '10:30']) }}" class="btn btn-warning">10:30</a></li>
-                        <li><a class="dropdown-item text-white bg-warning" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '12:30']) }}" class="btn btn-warning">12:30</a></li>
-                        <li><a class="dropdown-item text-white bg-warning" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '17:30']) }}" class="btn btn-warning">17:30</a></li>
+                      <ul class="dropdown-menu bg-danger">
+                        <li class="bg-danger"><a class="dropdown-item text-white bg-dange" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '10:30']) }}" class="btn btn-danger">10:30</a></li>
+                        <li><a class="dropdown-item text-white bg-dange" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '12:30']) }}" class="btn btn-danger">12:30</a></li>
+                        <li><a class="dropdown-item text-white bg-dange" href="{{ route('generarSala', ['movieID' => $movie->id, 'horario' => '17:30']) }}" class="btn btn-danger">17:30</a></li>
                       </ul>
                     </div>
                   </div>

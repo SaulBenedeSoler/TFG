@@ -5,8 +5,8 @@
 Creo una tabla que contiene los datos necesarios para mostrar los menus y que es posible
 debido al foreach creado
 Creo un formulario que llama a la funcion destroy y que busca por id del actor para eliminarlo-->
-<div class="table-responsive">
-<table class="table">
+<div class="table-responsive comdiad">
+<table class="table comdiad">
     <thead>
         <tr>
             <th>Titulo</th>

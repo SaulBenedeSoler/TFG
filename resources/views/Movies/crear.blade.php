@@ -71,7 +71,7 @@ Dentro del formulario pongo los datos a rellenar-->
                 <input type="string" name="qr" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Película</button>
+            <button type="submit" class="btn btn-danger">Añadir Película</button>
         </form>
     </div>
     </div>
