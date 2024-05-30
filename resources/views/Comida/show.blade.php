@@ -1,26 +1,36 @@
 @extends('master')
 
-
 @section('content')
 
-
-<div class="container">
-    <div class="row">
-        @foreach($ComidaList as $comida)
-        <div class="col-md-4">
-            <div class="card mb-4 h-100">
-                <h1>{{ $comida->titulo }}</h1>
-                <a href="{{ route('comida.show', ['id' => $comida->id]) }}">
-                    <img src="{{ url('imagenes/Menus') . '/' . $comida->imagen }}" class="menus">
-                </a>
-                <div class="mt-5">
-                    <p>Descripcion: {{ $comida->descripcion }}</p>
-                    <p>Precio: {{ $comida->Precio }}</p>
-                </div>
-            </div>
+<div class="Container">
+    <!--Creo diferentes divc modificads con bootstrap y css
+    Muestro toda la información de los menus gracias al uso del foreach
+    Creo un formulario el cual llama a la función menu.store y busca el id del menu
+    y compra el menu-->
+    <div class="row justify-content-center mb-3" style="padding: -250px">
+        @foreach($comidaList as $comida)
+    <div class="col-md-6 mb-4">
+        <div class="card-header bg-danger menBuy-header text-white">
+            <h2 class="tituloP">{{$comida->titulo}}</h2>
         </div>
-        @endforeach
+    <div class="card- menBuy-card">
+        <img src="{{ asset('imagenes/Menus/' . $comida->imagen) }}" style="height: 200px">
+        <p class="desc">Descripcion: {{$comida->descripcion}}</p>
+        <p>Precio: {{$comida->Precio}}</p>
+        <form action="{{ route('menu.store', ['menuid' => $comida->id]) }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-danger">Comprar</button>
+        </form>
     </div>
 
 
+    </div>
+    
+    @endforeach
+    </div>
+
+</div>
+
+
 @endsection
+

@@ -25,35 +25,35 @@ class ComidaSeeder extends Seeder
         DB::table('comida')->insert([
             'titulo' => 'Menu simple',
             'imagen' => 'MenuSimple.png',
-            'descripcion' => 'contiene palomitas y un refresco a elegir.',
+            'descripcion' => 'contiene palomitas y un refresco.',
             'Precio' => '9.99',
         ]);
 
         DB::table('comida')->insert([
-            'titulo' => 'Menu grande de palomitas',
+            'titulo' => 'Menu grande',
             'imagen' => 'MenuGrande.png',
-            'descripcion' => 'contiene dos boles palomitas y dos refrescos a elegir.',
+            'descripcion' => 'contiene dos boles palomitas y dos refrescos.',
             'Precio' => '14.99',
         ]);
 
         DB::table('comida')->insert([
-            'titulo' => 'Menu simple de patatas',
+            'titulo' => 'Menu simple',
             'imagen' => 'MenuSImplePatatas.png',
-            'descripcion' => 'contiene un paquete de patatas y un refresco a elegir.',
+            'descripcion' => 'contiene un paquete de patatas y un refresco.',
             'Precio' => '4.99',
         ]);
 
         DB::table('comida')->insert([
             'titulo' => 'Menu nachos',
             'imagen' => 'Nachos.png',
-            'descripcion' => 'contiene un bol de nachos con salsas y un refresco a elegir.',
+            'descripcion' => 'contiene un bol de nachos con salsas y un refresco .',
             'Precio' => '9.99',
         ]);
 
         DB::table('comida')->insert([
-            'titulo' => 'Menu grande de patatas',
+            'titulo' => 'Menu grande',
             'imagen' => 'MenuGrandePatatas.png',
-            'descripcion' => 'contiene dos paquetes de patatas y dos refresco a elegir.',
+            'descripcion' => 'contiene dos paquetes de patatas y dos refresco.',
             'Precio' => '14.99',
         ]);
     }

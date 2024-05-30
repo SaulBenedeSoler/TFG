@@ -1,25 +1,37 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+@extends('master')
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('content')
 
-    <form method="POST" action="{{ route('password.email') }}">
+@section('title', 'Iniciar Sesion')
+
+
+
+<!-- Session Status -->
+<div class="centrado">
+<x-auth-session-status class="mb-4" :status="session('status')" />
+
+<div class="resetear">
+
+    <form method="POST" action="{{ route('password.email') }}" class="bg-danger text-aling-center justify-content-center resetear">
         @csrf
 
         <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
+        <div class="infoRes">
+            <h5 class="text-white">Correo Electrónico</h2>
+        </div>
+        <div class="INFORES">
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
+        <div class="mt-4 botonRes">
+            <x-primary-button class="bg bg-warning text-white ">
+                {{ __('Enviar correo de reestablecimiento') }}
             </x-primary-button>
         </div>
+     
     </form>
-</x-guest-layout>
+    
+</div>
+</div>
+@endsection

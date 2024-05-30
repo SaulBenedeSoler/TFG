@@ -16,61 +16,54 @@ class PromocionesSeeder extends Seeder
     public function run()
     {
         DB::table('promociones')->insert([
-            'titulo' => 'Yo el vaquilla',
-            'imagen' => 'elvaquilla.jpg',
-            'descripcion' => 'Consigue ya tu entrada para la película "Yo el Vaquilla" y llevate una poster de esta y un menú básico gratis',
+            'titulo' => 'Pase cumpleaños',
+            'imagen' => 'Cumple.png',
+            'descripcion' => 'Con este pase obtiene desccuento en todas las entradas que obtengas durante la semana que lo compres.',
             'Precio' => '19.99',
-        ]);
-
-        DB::table('promociones')->insert([
-            'titulo' => 'Viven',
-            'imagen' => 'centurion.jpg',
-            'descripcion' => 'Consigue un poster exclusivo de Viven y un menu a elegir',
-            'Precio' => '24.99',
-        ]);
-
-        DB::table('promociones')->insert([
-            'titulo' => 'Cars',
-            'imagen' => 'elpeleador.jpg',
-            'descripcion' => 'Consigue ya tu entrada para la película "Yo el Vaquilla" y llevate una poster de esta y un menú básico gratis',
-            'Precio' => '19.99',
-        ]);
-
-        DB::table('promociones')->insert([
-            'titulo' => 'Faster',
-            'imagen' => 'cars.jpg',
-            'descripcion' => 'Consigue un poster exclusivo de Faster y un menu de nachos',
-            'Precio' => '24.99',
-        ]);
-
-
-        DB::table('promociones')->insert([
-            'titulo' => 'Cine gratis durante un mes',
-            'imagen' => 'bichos.jpg',
-            'descripcion' => 'Compra tu abono para el cine durante un mes, este incluye todas las películas que se emitiran durante el mes.',
-            'Precio' => '34.99',
+            'tipo' => 'eventos',
         ]);
 
         DB::table('promociones')->insert([
             'titulo' => 'Tarjeta regalo',
-            'imagen' => 'dragon.jpg',
-            'descripcion' => 'Compra ya tu tarjeta regalo para esa persona.',
+            'imagen' => 'regalo.png',
+            'descripcion' => 'Compra esta tarjeta y consigue descuentos durante todo el mes',
             'Precio' => '30.99',
-        ]);
-
-
-        DB::table('promociones')->insert([
-            'titulo' => 'Tarjeta VIP cine',
-            'imagen' => 'elvaquilla.jpg',
-            'descripcion' => 'Consigue la tarjet VIP del cine para poder disfrutar durante un mes de dos películas gratis y dos menus a elegir.',
-            'Precio' => '24.99',
+            'tipo' => 'mensual'
         ]);
 
         DB::table('promociones')->insert([
-            'titulo' => '2X1 en menus',
-            'imagen' => 'Batman.jpg',
-            'descripcion' => 'Consigue un 2X1 en menus grandes.',
+            'titulo' => 'Pase fiesta',
+            'imagen' => 'fiestaCine.png',
+            'descripcion' => 'Obten esta promociones y consigue todas las entradas durante la semana por 3,50.',
             'Precio' => '14.99',
+            'tipo' => 'eventos',
         ]);
-    }
+
+        DB::table('promociones')->insert([
+            'titulo' => 'Cine familiar',
+            'imagen' => 'familia.png',
+            'descripcion' => 'Obten esta promocion y conseguiras grandes descuentos en comida para toda la familia.',
+            'Precio' => '49.99',
+            'tipo' => 'eventos',
+        ]);
+
+
+        DB::table('promociones')->insert([
+            'titulo' => 'Pase Menus',
+            'imagen' => 'Mmenus.png',
+            'descripcion' => 'Compra esta promoción y consigue menus ilimitados durante el mes.',
+            'Precio' => '14.99',
+            'tipo' => 'mensual',
+        ]);
+
+        
+        DB::table('promociones')->insert([
+            'titulo' => 'Superpase Menus',
+            'imagen' => 'PMenus.png',
+            'descripcion' => 'Compra esta promoción y consigue menus ilimitados durante el año.',
+            'Precio' => '14.99',
+            'tipo' => 'anual',
+        ]);
+
+}
 }

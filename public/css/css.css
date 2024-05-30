@@ -4,33 +4,27 @@
     font-family: "Manrope", sans-serif;
 }
 
+
 /*ESTILO PARA EL BODY*/
 body{
     margin: 0;
     padding: 0;
 }
 
-
-
 /*Estilos HEADER*/
-
 .logo {
     flex: 1;
 
 }
-
 .Logo{
     width: 80px;
     height: 80px;
 }
-
 .enlace {
     margin-left: 10px;
     text-decoration: none;
     color: white;
 }
-
-
 .inicios{
     text-decoration: none;
     color: white;
@@ -43,7 +37,6 @@ body{
     position: relative;
     display: inline-block;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -52,22 +45,18 @@ body{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .boton{
     background-color: sandybrown;
 }
@@ -76,91 +65,133 @@ body{
 .usuario {
     background-color: transparent;
     padding-right: 150px;
-    background-color: black;
     color: white;
     border: none;
     cursor: pointer;
 }
-
 .cerrarSesion{
     background-color: black;
 }
-
 .cerrar {
     background-color: transparent;
-
     color: white;
-
+    background-color: black;
 }
 
-/* Ajuste de estilos adicionales según sea necesario */
-
-
-
-/*CSS FINAL */
-.numeros{
-    border-radius: 50%;
+.user-dropdown{
+    background-color: black;
     color: white;
-    background-color: sandybrown;
-    font-size: 20px;
-    padding: 3px 10px;
-
 }
 
-.semana{
-    color: white;
-    font-size: 23px;
-    font-weight: 700;
-
-}
-
-.menus{
-    width: 200px;
-    height: 200px;
-}
 
 
 /*INDEX*/
-
 /*Titulo del carrousel*/
-
-.h2Index {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.FotoComida {
-    width: 450px;
-    height: 450px;
-}
-
-
-
-.imgC{
-    width: 900px;
-    height: 2000px;
-}
-
-
-
-
-/*CARDS DEL INDEX*/
-.cardindex{
-    width: 200px;
-    height: 400px;
-}
-.cardindex .FotoComida{
-    width: 200px;
-    height: 300px;
-}
-
-.h2index{
+.carousel {
+    align-items: center;
     justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  
+
+.ftoc{
+    margin: auto;
+    display: block;
+    width: 1300px;
+    height: 1000px;
 }
 
+.carru{
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sic{
+    color: black;
+}
+
+.anc{
+    color: black;
+}
+
+/*CSS CARDS INDEX*/
+.card-c {
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+
+  .card-img-top {
+    height: 350px; 
+    object-fit: cover;
+  }
+
+  .imagenPromIn{
+    width: 300px;
+  }
+
+
+
+.imgMenuIn{
+    width: 218px;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    columns: 2;
+}
+
+.pHeader{
+    background-color: white;
+    border: 2px solid black;
+}
+
+.cardPI{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+/*CSS PARA APARTADO VER TODAS LAS PROMOCIONES*/
+
+.promBuy-header{
+    width: 300px;
+}
+
+.promBuy-card{
+    border: 2px solid black;
+    width: 200px;
+}
+
+/*Apartado comentarios*/
+.testimonial-section {
+    padding-top: 50px; 
+}
+
+.section-title {
+    text-align: left;
+}
 
 /* Semanas show */
-
 .enla{
     background-color: sandybrown;
     color: white;
@@ -168,141 +199,397 @@ body{
 }
 
 
-
+/*Comentarios*/
+.containerp{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
 
 /*CSS DE LA TABLA PELICULAS Y VISTA mostrar.blade.php de MOVIES*/
 
-.cent {
-    margin-left: 180px;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    display: flex;
-    flex-direction: column; 
-    padding-right: 100px;
+.listaMostrar{
+    list-style: none;
+    padding-top: 50px;
+    
 }
 
-.tablaPelis {
-    width: auto;
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin-right: 100px;
-    padding-right: 100px;
-}
-
-.tablaPelis tr {
-
-    display: flex;
-    justify-content: center;
-}
-
-.tablaPelis td {
-    width: 25%;
-    padding: 15px;
-    margin-left: 50px;
-    box-sizing: border-box;
-    text-align: center; 
-}
-
-.imagenes {
-    width: 200px;
-    height: auto;
-}
-
-.mover{
-
-margin-right: 50px;
-
-}
-/*CSS PARA LA VISTA INFO.BLADE DE MOVIES*/
-
-
-.peliculas{
-    padding-left: 100px;
-}
-
-/*ESTILOS PARA LA VISTA INFO.BLADE.PHP*/
-
-
-
-
-.contenido {
-    display: flex;
-    align-items: flex-start;
+.listaMostrar img{
+    padding-bottom: 15px;
+    width: 100px;
+    height: 170px;
+    margin-right: 10px;
 }
 
 
-.titulo-imagen {
-    flex: 0 0 auto;
-    margin-right: 20px;
+/*Modal*/
+
+    .modal-content{
+        width: 700px;
+    }
+
+    .modalul{
+        padding-top: 15px;
+    list-style: none;
+    }
+  
+    .modal-header{
+        background-color: red;
+        color: white;
+    }
+
+  .info {
+    margin-left: 20px;
+  }
+  
+  .imgMostrar{
+    width: 20px;
+    height: 20px;
+  }
+  .lado {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+#Modal{
+    padding-top: 15px;
 }
 
-.titulo-imagen img {
-    width: 500px;
-    max-width: 350px;
-}
-
-.parrafos {
-    flex: 1; 
-    text-align: left; 
-    margin-top: 50px;
-}
-
-.parrafos p{
-    margin-top: 50px;
-}
-
-.enlac{
-    text-decoration: none;
+.botonModal{
+    border: none;
     color: white;
 }
 
 
+/*CSS PARA VISTA TICKETS*/
 
 
-
-
-
-
-  
-/*INTRODUCCION A LA PÁGINA*/
-
-
-/*CSS PARA LA VISTA DE COMIDA*/
-
-.card {
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-.card img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-}
-
-.container {
+.ticket {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #f3f1c9;
+    border-radius: 10px;
+    border: 2px solid #222;
+    width: 800px;
+    height: 400px;
     margin-top: 100px;
+    margin-bottom: 259px;
+}
+
+.ticketPrincipal {
+    display: grid;
+    width: 500px;
+}
+
+.ticketHeader {
+    grid-column: span 2;
+    color: tomato;
+
+}
+
+.codigo {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    width: 180px;
+    height: 190px;
+    padding-right: 150px;
+    padding-bottom: 150px;
+}
+
+
+.qr{
+    margin-right: 150px;
+    margin-top: 50px;
+    width: 300px;
+}
+
+
+ 
+/*CSS PARA LAS VISTAS DE VISUALIZACIÓN DE TICKETS*/
+
+.ticke {
+    margin: auto;
+    background: #f3f1c9;
+    border-radius: 10px;
+    border: 2px solid #222;
+    width: 800px;
+    margin-top: 100px;
+    margin-bottom: 319px;
+    padding: 20px;
+
+}
+
+.tickePrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.tickeHeader {
+    color: tomato;
+}
+
+.tickeInfo {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+.ticketDetalles {
+    
+    margin-right: 20px; 
+    margin-top: 140px;
+
+}
+
+.code {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.Qr {
+    margin-right: 150px;
+    margin-top: 50px;
+    width: 150px;
+    margin-left: 200px;
+}
+
+/* CSS para la vista de comida */
+
+
+.row{
+    width: 1200px;
+    padding: -250px;
+}
+
+.Container{
     margin-bottom: 100px;
+    margin-top: 100px;
+    width: max-content;
+}
+
+.comida-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 20px; 
+}
+
+.desc{
+    margin-top: 10px;
+    font-size: smaller;
+}
+
+.comida-header {
+    width: 300px;
+    border: 1px solid black;
+}
+
+.tituloP{
+ 
+    
 }
 
 
 
+/*CSS COMPRAS SOLO*/
+.Container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 200px;
+    width: max-content;
+    margin-bottom: 500px;
+}
+
+.menOnly-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 303px; 
+}
+
+.menOnly-header{
+    width: 300px;
+    border: 1px solid black;
+}
+
+
+.menOnly-card img{
+    width: 700px;
+}
+
+
+.datosUsu{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.datosUsu h1{
+    display: inline;
+}
+
+.imgSolo{
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+}
+
+
+/*CSS PARA LAS VISTAS DE COMPRAR Y VER MENUS COMPRADOS*/
+
+.Container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 200px;
+    width: max-content;
+}
+
+
+
+.menBuy-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 20px; 
+}
+
+.menBuy-header {
+    width: 300px;
+    border: 1px solid black;
+}
+
+
+.menBuy-card img{
+    width: 700px;
+}
+
+
+.datosUsu{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.datosUsu h1{
+    display: inline;
+}
+
+.imgSolo{
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+}
 
 /*Estilos PROMOS*/
+
+.row{
+    width: 1200px;
+    padding: -250px;
+}
+
+.container{
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: max-content;
+}
+
 .content-container {
-    padding-top: 20px; /* Agregamos un margen superior de 20px */
+    padding-top: 20px; 
 }
 
-.promo-card {
-    padding: 20px; /* Agregamos un padding de 20px */
+.desc{
+    font-size: smaller;
 }
 
+.promimg{
+    width: 30px;
+    height: 30px;
+}
+
+.tituloP{
+    padding: 15px;
+}
+
+/*PROMO SOLO UNO*/
+
+
+.ROw{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.Coontainer{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 500px;
+    width: max-content;
+}
+
+.promOnly-card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 133px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 600px;
+}
+
+.promOnly-header{
+    width: 300px;
+    border: 1px solid black;
+    margin-left: 600px;
+}
+
+
+.promOnly-card img{
+    width: 400px;
+}
+
+.imgSolo{
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+}
 
 /*ESTILOS LOGIN*/
-
-
 
 /*FORMULRIO */
 .formularioLogin{
@@ -313,33 +600,28 @@ margin-right: 50px;
     padding: 20px;
     border-radius: 10px;
     width: 400px;
-    height: 400px;
+    height: 450px;
     border: 3px black solid;
     color: white;
     align-items: center;
-    width: 350px;
-    height: 350px;
 }
-
 .TituloLogin{
     text-align: center;
     font-size: large;
 }
-
 .olvidado{
     margin-top: 30px;
     text-decoration: none;
     color: white;
 }
 
+
 .Login{
-justify-content: center;
-margin-top: 30px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-
 /*Estilos Register*/
-
 .Register{
     position: absolute;
     top: 50%;
@@ -347,61 +629,439 @@ margin-top: 30px;
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 550px;
     border: 3px black solid;
+    color: white;
+}
+
+.log{
+    color: white;
+    text-decoration: none;
 }
 
 /* Estilos footer */
 footer{
-    height: 88px;
-    width: 100%;
-    background-color: #212529;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
 }
-
-
-footer div.info{
-    margin-left: 10%;
-}
-
-footer div.copyright{
-    margin-right: 3%;
-}
-
-footer div.copyright a{
-    color: #9b9d9e;
-}
-
-
-
 
 .imgfooter{
     width: 200px;
     height: 100px;
 }
-
-
 .carousel-item img {
-    max-height: 200px; /* Define aquí el tamaño máximo deseado */
+    max-height: 200px;
   }
-  
-
   /*CSS PROFILE EDIT*/
   .intro {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-
 .nomb{
     color: white;
     background-color: black;
     padding-left: 30px;
     margin-left: 50px;
 }
+
+/*ESTILOS PARA SHOW DE SALA*/
+.asientos{
+    width: 100px;
+    height: 100px;
+}
+.Salas{
+    margin-top: 50px;
+    padding: 40px;
+    margin: 0 auto; 
+}
+
+.Instrucciones {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding-bottom: 50px;
+}
+
+.Instrucciones p,
+.Instrucciones img {
+    margin: 0;
+    padding: 10px;
+}
+
+.Instrucciones img {
+    width: 100px; 
+    height: 100px;
+    margin: 0 10px;
+}
+
+.titPel{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+.pantallaCines{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 450px;
+    background-color: black;
+    color: white;
+    width: 1000px;
+    height: 100px;
+}
+
+.pantalla{
+    width: 500px;
+}
+
+/*CSS PARA EL APARTADO SHOWADMIN.PHP*/
+
+.table{
+    padding-top: 50px;
+    margin-top: 30px;
+    border: 2px solid black;
+
+}
+
+.table tr{
+    border: 1px solid black;
+}
+
+.table th{
+    border: 1px solid black;
+}
+
+.table td{
+    border: 1px solid black;
+}
+
+
+
+/*CSS PARA EL APARTADO FORM DE ADMIN*/
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.movie-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+
+
+button[type="submit"] {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.boton {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .container img {
+    width: 200px;
+    height: 400px;
+    margin-right: 2rem;
+  }
+
+  .container h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .botonSala {
+    margin-top: 2rem;
+    text-decoration: none;
+  }
+
+  .enlaceS{color: white;}
+
+
+ .rox{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ }
+
+
+ .containerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ /*Resetear contraseña*/
+
+ .centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    }
+
+ .resetear{
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+ }
+
+ .botonRes{
+    padding-top: 25px;
+    width: 100px;
+    margin-left: 33px;
+ }
+
+.infoRes{
+    padding-top: 25px;
+}
+
+.INFORES{
+    padding-top: 25px;
+}
+
+
+/*CSS GENÉRICO PARA EL APARTADO DE MODIFICAR DEL ADMINISTRADOR*/
+
+.ModificarForm{
+    width: 700px;
+    height: 700px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+}
+
+/*CSS PARA EL FORMILARIO DE AÑADIR PELÍCULA*/
+.AñadirForm{
+    width: 1200px;
+    height: 1050px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+}
+
+.titulo{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*CSS PARA EL FORMULARIO DE AÑADIR USUARIOS*/
+.UsuarioForm{
+    width: 400px;
+    height: 500px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+}
+
+/*CSS PARA EL FORMULARIO DE MODFIFICAR PROMOCIONES*/
+.ModificarProm{
+    width: 500px;
+    height: 500px; 
+    border: 2px solid black; 
+    padding: 20px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+/*CSS PARA EL FORMULARIO AÑADIR PROMOCIONES*/
+.AnadirProm{
+    width: 500px;
+    height: 600px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+    margin-bottom: 500px;
+}
+
+/*CSS PARA EL FORMULARIO MODIFCAR MENUS*/
+.ModificarMenu{
+    width: 500px;
+    height: 500px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+/*form*/
+
+.form{
+    margin-bottom: 400px;
+}
+
+/*CSS PARA EL FORMULARIO AÑADIR MENUS*/
+.AnadirMenu{
+    width: 500px;
+    height: 550px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+
+/*CSS PARA EL APARTADO AJUSTES DE USUARIOS*/
+
+.ActualizarPerfil{
+background-color: black;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: row;
+width: 500px;
+height: 400px;
+}
+
+
+/*CSS PARA EL APARTADO CAMBIAR CONTRASEÑA*/
+.CambiarContrasena{
+    background-color: black;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: row;
+width: 500px;
+height: 400px;
+}
+
+
+/*FOOTER*/
+.footer{
+    align-items: flex-end;
+}
+
+/*CSS ADMIN ACTORES*/
+
+
+
+
+
+/*RESPONSIVE*/
+
+
+/*RESPONSIVE IPAD AIR*/
+
+/*Responsive para el index*/
+@media (min-width: 768px) {
+
+    /*INDEX USUARIO*/
+    .card-c {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    /*HEADER USUARIO*/
+    .navbar-right {
+        align-items: center;
+    }
+    .navbar-right .btn {
+        width: auto;
+    }
+    .navbar-right .dropdown-toggle {
+        width: auto;
+    }
+
+
+
+}
+
+    
+
+@media (max-width: 767.98px) {
+    .listaMostrar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .list-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .imgMostrar {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .info {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* Estilos para pantalla mediana y grande (768px o más de ancho) */
+  @media (min-width: 768px) {
+    .listaMostrar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .list-item {
+      flex: 0 0 50%; 
+    }
+
+    .info {
+      margin-left: 20px;
+    }
+  }

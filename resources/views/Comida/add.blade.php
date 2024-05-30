@@ -1,7 +1,12 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<!--Creo una serie de divs los cuales son mdoificados con bootstrap para conseguir los ajustes deseados
+Dentro de estos divs creo un formulario el cual usa el metodo POST
+Realiza la accion sobre la ruta comida.store el cual sirve para añadir menus
+Dentro del formulario pongo los datos a rellenar-->
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form AnadirMenu">
         <h1>Añadir Comida</h1>
 
         <form method="POST" action="{{ route('comida.store') }}">
@@ -23,7 +28,7 @@
                 <input type="text" name="precio" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Comida</button>
+            <button type="submit" class="btn btn-danger">Añadir Comida</button>
         </form>
     </div>
 @endsection

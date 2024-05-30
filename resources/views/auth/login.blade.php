@@ -7,9 +7,9 @@
 <!-- Session Status -->
 <x-auth-session-status class="mb-4" :status="session('status')" />
 
-<div style="margin-top: 500px; margin-bottom: 500px;">
+<div style="margin-top: 500px; margin-bottom: 500px; ">
     <div class="LoginCentrado text-center" style="padding: 20px;">
-        <form method="POST" action="{{ route('login') }}" class="formularioLogin mx-auto bg-danger">
+        <form method="POST" action="{{ route('login') }}" class="formularioLogin bg-danger">
             @csrf
 
             <div class="TituloLogin">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="Login">
-                <x-primary-button class="ml-3 login">
+                <x-primary-button class="ml-3 login bg-warning">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>

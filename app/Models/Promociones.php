@@ -8,5 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Promociones extends Model
 {
     use HasFactory;
-    /*SE DESARROLLARAN EN EL 2ºSPRINT CUANDO SE IMPLEMENTEN SUS FUNCIONES CON LAS DEMAS TABLAS*/
+    /*PROTEGO EL NOMBRE DE LA TABLA PARA NO TENER ERRORES CON LA BASE DE DATOS*/
+    protected $table = 'promociones';
+
+    /*Creación de la relación con la tabla user*/
+    public function user(){
+        return $this->belongsToMany(User::class);
+    }
+   /*Creación de la relación con la tabla prombuy*/
+    public function prombuy(){
+        return $this->hasMany(PromBuy::class);
+    }
+
+
 }

@@ -5,77 +5,79 @@ namespace App\Http\Controllers;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use App\Models\Sala;
+use App\Models\ticket;
 
 class SalaController extends Controller
 {
+
+/*Se encarga de buscar el id de la pelicula y la sala que esta tiene asignada y mostrarla al usuario*/
+public function showSala($movieID)
+{
+    $movie = Movie::findOrFail($movieID);
+    $sala = Sala::where('movie_id', $movieID)->firstOrFail();
+    $maxFilas = $sala->maximo_filas;
+
+    return view('sala.show', compact('sala', 'movie', 'maxFilas'));
+}
+
+
+/*Se encarga de generar las salas de cine
+Recibe las variable de movieID y horario
+Busca el id de la película
+Busca la sala donde coincida el id de la película y los horarios
+Se busca los asientos y filas de salas
+Obtiene mediante la tabla ticket los asientos ocupados buscando la película y el horario concreto
+Creo un array salas el cual se forma mediante:
+La generacion de dos fors los cuales se encargan de generar los asientos y filas de las salas
+Creo un array asientos el cual almacena la fila el asiento y el id de película
+Almaceno todo en el array salas
+Devuelvo la vista sala y le paso los datos correspondientes
+*/
+public function generarSala(int $movieID, string $horario)
+{
+    $movie = Movie::findOrFail($movieID);
+    $sala = Sala::where('movie_id', $movieID)->where('horario', $horario)->firstOrFail();
+    $maxFilas = $sala->maximo_filas;
+    $maxAsientos = $sala->maximo_asientos;
+
     
-    /*FUNCION USADA PARA VISUALIZAR LAS SALAS*/
-    public function show($movieId)
-    {
-        $sala = Sala::where('movie_id', $movieId)->first();
-        
-        if (!$sala) {
-          
-            return redirect()->route('home')->with('error', 'No se encontró una sala para esta película.');
+    $asientosOcupados = Ticket::where('movie_id', $movieID)->where('horario', $horario)->get();
+    
+    $salas = [];
+    for ($fila = 1; $fila <= $maxFilas; $fila++) {
+        $asientos = [];
+        for ($asiento = 1; $asiento <= $maxAsientos; $asiento++) {
+            $asientos[] = [
+                'fila' => $fila,
+                'asiento' => $asiento,
+                'movie_id' => $movie->id,
+            ];
         }
-        
-        return view('sala.show', compact('sala'));
+        $salas[] = [
+            'maximo_asientos' => $maxAsientos,
+            'movie_id' => $movie->id,
+            'filas' => $asientos,
+        ];
     }
-    
-    
-    
 
-    /*FUNCION ENCARGADA DE GENERAR SALAS DE MANERA QUE CREA UN OBJETO MOVIES Y UN ARRAY SALAS, MEDIANTE EL FOREACH DEFINE LOS ASIENTOS
-    Y FILAS MAXIMAS Y EL ESTADO DEL ASIENTO MEDIANTE UN ARRAYFILL Y BUSCA LA PELICULA MEDIANTE EL ID PARA PODE ASOCIARLA A ESA PELICULA*/
-    public function generarSala(){
-            $movies = Movie::all();
-            $salas = [];
-            foreach ($movies as $movie) {
-                $sala = [
-                    'maximo_asientos' => 20, 
-                    'maximo_filas' => 4, 
-                    'movie_id' => $movie->id,                    
-                    'estado_asiento' => array_fill(0, 20, 0)
-                ];
-                $salas[] = $sala;
-            }
-            return view('Sala.show', compact('salas'));
-        }
-
-    /*FUNCION INCOMPLETA FINALIZAR EN EL 2ºSPRINT*/
-    public function marcarAsiento($salaId, $asiento){
-        // Obtenemos la sala de la base de datos
-        $sala = Sala::findOrFail($salaId);
-        
-        // Verificamos si la sala existe y si el asiento seleccionado es válido
-        if ($sala && $asiento >= 1 && $asiento <= $sala->maximo_asientos) {
-            // Marcamos el asiento como ocupado
-            $estado_asientos = json_decode($sala->seats_state, true);
-            $estado_asientos[$asiento - 1] = 1;
-            $sala->seats_state = json_encode($estado_asientos);
-            
-            // Guardamos los cambios en la base de datos
-            $sala->save();
-            
-            return redirect()->back()->with('success', "El asiento $asiento ha sido marcado como ocupado.");
-        } else {
-            return redirect()->back()->with('error', 'El número de asiento seleccionado no es válido.');
-        }
-    }
-    
-
-    
-
-
-    }
-    
-    
-    
-    
-    
-    
+    return view('sala.show', [
+        'salas' => $salas,
+        'movie' => $movie,
+        'asientosOcupados' => $asientosOcupados,
+        'horario' => $horario,
+    ]);
+}
 
 
 
 
+
+
+
+
+
+
+
+
+}
 

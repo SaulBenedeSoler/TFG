@@ -1,7 +1,12 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
+<!--Creo una serie de divs los cuales son mdoificados con bootstrap para conseguir los ajustes deseados
+Dentro de estos divs creo un formulario el cual usa el metodo POST
+Realiza la accion sobre la ruta usuarios el cual sirve para añadir usuarios
+Dentro del formulario pongo los datos a rellenar-->
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="user-form UsuarioForm">
         <h1>Añadir Usuario</h1>
 
         <form method="POST" action="{{ route('admin.store') }}">
@@ -23,7 +28,7 @@
                 <input type="password" name="password" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir usuario</button>
+            <button type="submit" class="btn btn-danger">Añadir usuario</button>
         </form>
     </div>
 @endsection

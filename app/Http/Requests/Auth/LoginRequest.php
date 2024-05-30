@@ -40,15 +40,17 @@ class LoginRequest extends FormRequest
     public function authenticate(): void
     {
         $this->ensureIsNotRateLimited();
-
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+    
+        $credentials = $this->only(['email', 'password']);
+    
+        if (! Auth::attempt($credentials, $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
-
+    
             throw ValidationException::withMessages([
-                'email' => trans('auth.failed'),
+                'email' => trans('Correo Electrónico no registrado'),
             ]);
         }
-
+    
         RateLimiter::clear($this->throttleKey());
     }
 

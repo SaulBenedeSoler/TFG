@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('imagen');
             $table->string('descripcion');
             $table->float('Precio');
+            $table->string('tipo');
             $table->timestamps();
         });
     }
