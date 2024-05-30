@@ -136,12 +136,12 @@ body{
 
 
   .card-img-top {
-    height: 350px; 
+    height: 250px; 
     object-fit: cover;
   }
 
   .imagenPromIn{
-    width: 300px;
+    width: 200px;
   }
 
 
@@ -179,7 +179,7 @@ body{
 
 .promBuy-card{
     border: 2px solid black;
-    width: 200px;
+    width: 300px;
 }
 
 /*Apartado comentarios*/
@@ -223,6 +223,10 @@ body{
     margin-right: 10px;
 }
 
+/*PromoONLY*/
+.carta{
+    width: 100px;
+}
 
 /*Modal*/
 
@@ -277,7 +281,7 @@ body{
     border-radius: 10px;
     border: 2px solid #222;
     width: 800px;
-    height: 400px;
+    height: 300px;
     margin-top: 100px;
     margin-bottom: 259px;
 }
@@ -285,11 +289,12 @@ body{
 .ticketPrincipal {
     display: grid;
     width: 500px;
+    margin-left: 50px;
 }
 
 .ticketHeader {
     grid-column: span 2;
-    color: tomato;
+    color: black;
 
 }
 
@@ -302,18 +307,18 @@ body{
     align-items: center;
     width: 180px;
     height: 190px;
-    padding-right: 150px;
-    padding-bottom: 150px;
+    margin-right:250px ;
+    margin-bottom: 50px;
 }
 
 
-.qr{
-    margin-right: 150px;
+
+.QR{
+    margin-right: 250px;
     margin-top: 50px;
     width: 300px;
+    padding-bottom: 50px;
 }
-
-
  
 /*CSS PARA LAS VISTAS DE VISUALIZACIÓN DE TICKETS*/
 
@@ -334,14 +339,15 @@ body{
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .tickeHeader {
-    color: tomato;
+    color: black;
 }
 
 .tickeInfo {
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     align-items: flex-start;
     margin-top: 50px;
@@ -479,6 +485,8 @@ body{
     width: 300px;
     border: 1px solid black;
     margin-bottom: 20px; 
+
+
 }
 
 .menBuy-header {
@@ -533,7 +541,7 @@ body{
 }
 
 .promimg{
-    width: 30px;
+    width: 60px;
     height: 30px;
 }
 
@@ -874,8 +882,8 @@ button[type="submit"] {
 
 /*CSS PARA EL FORMILARIO DE AÑADIR PELÍCULA*/
 .AñadirForm{
-    width: 1200px;
-    height: 1050px; 
+    width: 1300px;
+    height: 1100px; 
     border: 2px solid black; 
     padding: 20px; 
     background-color: red;
@@ -981,13 +989,59 @@ height: 400px;
 }
 
 
+/*Director*/
+
+.AñadirDir{
+    width: 500px;
+    height: 450px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+.ModificarDir{
+    width: 500px;
+    height: 450px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center
+}
+
+
+/*ADMIN ACTORES*/
+
+
+.AnadirActor{
+    width: 500px;
+    height: 450px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center;
+}
+
+
+.ModificarActor{
+    width: 500px;
+    height: 450px; 
+    border: 2px solid black; 
+    padding: 30px; 
+    background-color: red;
+    color: white;
+    justify-content: center
+}
+
+
 /*FOOTER*/
 .footer{
     align-items: flex-end;
 }
-
-/*CSS ADMIN ACTORES*/
-
 
 
 

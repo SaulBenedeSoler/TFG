@@ -68,7 +68,8 @@ class MovieController extends Controller
             'trailer' => 'required',
             'director_id' => 'required',
             'actor_id' => 'required',
-            'semana_id' => 'required'
+            'semana_id' => 'required',
+            'qr' => 'required'
         ]);
     
         $movie = new Movie();
@@ -83,7 +84,7 @@ class MovieController extends Controller
         $movie->semana_id = $validatedData['semana_id']; 
         $movie->trailer = $validatedData['trailer'];
         $movie->fecha_lanzamiento = now(); 
-
+        $movie->qr = $validatedData['qr'];
         $movie->save();
         
         return redirect()->route('admin.index', ['id' => $movie->id]);
@@ -106,7 +107,7 @@ class MovieController extends Controller
         $movie->duracion = $request->duracion;
         $movie->fecha_lanzamiento = $request->fecha_lanzamiento;
         $movie->save();
-        return redirect()->route('Movies.showAdmin');
+        return redirect()->route('admin.index');
     }
     
 

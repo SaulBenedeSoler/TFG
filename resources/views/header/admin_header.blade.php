@@ -16,9 +16,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Películas</a>
-                        <div class="dropdown-menu" aria-labelledby="week-dropdown">
-                            <a href="{{ route('admin.moviesShow') }}" class="nav-link text-black">Ver Películas</a>
-                            <a href="{{ route('movies.create') }}"  class="nav-link text-black">Añadir Películas</a>
+                        <div class="dropdown-menu bg-danger" aria-labelledby="week-dropdown">
+                            <a href="{{ route('admin.moviesShow') }}" class="nav-link text-white bg-danger">Ver Películas</a>
+                            <a href="{{ route('movies.create') }}"  class="nav-link text-white bg-danger">Añadir Películas</a>
                         </div>
                     </li>
 
@@ -26,9 +26,9 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios</a>
-                            <div class="dropdown-menu" aria-labelledby="week-dropdown">
-                                <a href="{{ route('usuarios.mostrar') }}" class="nav-link text-black">Ver usuarios</a>
-                                <a href="{{ route('admin.add') }}"  class="nav-link text-black">Añadir usuarios</a>
+                            <div class="dropdown-menu bg-danger" aria-labelledby="week-dropdown">
+                                <a href="{{ route('usuarios.mostrar') }}" class="nav-link text-white bg-danger">Ver usuarios</a>
+                                <a href="{{ route('admin.add') }}"  class="nav-link text-white bg-danger">Añadir usuarios</a>
                             </div>
                         </li>
                     </ul>
@@ -37,9 +37,9 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Promociones</a>
-                            <div class="dropdown-menu" aria-labelledby="week-dropdown">
-                                <a href="{{ route('promociones.adminshow') }}"  class="nav-link text-black">Ver promociones</a>
-                                <a href="{{ route('promociones.add') }}"  class="nav-link text-black">Añadir promociones</a>
+                            <div class="dropdown-menu bg-danger" aria-labelledby="week-dropdown">
+                                <a href="{{ route('promociones.adminshow') }}"  class="nav-link text-white bg-danger">Ver promociones</a>
+                                <a href="{{ route('promociones.add') }}"  class="nav-link text-white bg-danger">Añadir promociones</a>
                             </div>
                         </li>
                     </ul>
@@ -50,9 +50,9 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menus</a>
-                            <div class="dropdown-menu" aria-labelledby="week-dropdown">
-                                <a href="{{ route('comida.adminComshow') }}"  class="nav-link text-black">Ver menus</a>
-                                <a href="{{ route('comida.add') }}"  class="nav-link text-black">Añadir menus</a>
+                            <div class="dropdown-menu bg-danger" aria-labelledby="week-dropdown">
+                                <a href="{{ route('comida.adminComshow') }}"  class="nav-link text-white bg-danger">Ver menus</a>
+                                <a href="{{ route('comida.add') }}"  class="nav-link text-white bg-danger">Añadir menus</a>
                             </div>
                         </li>
                     </ul>
@@ -61,9 +61,9 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actores</a>
-                            <div class="dropdown-menu" aria-labelledby="week-dropdown">
-                                <a href="{{ route('actor.adminshow') }}"  class="nav-link text-black">Ver Actor</a>
-                                <a href="{{ route('actor.add') }}"  class="nav-link text-black">Añadir Actor</a>
+                            <div class="dropdown-menu bg-danger" aria-labelledby="week-dropdown">
+                                <a href="{{ route('actor.adminshow') }}"  class="nav-link text-white bg-danger">Ver Actor</a>
+                                <a href="{{ route('actor.add') }}"  class="nav-link text-white bg-danger">Añadir Actor</a>
                             </div>
                         </li>
                     </ul>
@@ -71,10 +71,10 @@
                     <!--ACCIONES ACTORES-->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link text-white dropdown-toggle" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Directores</a>
+                            <a href="#" class="nav-link text-white dropdown-toggle bg-danger" id="week-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Directores</a>
                                 <div class="dropdown-menu" aria-labelledby="week-dropdown">
-                                    <a href="{{ route('director.adminshow') }}"  class="nav-link text-black">Ver Director</a>
-                                    <a href="{{ route('director.add') }}"  class="nav-link text-black">Añadir Director</a>
+                                    <a href="{{ route('director.adminshow') }}"  class="nav-link text-black bg-danger">Ver Director</a>
+                                    <a href="{{ route('director.add') }}"  class="nav-link text-black bg-danger">Añadir Director</a>
                                     </div>
                         </li>
                     </ul>

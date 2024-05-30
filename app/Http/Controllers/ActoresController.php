@@ -66,7 +66,7 @@ class ActoresController extends Controller
         $actor->apellido = $request->apellido;
         $actor->movie_id = $request->movie_id;
         $actor->save();
-        return redirect()->route('admin.index');
+        return redirect()->route('actor.adminshow');
     }
 
     /*Se encarga de buscar mediante la variable actor en la tabla de la base de datos Actor por id
@@ -74,7 +74,7 @@ class ActoresController extends Controller
     public function destroy($id){
         $actor = actor::find($id);
         $actor->delete();
-        return redirect()->route('admin.index');
+        return redirect()->route('actor.adminshow');
     }
 
 

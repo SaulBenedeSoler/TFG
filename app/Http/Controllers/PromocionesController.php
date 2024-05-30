@@ -32,49 +32,51 @@ class PromocionesController extends Controller
     public function edit($id)
     {
         $promociones = Promociones::find($id);
-        return view('promociones.form', ['promociones' => $promociones, 'tipo' => $promociones->tipo]);
+        return view('promociones.form', ['promociones' => $promociones]);
     }
 
     /*Se encarga de validar todos los datos de la promocion seleccionada
     y permite buscar y modificar las promociones al administrador*/
-     public function update($id, Request $request)
-     {
-         $validatedData = $request->validate([
-             'titulo' => 'required',
-             'descripcion' => 'required',
-             'imagen' => 'required',
-             'precio' => 'required',
-             'tipo' => 'required|in:anual,mensual,semanal',
-         ]);
-     
-         $promociones = Promociones::find($id);
-         $promociones->titulo = $validatedData['titulo'];
-         $promociones->descripcion = $validatedData['descripcion'];
-         $promociones->imagen = $validatedData['imagen'];
-         $promociones->precio = $validatedData['precio'];
-         $promociones->tipo = $validatedData['tipo'];
-         $promociones->save();
-     
-         return redirect()->route('admin.index');
-     }
-
-    /*Se encarga de añadir o modificar promociones mediante la validación de datos y de crear una nueva promocion y insertar los datos de esta
-    y alamcenarlo todo en la varibale promocion*/
-    public function store(Request $request)
+    public function update($id, Request $request)
     {
         $validatedData = $request->validate([
             'titulo' => 'required',
             'descripcion' => 'required',
             'imagen' => 'required',
-            'precio' => 'required',
-            'tipo' => 'required|in:anual,mensual,semanal',
+            'Precio' => 'required',
+            'tipo' => 'required',
+        ]);
+    
+        $promociones = Promociones::find($id);
+        $promociones->titulo = $validatedData['titulo'];
+        $promociones->descripcion = $validatedData['descripcion'];
+        $promociones->imagen = $validatedData['imagen'];
+        $promociones->precio = $validatedData['Precio'];
+        $promociones->tipo = $validatedData['tipo'];
+        $promociones->save();
+    
+        return redirect()->route('admin.index');
+    }
+    
+
+    /*Se encarga de añadir o modificar promociones mediante la validación de datos y de crear una nueva promocion y insertar los datos de esta
+    y alamcenarlo todo en la varibale promocion*/
+    public function store(Request $request)
+    {
+      
+        $validatedData = $request->validate([
+            'titulo' => 'required',
+            'descripcion' => 'required',
+            'imagen' => 'required',
+            'Precio' => 'required',
+            'tipo' => 'required',
         ]);
     
         $promocion = new Promociones();
         $promocion->titulo = $validatedData['titulo'];
         $promocion->descripcion = $validatedData['descripcion'];
         $promocion->imagen = $validatedData['imagen'];
-        $promocion->precio = $validatedData['precio'];
+        $promocion->precio = $validatedData['Precio'];
         $promocion->tipo = $validatedData['tipo'];
         $promocion->save();
     

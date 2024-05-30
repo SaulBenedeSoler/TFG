@@ -94,6 +94,7 @@ Route::get('promocion/adminshow', [PromocionesController::class, 'showProm'])->n
 Route::get('promocion/add', [PromocionesController::class, 'create'])->name('promociones.add');
 Route::post('promocion/store', [PromocionesController::class, 'store'])->name('promociones.store');
 Route::get('promocion/editar/{id}', [PromocionesController::class, 'edit'])->name('promociones.edit');
+Route::put('/promociones/{id}', [PromocionesController::class, 'update'])->name('promociones.update');
 Route::delete('promocion/{id}', [PromocionesController::class, 'destroy'])->name('promociones.destroy');
 Route::put('promocion/{id}', [PromocionesController::class, 'update'])->name('promociones.update');
 /*RUTAS ACTOR ADMIN*/

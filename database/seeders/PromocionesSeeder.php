@@ -18,33 +18,52 @@ class PromocionesSeeder extends Seeder
         DB::table('promociones')->insert([
             'titulo' => 'Pase cumpleaños',
             'imagen' => 'Cumple.png',
-            'descripcion' => 'Con este pase obtiene desccuento en todas las entradas que obtengas durante la semana que lo compres.',
+            'descripcion' => 'Consigue este pase la semana de tu cumpleaños y obtendrás descuentos.',
             'Precio' => '19.99',
             'tipo' => 'eventos',
         ]);
 
+
+        DB::table('promociones')->insert([
+            'titulo' => 'Pase fiesta',
+            'imagen' => 'fiestaCine.png',
+            'descripcion' => 'Obten esta promoción y consigue tu entrada por 3.50 durante la semana del cine.',
+            'Precio' => '3.50',
+            'tipo' => 'eventos',
+        ]);
+
+
         DB::table('promociones')->insert([
             'titulo' => 'Tarjeta regalo',
             'imagen' => 'regalo.png',
-            'descripcion' => 'Compra esta tarjeta y consigue descuentos durante todo el mes',
+            'descripcion' => 'Compra esta tarjeta con valor de 39.99 en bar y cine.',
             'Precio' => '30.99',
             'tipo' => 'mensual'
         ]);
 
         DB::table('promociones')->insert([
-            'titulo' => 'Pase fiesta',
-            'imagen' => 'fiestaCine.png',
-            'descripcion' => 'Obten esta promociones y consigue todas las entradas durante la semana por 3,50.',
-            'Precio' => '14.99',
+            'titulo' => 'Cine familiar',
+            'imagen' => 'familia.png',
+            'descripcion' => 'Obten entradas gratis para toda la familia durante dos semanas.',
+            'Precio' => '49.99',
             'tipo' => 'eventos',
         ]);
 
+        
         DB::table('promociones')->insert([
-            'titulo' => 'Cine familiar',
-            'imagen' => 'familia.png',
-            'descripcion' => 'Obten esta promocion y conseguiras grandes descuentos en comida para toda la familia.',
-            'Precio' => '49.99',
-            'tipo' => 'eventos',
+            'titulo' => 'Pase Mensual',
+            'imagen' => 'iLmes.png',
+            'descripcion' => 'Compra esta promoción y consigue entradas ilimitadas durante un mes.',
+            'Precio' => '59.99',
+            'tipo' => 'anual',
+        ]);
+
+        DB::table('promociones')->insert([
+            'titulo' => 'Pase Ilimitado',
+            'imagen' => 'iLan.png',
+            'descripcion' => 'Compra esta promoción y consigue entradas ilimitadas durante el año.',
+            'Precio' => '69.99',
+            'tipo' => 'anual',
         ]);
 
 
@@ -52,7 +71,7 @@ class PromocionesSeeder extends Seeder
             'titulo' => 'Pase Menus',
             'imagen' => 'Mmenus.png',
             'descripcion' => 'Compra esta promoción y consigue menus ilimitados durante el mes.',
-            'Precio' => '14.99',
+            'Precio' => '59.99',
             'tipo' => 'mensual',
         ]);
 
@@ -61,9 +80,11 @@ class PromocionesSeeder extends Seeder
             'titulo' => 'Superpase Menus',
             'imagen' => 'PMenus.png',
             'descripcion' => 'Compra esta promoción y consigue menus ilimitados durante el año.',
-            'Precio' => '14.99',
+            'Precio' => '69.99',
             'tipo' => 'anual',
         ]);
+
+
 
 }
 }

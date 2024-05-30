@@ -66,6 +66,10 @@ Dentro del formulario pongo los datos a rellenar-->
                 <input type="number" name="semana_id" class="form-control" required>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label">qr</label>
+                <input type="string" name="qr" class="form-control" required>
+            </div>
 
             <button type="submit" class="btn btn-warning">Añadir Película</button>
         </form>

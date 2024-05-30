@@ -5,7 +5,7 @@
     Dentro de esto creo un formulario con meotod post y que realiza la acción de llamar a la funcion
     update y buscar el id del director para mostrar sus datos en el formulario y que estos sean cambiados--->
 <div class="container d-flex justify-content-center align-items-center">
-    <div class="user-form ModificarDirector">
+    <div class="user-form ModificarDir">
         <h1>Modificar Director</h1>
         <form method="POST" action="{{ route('director.update', $director->id) }}" class="user-form">
             @csrf

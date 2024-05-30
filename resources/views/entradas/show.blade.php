@@ -8,7 +8,7 @@
         <div class="ticketPrincipal">
 
             <div class="ticketHeader">
-                <h1><b>{{$movieName}}</b></h1>
+                <h2><b>{{$movieName}}</b></h2>
             </div>
 
             <div class="ticketUsuario">
@@ -58,14 +58,14 @@
             </div>
 
             </div>
-
+  
         </div>
-
-            <div class="codigo">
-                <div class="qr">
-                    <img src="{{$QR}}">
-                </div>
+        <div class="codigo">
+            <div class="qr">
+                <img src="{{$QR}}">
             </div>
+        </div>
+      
       
     </div>
 

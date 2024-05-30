@@ -11,24 +11,33 @@ Dentro del formulario pongo los datos a rellenar-->
 
         <form method="POST" action="{{ route('promociones.store') }}">
             @csrf
-            <div class="mb-3">
-                <label class="form-label">Título</label>
-                <input type="text" name="titulo" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Imagen</label>
-                <input type="text" name="imagen" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Descripción</label>
-                <textarea name="descripcion" class="form-control" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Precio</label>
-                <input type="text" name="precio" class="form-control" required>
+            <div class="form-group">
+                <label for="Titulo">Titulo: </label>
+                <input type="string" name="titulo" class="form-control">
+
             </div>
 
-            <button type="submit" class="btn btn-warning">Añadir Promoción</button>
+            <div class="form-group">
+                <label for="imagen">imagen: </label>
+                <input type="string" name="imagen" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Descripcion">Descripcion:</label>
+                <input type="string" name="descripcion" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio: </label>
+                <input type="string" name="Precio"class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Descripcion">Tipo:</label>
+                <input type="string" name="tipo"  class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-danger">Añadir Promoción</button>
         </form>
     </div>
 @endsection

@@ -80,7 +80,7 @@ class ComidaController extends Controller
         $comida->descripcion = $request->descripcion;
         $comida->precio = $request->precio;
         $comida->save();
-        return redirect()->route('admin.index');
+        return redirect()->route('comida.adminComshow');
     }
 
     /*Se encarga de buscar mediante la variable comida en la tabla de la base de datos Comdida por id
@@ -88,7 +88,7 @@ class ComidaController extends Controller
     public function destroy($id){
         $comida = Comida::find($id);
         $comida->delete();
-        return redirect()->route('admin.index');
+        return redirect()->route('comida.adminComshow');
     }
 
 

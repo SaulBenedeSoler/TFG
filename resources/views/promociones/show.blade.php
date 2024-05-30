@@ -2,31 +2,39 @@
 
 @section('content')
 
-<div class="container">
-<!--Creo una serie de divs adecuados con css y bootstrap a mi gusto
-    Creo una card con un foreach que muestra toda la información de las promociones
-    Hago un formulario que llama a compra-store y busca el id de la promo seleccionada para comprarlo--->
-    <div class="row" style="padding: -250px">
-    @foreach($PromoList as $promo)
-    <div class="col-md-4">
-    <div class="card- promo-card">
-        <p class="tituloP"><b>{{$promo->titulo}}</b></p>
-        <img src="{{ asset('imagenes/promociones/' . $promo->imagen) }}" class="promimg" style="height: 100px">
-        <p class="desc">Descripcion: {{$promo->descripcion}}</p>
-        <p>Precio: {{$promo->Precio}}
-            <form action="{{ route('compra.store', ['promocionid' => $promo->id]) }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger">Comprar</button>
-            </form>
+
+    <div class="Container">
+        <!--Creo diferentes divc modificads con bootstrap y css
+        Muestro toda la información de los menus gracias al uso del foreach
+        Creo un formulario el cual llama a la función menu.store y busca el id del menu
+        y compra el menu-->
+      
+        <div class="row justify-content-center mb-3" style="padding: -250px">
+            @foreach($PromoList as $promo)
+
+        <div class="col-md-6 mb-4">
+            <div class="card-header bg-danger menBuy-header text-white">
+                <p class="tituloP"><b>{{$promo->titulo}}</b></p>
+            </div>
+      
+        <div class="card- menBuy-card">
+
+            <img src="{{ asset('imagenes/promociones/' . $promo->imagen) }}" class="promimg"  style="height: 150px;">
+            <p class="desc"> {{$promo->descripcion}}</p>
+            <p>Precio: {{$promo->Precio}}
+                <form action="{{ route('compra.store', ['promocionid' => $promo->id]) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Comprar</button>
+                </form>
+        </div>
+            </div>
+    
+ 
+        
+        @endforeach
+        </div>
+    
     </div>
-
-
-    </div>
-    @endforeach
-    </div>
-
-</div>
-
 
 
 @endsection

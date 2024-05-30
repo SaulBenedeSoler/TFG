@@ -14,7 +14,7 @@
         <h5 class="titulo">{{ $movie->title }}</h5>
         <br>
         <a data-bs-toggle="modal" data-bs-target="#infoModal-{{ $movie->id }}" id="Modal">
-          <button class="botonModal bg-warning">Informate y reserva tu entrada</button>
+          <button class="botonModal bg-danger">Informate y reserva tu entrada</button>
         </a>
       </div>
 

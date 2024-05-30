@@ -7,7 +7,7 @@
 <div class="container d-flex justify-content-center align-items-center">
     <div class="user-form ModificarProm">
         <h1>Modificar Promociones</h1>
-        <form method="POST" action="{{ route('promociones.update', $promociones->id) }}" class="user-form">
+        <form method="POST" action="{{ route('promociones.update', $promociones->id) }}">
             @csrf
             @method('PUT')
 
@@ -29,10 +29,15 @@
 
             <div class="form-group">
                 <label for="precio">Precio: </label>
-                <input type="string" name="precio" value="{{ $promociones->Precio }}" class="form-control">
+                <input type="string" name="Precio" value="{{ $promociones->Precio }}" class="form-control">
             </div>
 
-            <button type="submit" class="btn btn-warning">Guardar cambios</button>
+            <div class="form-group">
+                <label for="Descripcion">Tipo:</label>
+                <input type="string" name="tipo" value="{{ $promociones->tipo }}" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-danger">Guardar cambios</button>
         </form>
     </div>
 @endsection

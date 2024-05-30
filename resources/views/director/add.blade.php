@@ -5,8 +5,8 @@
 Dentro de estos divs creo un formulario el cual usa el metodo POST
 Realiza la accion sobre la ruta director.store el cual sirve para añadir directores
 Dentro del formulario pongo los datos a rellenar-->
-<div class="container d-flex justify-content-center align-items-center">
-    <div class="user-form AnadirDirector">
+<div class="container d-flex justify-content-center align-items-center ">
+    <div class="user-form AñadirDir">
         <h1>Añadir Director</h1>
 
         <form method="POST" action="{{ route('director.store') }}">
